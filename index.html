@@ -745,6 +745,7 @@
       grid-template-columns: repeat(2, 1fr);
       gap: 10px;
       width: 100%;
+      transition: opacity 0.15s ease;
     }
 
     .product-card {
@@ -877,6 +878,123 @@
       border-color: var(--primary);
       color: var(--primary);
     }
+
+    /* Search Bar */
+    .products-search-wrap {
+      position: relative;
+      width: 100%;
+      display: flex;
+      align-items: center;
+    }
+
+    .products-search-wrap .search-icon {
+      position: absolute;
+      left: 14px;
+      color: var(--text-sub);
+      pointer-events: none;
+    }
+
+    .products-search-input {
+      width: 100%;
+      background: rgba(14, 16, 21, 0.85);
+      border: 1.5px solid rgba(255, 255, 255, 0.1);
+      border-radius: 999px;
+      padding: 10px 38px 10px 40px;
+      font-size: 0.82rem;
+      color: #FFF;
+      outline: none;
+      transition: all 0.2s ease;
+      box-sizing: border-box;
+    }
+
+    .products-search-input:focus {
+      border-color: #EE4D2D;
+      box-shadow: 0 0 16px rgba(238, 77, 45, 0.25);
+    }
+
+    .products-search-input::placeholder {
+      color: #64748B;
+    }
+
+    .products-search-clear {
+      position: absolute;
+      right: 12px;
+      background: transparent;
+      border: none;
+      color: var(--text-sub);
+      font-size: 0.85rem;
+      cursor: pointer;
+      padding: 4px;
+      line-height: 1;
+    }
+
+    .products-search-clear:hover {
+      color: #FFF;
+    }
+
+    /* Category Filter Tabs (Horizontal Scrollable) */
+    .products-categories-wrap {
+      width: 100%;
+      overflow-x: auto;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+      padding-bottom: 2px;
+    }
+
+    .products-categories-wrap::-webkit-scrollbar {
+      display: none;
+    }
+
+    .products-categories {
+      display: inline-flex;
+      gap: 8px;
+      white-space: nowrap;
+    }
+
+    .category-tab-btn {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: var(--text-sub);
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 6px 14px;
+      border-radius: 999px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      flex-shrink: 0;
+    }
+
+    .category-tab-btn:hover {
+      background: rgba(255, 255, 255, 0.1);
+      color: #FFF;
+    }
+
+    .category-tab-btn.active {
+      background: linear-gradient(135deg, #FF6433 0%, #EE4D2D 100%);
+      border-color: #EE4D2D;
+      color: #FFF;
+      box-shadow: 0 4px 12px rgba(238, 77, 45, 0.35);
+    }
+
+    .product-empty-state {
+      width: 100%;
+      padding: 2rem 1rem;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      color: var(--text-main);
+      font-size: 0.88rem;
+      font-weight: 700;
+    }
+
+    .product-end-note {
+      text-align: center;
+      font-size: 0.75rem;
+      color: var(--text-sub);
+      margin-top: 4px;
+    }
   </style>
 </head>
 <body>
@@ -930,7 +1048,7 @@
     <section class="products-section" id="shopeeProductsSection" style="display: none;">
       <div class="products-header">
         <h2 class="products-title">
-          <span>🛍️</span> Góc Săn Sale & Ủng Hộ Page 😼
+          <span>🛍️</span> Góc Giỏ Hàng Ủng Hộ Page 😼
         </h2>
         
         <!-- Khung Kêu Gọi Chân Thành -->
@@ -943,16 +1061,42 @@
         </div>
       </div>
 
+      <!-- Search Bar -->
+      <div class="products-search-wrap">
+        <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" id="productSearchInput" class="products-search-input" placeholder="🔍 Tìm nhanh món bạn thích..." autocomplete="off">
+        <button type="button" id="productSearchClear" class="products-search-clear" style="display: none;" onclick="clearProductSearch()">✕</button>
+      </div>
+
+      <!-- Category Filter Pills (Thanh trượt ngang Dynamic) -->
+      <div class="products-categories-wrap">
+        <div class="products-categories" id="productCategoriesList">
+          <button type="button" class="category-tab-btn active" data-cat="all" onclick="selectCategory('all')">🔥 Tất cả</button>
+        </div>
+      </div>
+
       <!-- Product Grid -->
       <div class="product-grid" id="productGrid">
         <!-- Rendered by JS -->
       </div>
 
-      <!-- Toggle Button (nếu > 6 sản phẩm) -->
-      <button type="button" class="products-toggle-btn" id="btnToggleProducts" style="display: none;" onclick="toggleMoreProducts()">
-        <span id="btnToggleProductsText">Xem thêm sản phẩm</span>
-        <svg id="btnToggleProductsIcon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="transition: transform 0.2s;"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      <!-- Empty State -->
+      <div id="productEmptyState" class="product-empty-state" style="display: none;">
+        <span style="font-size: 2rem;">🔍</span>
+        <p>Không tìm thấy món đồ nào phù hợp</p>
+        <small style="color: var(--text-sub);">Thử tìm bằng từ khóa khác hoặc bấm tab khác nha!</small>
+      </div>
+
+      <!-- Load More Button -->
+      <button type="button" class="products-toggle-btn" id="btnLoadMoreProducts" style="display: none;" onclick="loadMoreProducts()">
+        <span id="btnLoadMoreText">Xem thêm sản phẩm</span>
+        <svg id="btnLoadMoreIcon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="transition: transform 0.2s;"><polyline points="6 9 12 15 18 9"></polyline></svg>
       </button>
+
+      <!-- End of List Note -->
+      <div id="productEndOfList" class="product-end-note" style="display: none;">
+        ✨ Đã hiển thị tất cả sản phẩm
+      </div>
     </section>
 
     <!-- Social Links Section -->
@@ -1068,7 +1212,7 @@
   <div class="toast" id="toast">✅ Đã sao chép số tài khoản vào khay nhớ tạm!</div>
 
   <script>
-    const API_URL = 'https://phuocmeomeme.site';
+    const API_URL = 'https://phuocmeomeme.site'
 
     function copySTK() {
       const stk = document.getElementById('stkVal').innerText.trim();
@@ -1095,48 +1239,195 @@
       }, 3000);
     }
 
-    // === Shopee Products Showcase ===
+    // === Shopee Products Showcase với Server-side Pagination & Search ===
     let loadedProducts = [];
-    let isProductsExpanded = false;
-    const INITIAL_SHOW_COUNT = 6;
+    let currentPage = 1;
+    let totalProducts = 0;
+    let hasMorePages = false;
+    let isLoading = false;
+    let currentCategory = 'all';
+    let currentSearch = '';
+    let searchDebounceTimer = null;
+    const PAGE_LIMIT = 8;
 
-    async function loadShopeeProducts() {
+    // Client-side Memory Cache (TTL: 60s) để chuyển Tab 0ms tức thì không độ trễ
+    const clientProductCache = new Map();
+    const CLIENT_CACHE_TTL = 60 * 1000;
+
+    function getClientCache(key) {
+      const item = clientProductCache.get(key);
+      if (!item) return null;
+      if (Date.now() - item.timestamp > CLIENT_CACHE_TTL) {
+        clientProductCache.delete(key);
+        return null;
+      }
+      return item.data;
+    }
+
+    function setClientCache(key, data) {
+      if (clientProductCache.size > 60) {
+        const oldest = clientProductCache.keys().next().value;
+        clientProductCache.delete(oldest);
+      }
+      clientProductCache.set(key, { data, timestamp: Date.now() });
+    }
+
+    // Áp dụng dữ liệu products lên UI (Dùng chung cho cả Cache Hit và Network Response)
+    function applyProductsData(data, append = false) {
       const section = document.getElementById('shopeeProductsSection');
       const grid = document.getElementById('productGrid');
-      const toggleBtn = document.getElementById('btnToggleProducts');
-      if (!section || !grid) return;
+      const btnLoadMore = document.getElementById('btnLoadMoreProducts');
+      const textLoadMore = document.getElementById('btnLoadMoreText');
+      const emptyState = document.getElementById('productEmptyState');
+      const endNote = document.getElementById('productEndOfList');
 
-      try {
-        const res = await fetch(`${API_URL}/api/products?channelId=phuocmeomeme`);
-        const data = await res.json();
-        if (!data.success || !Array.isArray(data.products) || data.products.length === 0) {
-          section.style.display = 'none';
-          return;
+      currentPage = data.page || 1;
+      totalProducts = data.total || 0;
+      hasMorePages = Boolean(data.hasMore);
+
+      if (append) {
+        loadedProducts = loadedProducts.concat(data.products || []);
+      } else {
+        loadedProducts = data.products || [];
+      }
+
+      if (section) section.style.display = 'flex';
+
+      // Render Categories Tabs Động từ API nếu có
+      if (Array.isArray(data.categories) && data.categories.length > 0) {
+        renderCategoryTabs(data.categories);
+      }
+
+      // Render UI Cards
+      renderProductCards(append, data.products || []);
+
+      if (grid) grid.style.opacity = '1';
+
+      // Xử lý Empty State
+      if (loadedProducts.length === 0) {
+        if (emptyState) emptyState.style.display = 'flex';
+        if (btnLoadMore) btnLoadMore.style.display = 'none';
+        if (endNote) endNote.style.display = 'none';
+      } else {
+        if (emptyState) emptyState.style.display = 'none';
+
+        // Hiển thị nút Load More hoặc End Note
+        if (hasMorePages) {
+          if (btnLoadMore) {
+            btnLoadMore.style.display = 'flex';
+            btnLoadMore.disabled = false;
+            const remaining = totalProducts - loadedProducts.length;
+            textLoadMore.textContent = `Xem thêm sản phẩm (còn ${remaining} món)`;
+          }
+          if (endNote) endNote.style.display = 'none';
+        } else {
+          if (btnLoadMore) btnLoadMore.style.display = 'none';
+          if (endNote && totalProducts > PAGE_LIMIT) {
+            endNote.style.display = 'block';
+            endNote.textContent = `✨ Đã hiển thị tất cả ${totalProducts} sản phẩm`;
+          } else if (endNote) {
+            endNote.style.display = 'none';
+          }
         }
-
-        loadedProducts = data.products;
-        section.style.display = 'flex';
-        renderProducts();
-
-        if (loadedProducts.length > INITIAL_SHOW_COUNT && toggleBtn) {
-          toggleBtn.style.display = 'flex';
-          updateToggleBtnText();
-        }
-      } catch (err) {
-        console.warn('Lỗi load sản phẩm Shopee:', err);
-        section.style.display = 'none';
       }
     }
 
-    function renderProducts() {
+    async function fetchProducts(page = 1, append = false) {
+      if (isLoading) return;
+
+      const grid = document.getElementById('productGrid');
+      const btnLoadMore = document.getElementById('btnLoadMoreProducts');
+      const textLoadMore = document.getElementById('btnLoadMoreText');
+      const section = document.getElementById('shopeeProductsSection');
+
+      const cacheKey = `${currentCategory}:${currentSearch.trim()}:${page}`;
+
+      // 1. Kiểm tra Client-Side Memory Cache (Phản hồi tức thì 0ms khi chuyển qua lại tab)
+      if (!append) {
+        const cached = getClientCache(cacheKey);
+        if (cached) {
+          applyProductsData(cached, false);
+          return;
+        }
+      }
+
+      isLoading = true;
+
+      if (btnLoadMore && append) {
+        btnLoadMore.disabled = true;
+        textLoadMore.textContent = 'Đang tải thêm...';
+      }
+
+      // Hiệu ứng mờ nhẹ để không bị giật trắng giao diện khi chờ mạng
+      if (grid && !append && loadedProducts.length > 0) {
+        grid.style.opacity = '0.55';
+      }
+
+      try {
+        const params = new URLSearchParams({
+          channelId: 'phuocmeomeme',
+          page: String(page),
+          limit: String(PAGE_LIMIT)
+        });
+
+        if (currentCategory && currentCategory !== 'all') {
+          params.set('category', currentCategory);
+        }
+
+        if (currentSearch && currentSearch.trim()) {
+          params.set('search', currentSearch.trim());
+        }
+
+        const res = await fetch(`${API_URL}/api/products?${params.toString()}`);
+        const data = await res.json();
+
+        if (!data.success) throw new Error(data.error || 'Fetch failed');
+
+        // Lưu vào Client Cache
+        setClientCache(cacheKey, data);
+
+        // Áp dụng dữ liệu lên giao diện
+        applyProductsData(data, append);
+      } catch (err) {
+        console.warn('Lỗi load sản phẩm Shopee:', err);
+        if (grid) grid.style.opacity = '1';
+        if (!append && loadedProducts.length === 0) {
+          if (section) section.style.display = 'none';
+        }
+      } finally {
+        isLoading = false;
+        if (btnLoadMore) btnLoadMore.disabled = false;
+        if (grid) grid.style.opacity = '1';
+      }
+    }
+
+    // Render danh sách Tabs Danh mục động từ Server
+    function renderCategoryTabs(categories) {
+      const container = document.getElementById('productCategoriesList');
+      if (!container || !Array.isArray(categories)) return;
+
+      container.innerHTML = categories.map(cat => {
+        const isActive = cat.id === currentCategory;
+        const countStr = cat.count !== undefined ? ` (${cat.count})` : '';
+        const iconStr = cat.icon ? `${cat.icon} ` : '';
+        return `
+          <button type="button" 
+                  class="category-tab-btn ${isActive ? 'active' : ''}" 
+                  data-cat="${escapeHtml(cat.id)}" 
+                  onclick="selectCategory('${escapeHtml(cat.id)}')">
+            ${iconStr}${escapeHtml(cat.name)}${countStr}
+          </button>
+        `;
+      }).join('');
+    }
+
+    function renderProductCards(append = false, newItems = []) {
       const grid = document.getElementById('productGrid');
       if (!grid) return;
 
-      const visibleList = isProductsExpanded 
-        ? loadedProducts 
-        : loadedProducts.slice(0, INITIAL_SHOW_COUNT);
+      const itemsToRender = append ? newItems : loadedProducts;
 
-      grid.innerHTML = visibleList.map(item => {
+      const cardsHtml = itemsToRender.map(item => {
         const titleSafe = escapeHtml(item.title || 'Sản phẩm Shopee');
         const imgSafe = item.imageUrl ? escapeHtml(item.imageUrl) : './avatar.png';
         const clickUrl = `${API_URL}/api/products/click/${item.id}`;
@@ -1163,27 +1454,68 @@
           </a>
         `;
       }).join('');
-    }
 
-    function toggleMoreProducts() {
-      isProductsExpanded = !isProductsExpanded;
-      renderProducts();
-      updateToggleBtnText();
-    }
-
-    function updateToggleBtnText() {
-      const textSpan = document.getElementById('btnToggleProductsText');
-      const iconSvg = document.getElementById('btnToggleProductsIcon');
-      if (!textSpan) return;
-
-      if (isProductsExpanded) {
-        textSpan.textContent = 'Thu gọn';
-        if (iconSvg) iconSvg.style.transform = 'rotate(180deg)';
+      if (append) {
+        grid.insertAdjacentHTML('beforeend', cardsHtml);
       } else {
-        const remaining = loadedProducts.length - INITIAL_SHOW_COUNT;
-        textSpan.textContent = `Xem thêm sản phẩm (${remaining})`;
-        if (iconSvg) iconSvg.style.transform = 'rotate(0deg)';
+        grid.innerHTML = cardsHtml;
       }
+    }
+
+    // Bấm nút Xem thêm sản phẩm (Load More)
+    function loadMoreProducts() {
+      if (hasMorePages && !isLoading) {
+        fetchProducts(currentPage + 1, true);
+      }
+    }
+
+    // Chọn danh mục (Category filter)
+    function selectCategory(cat) {
+      if (currentCategory === cat) return;
+      currentCategory = cat;
+
+      // Update active pill
+      document.querySelectorAll('.category-tab-btn').forEach(btn => {
+        if (btn.dataset.cat === cat) {
+          btn.classList.add('active');
+        } else {
+          btn.classList.remove('active');
+        }
+      });
+
+      // Reset page & load
+      currentPage = 1;
+      fetchProducts(1, false);
+    }
+
+    // Khởi tạo listeners cho thanh Search
+    function initSearchListeners() {
+      const input = document.getElementById('productSearchInput');
+      const clearBtn = document.getElementById('productSearchClear');
+      if (!input) return;
+
+      input.addEventListener('input', (e) => {
+        const val = e.target.value.trim();
+        if (clearBtn) clearBtn.style.display = val ? 'block' : 'none';
+
+        clearTimeout(searchDebounceTimer);
+        searchDebounceTimer = setTimeout(() => {
+          currentSearch = val;
+          currentPage = 1;
+          fetchProducts(1, false);
+        }, 300);
+      });
+    }
+
+    function clearProductSearch() {
+      const input = document.getElementById('productSearchInput');
+      const clearBtn = document.getElementById('productSearchClear');
+      if (input) input.value = '';
+      if (clearBtn) clearBtn.style.display = 'none';
+
+      currentSearch = '';
+      currentPage = 1;
+      fetchProducts(1, false);
     }
 
     function escapeHtml(str) {
@@ -1198,9 +1530,13 @@
 
     // Tự động load sản phẩm khi DOM sẵn sàng
     if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', loadShopeeProducts);
+      document.addEventListener('DOMContentLoaded', () => {
+        initSearchListeners();
+        fetchProducts(1, false);
+      });
     } else {
-      loadShopeeProducts();
+      initSearchListeners();
+      fetchProducts(1, false);
     }
   </script>
 <!-- Google Analytics -->
