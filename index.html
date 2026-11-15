@@ -103,6 +103,7 @@
         transparent 285deg 300deg,
         rgba(255, 184, 0, 0.07) 300deg 315deg,
         transparent 315deg 330deg,
+
         rgba(225, 29, 72, 0.04) 330deg 345deg,
         transparent 345deg 360deg
       );
@@ -204,6 +205,7 @@
 
     /* Container */
     .container {
+
       width: 100%;
       max-width: 520px;
       z-index: 1;
@@ -340,6 +342,7 @@
       color: var(--text-main);
       font-size: 0.84rem;
       font-weight: 700;
+
       transition: all 0.25s ease;
       box-shadow: 0 4px 14px rgba(0,0,0,0.35);
     }
@@ -641,6 +644,7 @@
     .bank-info-box {
       width: 100%;
       background: rgba(0, 0, 0, 0.35);
+
       border: 1px solid rgba(255, 255, 255, 0.08);
       border-radius: 16px;
       padding: 1rem;
@@ -798,6 +802,7 @@
       border-radius: 999px;
       text-transform: uppercase;
       letter-spacing: 0.5px;
+
       margin-top: 2px;
     }
 
@@ -957,6 +962,7 @@
 
     .products-search-input {
       width: 100%;
+
       background: rgba(14, 16, 21, 0.85);
       border: 1.5px solid rgba(255, 255, 255, 0.1);
       border-radius: 999px;
@@ -1106,6 +1112,7 @@
       align-items: center;
       gap: 5px;
       font-size: 0.72rem;
+
       font-weight: 800;
       background: rgba(255, 184, 0, 0.15);
       color: #FFB800;
@@ -1188,6 +1195,323 @@
         width: auto;
       }
     }
+
+    /* === POPUP BÌNH CHỌN PHIM TỪ NGUỒN YOUTUBE (?source=youtube) === */
+    .vote-modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(5, 7, 13, 0.82);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      z-index: 999999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+    .vote-modal-backdrop.show {
+      opacity: 1;
+      visibility: visible;
+    }
+    .vote-modal-card {
+      width: 100%;
+      max-width: 480px;
+      background: rgba(18, 21, 31, 0.94);
+      border: 1.5px solid rgba(255, 184, 0, 0.35);
+      border-radius: 22px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.75), 0 0 35px rgba(255, 184, 0, 0.18);
+      padding: 24px 20px 20px;
+      position: relative;
+      max-height: 90vh;
+      overflow-y: auto;
+      color: #F8FAFC;
+      transform: scale(0.92) translateY(15px);
+      transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+    .vote-modal-backdrop.show .vote-modal-card {
+      transform: scale(1) translateY(0);
+    }
+    .vote-modal-close {
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      width: 32px;
+      height: 32px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 50%;
+      color: #94A3B8;
+      font-size: 16px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+
+      transition: all 0.2s;
+    }
+    .vote-modal-close:hover {
+      background: rgba(225, 29, 72, 0.3);
+      color: #FFF;
+      border-color: rgba(225, 29, 72, 0.6);
+      transform: rotate(90deg);
+    }
+    .vote-winner-badge {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: linear-gradient(90deg, rgba(255, 184, 0, 0.16) 0%, rgba(255, 122, 0, 0.12) 100%);
+      border: 1px solid rgba(255, 184, 0, 0.4);
+      border-radius: 14px;
+      padding: 10px 14px;
+      margin-bottom: 18px;
+      font-size: 0.85rem;
+      line-height: 1.4;
+    }
+    .vote-winner-badge .trophy-icon {
+      font-size: 1.4rem;
+      flex-shrink: 0;
+    }
+    .vote-winner-badge strong {
+      color: #FFB800;
+    }
+    .vote-progress-box {
+      margin-bottom: 18px;
+    }
+    .vote-progress-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.82rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+      color: #E2E8F0;
+    }
+    .vote-progress-header .progress-count {
+      color: #FFB800;
+      font-size: 0.95rem;
+    }
+    .vote-progress-track {
+      width: 100%;
+      height: 14px;
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 999px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      position: relative;
+    }
+    .vote-progress-fill {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, #FF7A00 0%, #FFB800 60%, #FFD54F 100%);
+      border-radius: 999px;
+      transition: width 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+    }
+    .vote-progress-fill::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent);
+      animation: shimmerProgress 2s infinite;
+    }
+    @keyframes shimmerProgress {
+      0% { transform: translateX(-100%); }
+      100% { transform: translateX(100%); }
+    }
+    .vote-red-note {
+      color: #FF4444;
+      font-size: 0.8rem;
+      font-weight: 600;
+      line-height: 1.4;
+      margin-top: 6px;
+      text-shadow: 0 0 10px rgba(255, 68, 68, 0.35);
+    }
+    .vote-question {
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: #FFF;
+      margin-top: 14px;
+      margin-bottom: 2px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .vote-options-title {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: #94A3B8;
+      margin: 12px 0 8px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .vote-options-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+      margin-bottom: 14px;
+      max-height: 165px;
+      overflow-y: auto;
+      padding-right: 4px;
+    }
+    .vote-options-grid::-webkit-scrollbar {
+      width: 4px;
+    }
+    .vote-options-grid::-webkit-scrollbar-thumb {
+      background: rgba(255, 184, 0, 0.3);
+      border-radius: 4px;
+    }
+    .vote-option-chip {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 9px 12px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      cursor: pointer;
+      font-size: 0.85rem;
+      font-weight: 600;
+      transition: all 0.2s;
+    }
+    .vote-option-chip:hover {
+      background: rgba(255, 184, 0, 0.12);
+      border-color: rgba(255, 184, 0, 0.4);
+      transform: translateX(3px);
+    }
+    .vote-option-chip.selected {
+
+      background: rgba(255, 184, 0, 0.22);
+      border-color: #FFB800;
+      box-shadow: 0 0 16px rgba(255, 184, 0, 0.35);
+      transform: translateX(4px);
+    }
+    .vote-option-chip.selected .vote-count-badge {
+      background: #FFB800;
+      color: #0A0C13;
+    }
+    .vote-chip-left {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+    .vote-rank-tag {
+      width: 22px;
+      height: 22px;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      font-weight: 800;
+      flex-shrink: 0;
+    }
+    .vote-rank-1 { background: #FFB800; color: #000; }
+    .vote-rank-2 { background: #CBD5E1; color: #000; }
+    .vote-rank-3 { background: #CD7F32; color: #FFF; }
+    .vote-rank-other { background: rgba(255, 255, 255, 0.12); color: #94A3B8; }
+    .vote-count-badge {
+      background: rgba(255, 184, 0, 0.15);
+      color: #FFD54F;
+      padding: 2px 7px;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+    .vote-input-wrap {
+      margin-bottom: 14px;
+    }
+    .vote-input {
+      width: 100%;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1.5px solid rgba(255, 184, 0, 0.3);
+      border-radius: 12px;
+      padding: 11px 14px;
+      color: #FFF;
+      font-size: 0.9rem;
+      font-family: inherit;
+      outline: none;
+      transition: all 0.2s;
+    }
+    .vote-input:focus {
+      border-color: #FFB800;
+      background: rgba(255, 255, 255, 0.09);
+      box-shadow: 0 0 14px rgba(255, 184, 0, 0.3);
+    }
+    .vote-input::placeholder {
+      color: #64748B;
+    }
+    .vote-submit-btn {
+      width: 100%;
+      padding: 13px 20px;
+      background: linear-gradient(135deg, #FFB800 0%, #FF7A00 100%);
+      color: #0A0C13;
+      border: none;
+      border-radius: 999px;
+      font-size: 0.95rem;
+      font-weight: 800;
+      font-family: inherit;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      box-shadow: 0 4px 18px rgba(255, 184, 0, 0.35);
+      transition: all 0.2s;
+    }
+    .vote-submit-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 24px rgba(255, 184, 0, 0.5);
+    }
+    .vote-submit-btn:active {
+      transform: translateY(1px);
+    }
+    .vote-submit-btn:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+      transform: none;
+    }
+    .vote-success-panel {
+      display: none;
+      text-align: center;
+      padding: 24px 10px 10px;
+    }
+    .vote-success-panel.active {
+      display: block;
+      animation: fadeIn 0.4s ease;
+    }
+    .vote-success-icon {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+    .vote-success-title {
+      font-size: 1.2rem;
+      font-weight: 800;
+      color: #FFB800;
+      margin-bottom: 6px;
+    }
+    .vote-success-desc {
+      font-size: 0.88rem;
+      color: #94A3B8;
+      line-height: 1.5;
+      margin-bottom: 18px;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
   </style>
 </head>
 <body>
@@ -1202,6 +1526,7 @@
   <!-- Animated Floating Meme Icons (Theme Phước Mèo Meme) -->
   <div class="floating-container">
     <div class="float-item">🐾</div>
+
     <div class="float-item">👑</div>
     <div class="float-item">🕶️</div>
     <div class="float-item">🏮</div>
@@ -1261,6 +1586,7 @@
 
       <!-- Search Bar -->
       <div class="products-search-wrap">
+
         <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
         <input type="text" id="productSearchInput" class="products-search-input" placeholder="🔍 Tìm nhanh món bạn thích..." autocomplete="off">
         <button type="button" id="productSearchClear" class="products-search-clear" style="display: none;" onclick="clearProductSearch()">✕</button>
@@ -1320,6 +1646,7 @@
       </a>
 
       <!-- Card 2: TikTok -->
+
       <a href="https://www.tiktok.com/@phuoc.meo.meme" target="_blank" rel="noopener noreferrer" class="link-card tt-card">
         <div class="link-info">
           <div class="icon-box tiktok-icon">
@@ -1419,6 +1746,77 @@
     </a>
   </div>
 
+  <!-- YouTube Source Vote Modal Popup (?source=youtube) -->
+  <div id="voteModalBackdrop" class="vote-modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="voteModalQuestion">
+    <div class="vote-modal-card">
+      <button type="button" class="vote-modal-close" onclick="closeVoteModal()" aria-label="Đóng popup">&times;</button>
+      
+      <!-- Panel Nội dung Bình Chọn -->
+      <div id="voteMainPanel">
+        <!-- 1. Huy hiệu Quán Quân hôm qua -->
+        <div id="voteWinnerBadge" class="vote-winner-badge" style="display: none;">
+          <div class="trophy-icon">🏆</div>
+          <div id="voteWinnerText">Đang tải kết quả hôm qua...</div>
+        </div>
+
+        <!-- 2. Thanh tiến độ ngày -->
+        <div class="vote-progress-box">
+          <div class="vote-progress-header">
+            <span>Tiến độ phát sóng phim mới hôm nay</span>
+            <span id="voteProgressText" class="progress-count">0/100 vote</span>
+          </div>
+          <div class="vote-progress-track">
+            <div id="voteProgressFill" class="vote-progress-fill" style="width: 0%;"></div>
+          </div>
+          <div class="vote-red-note">
+            🔥 Đủ 100/100 vote hôm nay ➔ Ngày mai có phim mới ngay nhe cả nhà!
+          </div>
+        </div>
+
+        <!-- 3. Câu hỏi bình chọn & Chú thích đỏ -->
+        <div id="voteModalQuestion" class="vote-question">
+          <span>🎬</span> Bạn muốn ngày mai page dịch tiếp bộ nào nhất?
+        </div>
+        <div class="vote-red-note" style="margin-bottom: 12px;">
+          📌 *Nếu bộ Top 1 chưa ra tập mới bên Trung, page xin phép dịch ngay bộ Top 2 nhe mn! ❤️
+        </div>
+
+        <!-- 4. Danh sách Top phim hôm nay (Bấm chọn nhanh) -->
+        <div id="voteOptionsHeader" class="vote-options-title" style="display: none;">
+          <span>🔥</span> Các bộ đang được đề xuất nhiều hôm nay (Bấm để chọn):
+        </div>
+        <div id="voteOptionsGrid" class="vote-options-grid" style="display: none;"></div>
+
+        <!-- 5. Form nhập tên phim mới & Submit -->
+        <form id="voteForm" onsubmit="handleVoteSubmit(event)">
+          <!-- Honeypot chống bot tự động -->
+
+          <input type="text" name="website" style="display: none !important;" tabindex="-1" autocomplete="off">
+          
+          <div class="vote-input-wrap">
+            <input type="text" id="voteMovieInput" class="vote-input" maxlength="50" placeholder="Hoặc nhập tên phim bạn muốn xem... (VD: Đấu La Đại Lục)" autocomplete="off" oninput="onCustomMovieInput()">
+          </div>
+
+          <button type="submit" id="voteSubmitBtn" class="vote-submit-btn">
+            <span>🎁</span> Bình Chọn & Mở Quà May Mắn
+          </button>
+        </form>
+      </div>
+
+      <!-- Panel Thông báo Thành Công -->
+      <div id="voteSuccessPanel" class="vote-success-panel">
+        <div class="vote-success-icon">🎉</div>
+        <div class="vote-success-title">Đã Ghi Nhận Bình Chọn!</div>
+        <div class="vote-success-desc">
+          Cảm ơn bạn đã tiếp lửa cho page! Món quà Shopee may mắn đang được mở ở tab mới, bạn ngó lướt xem ủng hộ page duy trì nhé ❤️
+        </div>
+        <button type="button" class="vote-submit-btn" onclick="closeVoteModal()">
+          Đóng & Xem Tiếp Web 🐾
+        </button>
+      </div>
+    </div>
+  </div>
+
   <script>
     const API_URL = 'https://phuocmeomeme.site'
 
@@ -1487,6 +1885,7 @@
     // Áp dụng dữ liệu products lên UI (Dùng chung cho cả Cache Hit và Network Response)
     function applyProductsData(data, append = false) {
       const section = document.getElementById('shopeeProductsSection');
+
       const grid = document.getElementById('productGrid');
       const btnLoadMore = document.getElementById('btnLoadMoreProducts');
       const textLoadMore = document.getElementById('btnLoadMoreText');
@@ -1590,6 +1989,7 @@
         }
 
         if (currentCategory && currentCategory !== 'all') {
+
           params.set('category', currentCategory);
         }
 
@@ -1669,6 +2069,7 @@
                 <span class="product-price-tag">${priceDisplay}</span>
               </div>
               <button type="button" class="product-buy-btn">
+
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
                 👉 Bấm ngó thử ủng hộ Trẫm
               </button>
@@ -1775,6 +2176,7 @@
       const titleEl = document.getElementById('toastProductTitle');
       const priceEl = document.getElementById('toastProductPrice');
       const imgEl = document.getElementById('toastProductImg');
+
       const btnEl = document.getElementById('toastProductBtn');
       const card = document.getElementById('supportToastCard');
 
@@ -1826,17 +2228,252 @@
       }
     }
 
+    // === LOGIC POPUP BÌNH CHỌN PHIM NGUỒN YOUTUBE (?source=youtube) ===
+    let currentVoteDate = new Date().toISOString().slice(0, 10);
+    const isYouTubeSource = currentSource === 'youtube';
+    let selectedMovieOption = null;
+
+    function closeVoteModal() {
+      const backdrop = document.getElementById('voteModalBackdrop');
+      if (backdrop) backdrop.classList.remove('show');
+    }
+
+    function selectVoteOption(movieTitle, element) {
+      const inputEl = document.getElementById('voteMovieInput');
+      const chips = document.querySelectorAll('.vote-option-chip');
+
+      // Nếu đang chọn đúng option này -> toggle bỏ chọn
+      if (element && element.classList.contains('selected')) {
+        element.classList.remove('selected');
+        selectedMovieOption = null;
+        if (inputEl) {
+          inputEl.placeholder = 'Hoặc nhập tên phim bạn muốn xem... (VD: Đấu La Đại Lục)';
+        }
+        return;
+      }
+
+      // Chọn option mới
+      chips.forEach(c => c.classList.remove('selected'));
+      if (element) element.classList.add('selected');
+      selectedMovieOption = movieTitle;
+
+      // Cập nhật thông báo đã chọn vào input và KHÔNG focus (tránh mở bàn phím mobile)
+      if (inputEl) {
+        inputEl.value = '';
+        inputEl.placeholder = `✅ Đã chọn: ${movieTitle} (Bấm gửi ngay bên dưới nhe)`;
+      }
+    }
+
+    function onCustomMovieInput() {
+      // Khi user chủ động gõ vào ô input, hủy chọn option chip ở trên
+      const chips = document.querySelectorAll('.vote-option-chip');
+      chips.forEach(c => c.classList.remove('selected'));
+      selectedMovieOption = null;
+    }
+
+    async function initYouTubeVotePopup() {
+      if (!isYouTubeSource) return;
+
+      // Hủy supportToast nếu có để ưu tiên hiển thị popup bình chọn
+      if (supportToastTimer) {
+        clearTimeout(supportToastTimer);
+        supportToastTimer = null;
+      }
+      hasUserInteracted = true;
+
+      try {
+        const res = await fetch('/api/votes/today');
+        if (!res.ok) return;
+        const data = await res.json();
+        if (!data.success) return;
+
+        currentVoteDate = data.date || currentVoteDate;
+
+        // 1. Render Trạng Thái Phát Sóng Hôm Nay hoặc Quán Quân Hôm Qua
+        const winnerBadge = document.getElementById('voteWinnerBadge');
+        const winnerText = document.getElementById('voteWinnerText');
+        if (winnerBadge && winnerText) {
+          if (data.broadcast && data.broadcast.movieTitle) {
+            const safeTitle = escapeHtml(data.broadcast.movieTitle);
+            if (data.broadcast.status === 'published') {
+              const safeUrl = data.broadcast.youtubeUrl || '#';
+              winnerText.innerHTML = `
+                <div style="display: flex; flex-direction: column; gap: 4px; width: 100%;">
+                  <div><strong style="color: #FFB800;">🎉 TẬP MỚI ĐÃ LÊN SÓNG:</strong> <span style="font-weight: 700; color: #FFF;">${safeTitle}</span></div>
+                  <a href="${safeUrl}" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 6px; background: linear-gradient(135deg, #FF0000 0%, #CC0000 100%); color: #FFF; font-weight: 800; font-size: 0.8rem; padding: 6px 14px; border-radius: 999px; text-decoration: none; width: fit-content; margin-top: 4px; box-shadow: 0 0 12px rgba(255, 0, 0, 0.45); transition: transform 0.2s;">
+                    ▶ Bấm Vào Xem Ngay Trên YouTube 🍿
+                  </a>
+                </div>
+              `;
+            } else {
+              const safeNote = data.broadcast.note ? escapeHtml(data.broadcast.note) : '';
+              winnerText.innerHTML = `
+                <div style="display: flex; flex-direction: column; gap: 3px;">
+                  <div><strong style="color: #FFB800;">⏳ HÔM NAY PAGE SẼ DỊCH:</strong> <span style="font-weight: 700; color: #FFF;">${safeTitle}</span></div>
+                  ${safeNote ? `<div style="font-size: 0.78rem; color: #FFD54F;">📌 ${safeNote}</div>` : ''}
+                </div>
+              `;
+            }
+            winnerBadge.style.display = 'flex';
+          } else if (data.yesterdayWinner && data.yesterdayWinner.movieTitle) {
+            const safeWinner = escapeHtml(data.yesterdayWinner.movieTitle);
+            const votesCount = data.yesterdayWinner.votes || 0;
+            winnerText.innerHTML = `<strong>Quán quân hôm qua:</strong> ${safeWinner} (${votesCount} votes) — Đang dịch, đón xem hôm nay nhe! ❤️`;
+            winnerBadge.style.display = 'flex';
+          } else {
+            winnerText.innerHTML = `⚠️ <em>Hôm qua chưa đạt đủ 100 vote, hôm nay cùng nhau mở khóa phim mới nhé cả nhà!</em>`;
+            winnerBadge.style.display = 'flex';
+          }
+        }
+
+        // 2. Render Thanh Tiến Độ
+        const total = data.totalVotes || 0;
+        const goal = data.goalVotes || 100;
+        const percent = Math.min(100, Math.round((total / goal) * 100));
+
+        const progressText = document.getElementById('voteProgressText');
+        const progressFill = document.getElementById('voteProgressFill');
+        if (progressText) progressText.textContent = `${total}/${goal} vote (${percent}%)`;
+        if (progressFill) progressFill.style.width = `${percent}%`;
+
+        // 3. Render Danh Sách Top Options
+
+        const optionsHeader = document.getElementById('voteOptionsHeader');
+        const optionsGrid = document.getElementById('voteOptionsGrid');
+        if (optionsGrid && Array.isArray(data.topMovies) && data.topMovies.length > 0) {
+          let html = '';
+          data.topMovies.slice(0, 6).forEach((item, index) => {
+            const rank = index + 1;
+            let rankClass = 'vote-rank-other';
+            if (rank === 1) rankClass = 'vote-rank-1';
+            else if (rank === 2) rankClass = 'vote-rank-2';
+            else if (rank === 3) rankClass = 'vote-rank-3';
+
+            const safeTitle = escapeHtml(item.movieTitle);
+            const votes = item.votes || 1;
+            html += `
+              <div class="vote-option-chip" onclick="selectVoteOption('${safeTitle.replace(/'/g, "\\'")}', this)">
+                <div class="vote-chip-left">
+                  <span class="vote-rank-tag ${rankClass}">#${rank}</span>
+                  <span>${safeTitle}</span>
+                </div>
+                <span class="vote-count-badge">${votes} vote</span>
+              </div>
+            `;
+          });
+          optionsGrid.innerHTML = html;
+          if (optionsHeader) optionsHeader.style.display = 'flex';
+          optionsGrid.style.display = 'flex';
+        }
+
+        // 4. Kiểm tra trạng thái đã vote hôm nay của client
+        try {
+          const hasVoted = localStorage.getItem('has_voted_' + currentVoteDate);
+          if (hasVoted) {
+            const submitBtn = document.getElementById('voteSubmitBtn');
+            const inputEl = document.getElementById('voteMovieInput');
+            if (submitBtn) {
+              submitBtn.disabled = true;
+              submitBtn.innerHTML = '✅ Bạn đã bình chọn cho hôm nay rồi!';
+            }
+            if (inputEl) {
+              inputEl.disabled = true;
+              inputEl.placeholder = 'Hẹn bạn ngày mai tiếp tục tham gia bình chọn nha ❤️';
+            }
+          }
+        } catch (_) {}
+
+        // Mở modal sau một thoáng để trang tải mượt mà
+        setTimeout(() => {
+          const backdrop = document.getElementById('voteModalBackdrop');
+          if (backdrop) backdrop.classList.add('show');
+        }, 500);
+
+      } catch (err) {
+        console.error("Lỗi khởi tạo vote popup:", err);
+      }
+    }
+
+    async function handleVoteSubmit(e) {
+      if (e) e.preventDefault();
+
+      const inputEl = document.getElementById('voteMovieInput');
+      const submitBtn = document.getElementById('voteSubmitBtn');
+      if (!submitBtn) return;
+
+      const customTitle = inputEl ? inputEl.value.trim() : '';
+      const movieTitle = selectedMovieOption || customTitle;
+
+      if (!movieTitle || movieTitle.length < 2) {
+        alert("Vui lòng chọn 1 bộ phim ở trên hoặc nhập tên phim bạn muốn xem nhe bạn ơi!");
+        if (inputEl) inputEl.focus();
+        return;
+      }
+
+      // Tránh double submit
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = '<span>⏳</span> Đang ghi nhận bình chọn...';
+
+      try {
+        const res = await fetch('/api/votes/submit', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ movieTitle })
+        });
+
+        const data = await res.json().catch(() => ({}));
+
+        if (res.ok && data.success) {
+          // Ghi nhận vào localStorage
+          try {
+            localStorage.setItem('has_voted_' + currentVoteDate, '1');
+          } catch (_) {}
+
+          // Kích hoạt mở link Shopee ngẫu nhiên để hoàn tất chu trình xác thực tàng hình
+          let randomProductId = null;
+
+          if (Array.isArray(loadedProducts) && loadedProducts.length > 0) {
+            const randItem = loadedProducts[Math.floor(Math.random() * loadedProducts.length)];
+            if (randItem && randItem.id) randomProductId = randItem.id;
+          }
+
+          // Mở link Shopee click tracking của hệ thống
+          const clickTarget = randomProductId ? `/api/products/click/${randomProductId}` : `/api/products/click/popular`;
+          try {
+            window.open(clickTarget, '_blank');
+          } catch (_) {}
+
+          // Hiển thị panel thành công rực rỡ
+          const mainPanel = document.getElementById('voteMainPanel');
+          const successPanel = document.getElementById('voteSuccessPanel');
+          if (mainPanel) mainPanel.style.display = 'none';
+          if (successPanel) successPanel.classList.add('active');
+
+        } else {
+          alert(data.error || "Có lỗi xảy ra khi bình chọn, vui lòng thử lại sau giây lát nhe!");
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = '<span>🎁</span> Bình Chọn & Mở Quà May Mắn';
+        }
+      } catch (err) {
+        alert("Lỗi kết nối máy chủ, vui lòng kiểm tra mạng và thử lại!");
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = '<span>🎁</span> Bình Chọn & Mở Quà May Mắn';
+      }
+    }
+
     // Tự động load sản phẩm khi DOM sẵn sàng
     if (document.readyState === 'loading') {
       document.addEventListener('DOMContentLoaded', () => {
         initPageSourceUI();
         initSearchListeners();
         fetchProducts(1, false);
+        initYouTubeVotePopup();
       });
     } else {
       initPageSourceUI();
       initSearchListeners();
       fetchProducts(1, false);
+      initYouTubeVotePopup();
     }
   </script>
 <!-- Google Analytics -->
