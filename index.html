@@ -2212,6 +2212,7 @@
 
     // === LOGIC POPUP BÌNH CHỌN PHIM NGUỒN YOUTUBE (?source=youtube) ===
     let currentVoteDate = new Date().toISOString().slice(0, 10);
+    let currentCycleNumber = 1;
     const isYouTubeSource = currentSource === 'youtube';
     let selectedMovieOption = null;
 
@@ -2270,7 +2271,7 @@
         if (!data.success) return;
 
         currentVoteDate = data.date || currentVoteDate;
-        let currentCycleNumber = data.cycleNumber || 1;
+        currentCycleNumber = data.cycleNumber || 1;
 
         // 1. Render Trạng Thái Phát Sóng hoặc Top 3 Đợt Trước
         const winnerBadge = document.getElementById('voteWinnerBadge');
@@ -2370,10 +2371,20 @@
           optionsGrid.style.display = 'flex';
         }
 
-        // 4. Kiểm tra trạng thái đã vote ở đợt này của client
+        // 4. Kiểm tra trạng thái đã vote ở đợt này của client (cả Server IP check lẫn LocalStorage)
         try {
-          const hasVoted = localStorage.getItem('has_voted_cycle_' + currentCycleNumber);
-          if (hasVoted) {
+          const hasVotedServer = Boolean(data.hasVoted);
+          const hasVotedLocal = Boolean(
+            localStorage.getItem('has_voted_cycle_' + currentCycleNumber) ||
+            localStorage.getItem('has_voted_' + currentVoteDate)
+          );
+
+          if (hasVotedServer || hasVotedLocal) {
+            try {
+              localStorage.setItem('has_voted_cycle_' + currentCycleNumber, '1');
+              localStorage.setItem('has_voted_' + currentVoteDate, '1');
+            } catch (_) {}
+
             const submitBtn = document.getElementById('voteSubmitBtn');
             const inputEl = document.getElementById('voteMovieInput');
             if (submitBtn) {
@@ -2428,13 +2439,21 @@
         const data = await res.json().catch(() => ({}));
 
         if (res.ok && data.success) {
-          // Ghi nhận vào localStorage
+          // Ghi nhận vào localStorage cả theo ngày và theo đợt
           try {
             localStorage.setItem('has_voted_' + currentVoteDate, '1');
-            if (typeof currentCycleNumber !== 'undefined') {
-              localStorage.setItem('has_voted_cycle_' + currentCycleNumber, '1');
-            }
+            localStorage.setItem('has_voted_cycle_' + currentCycleNumber, '1');
           } catch (_) {}
+
+          // Khóa ngay lập tức nút bấm và input để không bị sáng lại khi quay lại form
+          if (submitBtn) {
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = `✅ Bạn đã bình chọn ở Đợt #${currentCycleNumber} rồi!`;
+          }
+          if (inputEl) {
+            inputEl.disabled = true;
+            inputEl.placeholder = 'Hẹn bạn ở đợt bình chọn tiếp theo nha ❤️';
+          }
 
           // Kích hoạt mở link Shopee ngẫu nhiên để hoàn tất chu trình xác thực tàng hình
           let randomProductId = null;
