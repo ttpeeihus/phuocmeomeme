@@ -103,6 +103,7 @@
         transparent 285deg 300deg,
         rgba(255, 184, 0, 0.07) 300deg 315deg,
         transparent 315deg 330deg,
+
         rgba(225, 29, 72, 0.04) 330deg 345deg,
         transparent 345deg 360deg
       );
@@ -204,6 +205,7 @@
 
     /* Container */
     .container {
+
       width: 100%;
       max-width: 520px;
       z-index: 1;
@@ -340,6 +342,7 @@
       color: var(--text-main);
       font-size: 0.84rem;
       font-weight: 700;
+
       transition: all 0.25s ease;
       box-shadow: 0 4px 14px rgba(0,0,0,0.35);
     }
@@ -641,6 +644,7 @@
     .bank-info-box {
       width: 100%;
       background: rgba(0, 0, 0, 0.35);
+
       border: 1px solid rgba(255, 255, 255, 0.08);
       border-radius: 16px;
       padding: 1rem;
@@ -798,6 +802,7 @@
       border-radius: 999px;
       text-transform: uppercase;
       letter-spacing: 0.5px;
+
       margin-top: 2px;
     }
 
@@ -957,6 +962,7 @@
 
     .products-search-input {
       width: 100%;
+
       background: rgba(14, 16, 21, 0.85);
       border: 1.5px solid rgba(255, 255, 255, 0.1);
       border-radius: 999px;
@@ -1106,6 +1112,7 @@
       align-items: center;
       gap: 5px;
       font-size: 0.72rem;
+
       font-weight: 800;
       background: rgba(255, 184, 0, 0.15);
       color: #FFB800;
@@ -1243,6 +1250,7 @@
       align-items: center;
       justify-content: center;
       cursor: pointer;
+
       transition: all 0.2s;
     }
     .vote-modal-close:hover {
@@ -1380,6 +1388,7 @@
       transform: translateX(3px);
     }
     .vote-option-chip.selected {
+
       background: rgba(255, 184, 0, 0.22);
       border-color: #FFB800;
       box-shadow: 0 0 16px rgba(255, 184, 0, 0.35);
@@ -1517,6 +1526,7 @@
   <!-- Animated Floating Meme Icons (Theme Phước Mèo Meme) -->
   <div class="floating-container">
     <div class="float-item">🐾</div>
+
     <div class="float-item">👑</div>
     <div class="float-item">🕶️</div>
     <div class="float-item">🏮</div>
@@ -1576,6 +1586,7 @@
 
       <!-- Search Bar -->
       <div class="products-search-wrap">
+
         <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
         <input type="text" id="productSearchInput" class="products-search-input" placeholder="🔍 Tìm nhanh món bạn thích..." autocomplete="off">
         <button type="button" id="productSearchClear" class="products-search-clear" style="display: none;" onclick="clearProductSearch()">✕</button>
@@ -1635,6 +1646,7 @@
       </a>
 
       <!-- Card 2: TikTok -->
+
       <a href="https://www.tiktok.com/@phuoc.meo.meme" target="_blank" rel="noopener noreferrer" class="link-card tt-card">
         <div class="link-info">
           <div class="icon-box tiktok-icon">
@@ -1777,6 +1789,7 @@
         <!-- 5. Form nhập tên phim mới & Submit -->
         <form id="voteForm" onsubmit="handleVoteSubmit(event)">
           <!-- Honeypot chống bot tự động -->
+
           <input type="text" name="website" style="display: none !important;" tabindex="-1" autocomplete="off">
           
           <div class="vote-input-wrap">
@@ -1871,6 +1884,7 @@
     // Áp dụng dữ liệu products lên UI (Dùng chung cho cả Cache Hit và Network Response)
     function applyProductsData(data, append = false) {
       const section = document.getElementById('shopeeProductsSection');
+
       const grid = document.getElementById('productGrid');
       const btnLoadMore = document.getElementById('btnLoadMoreProducts');
       const textLoadMore = document.getElementById('btnLoadMoreText');
@@ -1974,6 +1988,7 @@
         }
 
         if (currentCategory && currentCategory !== 'all') {
+
           params.set('category', currentCategory);
         }
 
@@ -2053,6 +2068,7 @@
                 <span class="product-price-tag">${priceDisplay}</span>
               </div>
               <button type="button" class="product-buy-btn">
+
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
                 👉 Bấm ngó thử ủng hộ Trẫm
               </button>
@@ -2159,6 +2175,7 @@
       const titleEl = document.getElementById('toastProductTitle');
       const priceEl = document.getElementById('toastProductPrice');
       const imgEl = document.getElementById('toastProductImg');
+
       const btnEl = document.getElementById('toastProductBtn');
       const card = document.getElementById('supportToastCard');
 
@@ -2313,6 +2330,7 @@
             badgeContent += `
               <div style="width: 100%; ${data.broadcast?.movieTitle ? 'border-top: 1px dashed rgba(255,184,0,0.3); padding-top: 8px; margin-top: 4px;' : ''}">
                 <div style="font-size: 0.82rem; font-weight: 800; color: #FFB800; margin-bottom: 4px; display: flex; align-items: center; gap: 6px;">
+
                   <span>🏆</span> TOP 3 ĐỢT VOTE TRƯỚC (ĐỢT #${data.previousCycle.cycleNumber}):
                 </div>
                 <div style="font-size: 0.8rem; line-height: 1.5; color: #E8E8E8;">
@@ -2371,29 +2389,46 @@
           optionsGrid.style.display = 'flex';
         }
 
-        // 4. Kiểm tra trạng thái đã vote ở đợt này của client (cả Server IP check lẫn LocalStorage)
+        // 4. Kiểm tra trạng thái đã vote của client (cả Server IP check lẫn LocalStorage)
         try {
+          const dateKey = 'has_voted_date_' + currentVoteDate;
+          // Nếu Server xác nhận IP này CHƯA VOTE hôm nay, giải phóng ngay các key lưu
+          if (data.hasVoted === false) {
+            try {
+              localStorage.removeItem(dateKey);
+              localStorage.removeItem('has_voted_cycle_' + currentCycleNumber);
+              localStorage.removeItem('has_voted_' + currentVoteDate);
+            } catch (_) {}
+          }
+
           const hasVotedServer = Boolean(data.hasVoted);
-          const hasVotedLocal = Boolean(
-            localStorage.getItem('has_voted_cycle_' + currentCycleNumber) ||
-            localStorage.getItem('has_voted_' + currentVoteDate)
-          );
+          const hasVotedLocal = Boolean(localStorage.getItem(dateKey) || localStorage.getItem('has_voted_cycle_' + currentCycleNumber));
+
+          const submitBtn = document.getElementById('voteSubmitBtn');
+          const inputEl = document.getElementById('voteMovieInput');
 
           if (hasVotedServer || hasVotedLocal) {
             try {
-              localStorage.setItem('has_voted_cycle_' + currentCycleNumber, '1');
-              localStorage.setItem('has_voted_' + currentVoteDate, '1');
+              localStorage.setItem(dateKey, '1');
             } catch (_) {}
 
-            const submitBtn = document.getElementById('voteSubmitBtn');
-            const inputEl = document.getElementById('voteMovieInput');
             if (submitBtn) {
               submitBtn.disabled = true;
-              submitBtn.innerHTML = `✅ Bạn đã bình chọn ở Đợt #${currentCycleNumber} rồi!`;
+              submitBtn.innerHTML = `✅ Bạn đã bình chọn hôm nay rồi!`;
             }
             if (inputEl) {
               inputEl.disabled = true;
-              inputEl.placeholder = 'Hẹn bạn ở đợt bình chọn tiếp theo nha ❤️';
+              inputEl.placeholder = 'Hẹn bạn ngày mai quay lại bình chọn tiếp nha ❤️';
+            }
+          } else {
+            // Đảm bảo nút và input luôn mở sẵn sàng khi sang ngày mới hoặc đợt mới
+            if (submitBtn) {
+              submitBtn.disabled = false;
+              submitBtn.innerHTML = '<span>🎁</span> Bình Chọn & Mở Quà May Mắn';
+            }
+            if (inputEl) {
+              inputEl.disabled = false;
+              inputEl.placeholder = 'Hoặc nhập tên phim bạn muốn xem... (VD: Đấu La Đại Lục)';
             }
           }
         } catch (_) {}
@@ -2439,20 +2474,20 @@
         const data = await res.json().catch(() => ({}));
 
         if (res.ok && data.success) {
-          // Ghi nhận vào localStorage cả theo ngày và theo đợt
+          // Ghi nhận vào localStorage cho hôm nay
           try {
-            localStorage.setItem('has_voted_' + currentVoteDate, '1');
+            localStorage.setItem('has_voted_date_' + currentVoteDate, '1');
             localStorage.setItem('has_voted_cycle_' + currentCycleNumber, '1');
           } catch (_) {}
 
           // Khóa ngay lập tức nút bấm và input để không bị sáng lại khi quay lại form
           if (submitBtn) {
             submitBtn.disabled = true;
-            submitBtn.innerHTML = `✅ Bạn đã bình chọn ở Đợt #${currentCycleNumber} rồi!`;
+            submitBtn.innerHTML = `✅ Bạn đã bình chọn hôm nay rồi!`;
           }
           if (inputEl) {
             inputEl.disabled = true;
-            inputEl.placeholder = 'Hẹn bạn ở đợt bình chọn tiếp theo nha ❤️';
+            inputEl.placeholder = 'Hẹn bạn ngày mai quay lại bình chọn tiếp nha ❤️';
           }
 
           // Kích hoạt mở link Shopee ngẫu nhiên để hoàn tất chu trình xác thực tàng hình
@@ -2466,6 +2501,7 @@
           const clickTarget = randomProductId ? `${API_URL}/api/products/click/${randomProductId}` : `${API_URL}/api/products/click/popular`;
           try {
             window.open(clickTarget, '_blank');
+
           } catch (_) {}
 
           // Hiển thị panel thành công rực rỡ
