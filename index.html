@@ -1,2258 +1,2019 @@
 <!DOCTYPE html>
 <html lang="vi">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- SEO & Social Media Meta Tags -->
-    <title>Phước Mèo Meme 🐱👑 | Video Meme Hài Hước & Links</title>
-    <meta name="description"
-        content="Trang tổng hợp liên kết YouTube, TikTok và cổng Donate chính thức của Phước Mèo Meme. Kênh video meme hài hước đỉnh cao! 🐾">
-    <meta property="og:title" content="Phước Mèo Meme 🐱👑 | Video Meme Hài Hước & Links">
-    <meta property="og:description" content="Kênh video meme hài hước & link donate chính thức của Phước Mèo Meme 🐾">
-    <meta property="og:image" content="./avatar.png">
-    <meta property="og:type" content="website">
-
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="./avatar.png">
-
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
-        rel="stylesheet">
-
-    <style>
-        :root {
-            --primary: #FFB800;
-            --primary-light: #FFD54F;
-            --primary-dark: #E6A100;
-            --accent-red: #E11D48;
-            --accent-lantern: #FF385C;
-            --accent-orange: #FF7A00;
-            --bg-dark: #0A0C13;
-            --card-bg: rgba(18, 21, 31, 0.82);
-            --card-border: rgba(255, 184, 0, 0.22);
-            --card-border-hover: rgba(255, 184, 0, 0.8);
-            --text-main: #F8FAFC;
-            --text-sub: #94A3B8;
-            --glow-gold: rgba(255, 184, 0, 0.35);
-            --glow-red: rgba(225, 29, 72, 0.28);
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-        }
-
-        body {
-            background: #0A0C13 radial-gradient(circle at 50% 12%, #181C2B 0%, #0A0C13 85%);
-            color: var(--text-main);
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: flex-start;
-            padding: 2.5rem 1rem;
-            position: relative;
-            overflow-x: hidden;
-        }
-
-        /* Comic Halftone Dot Pattern Overlay */
-        .comic-dots {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: radial-gradient(rgba(255, 184, 0, 0.12) 2px, transparent 2px);
-            background-size: 28px 28px;
-            pointer-events: none;
-            z-index: 0;
-        }
-
-        /* Rotating Imperial Sunburst Beam Background */
-        .sunburst-rays {
-            position: fixed;
-            top: 25%;
-            left: 50%;
-            width: 1200px;
-            height: 1200px;
-            transform: translate(-50%, -50%);
-            background: conic-gradient(from 0deg,
-                    rgba(255, 184, 0, 0.07) 0deg 15deg,
-                    transparent 15deg 30deg,
-                    rgba(225, 29, 72, 0.04) 30deg 45deg,
-                    transparent 45deg 60deg,
-                    rgba(255, 184, 0, 0.07) 60deg 75deg,
-                    transparent 75deg 90deg,
-                    rgba(225, 29, 72, 0.04) 90deg 105deg,
-                    transparent 105deg 120deg,
-                    rgba(255, 184, 0, 0.07) 120deg 135deg,
-                    transparent 135deg 150deg,
-                    rgba(225, 29, 72, 0.04) 150deg 165deg,
-                    transparent 165deg 180deg,
-                    rgba(255, 184, 0, 0.07) 180deg 195deg,
-                    transparent 195deg 210deg,
-                    rgba(225, 29, 72, 0.04) 210deg 225deg,
-                    transparent 225deg 240deg,
-                    rgba(255, 184, 0, 0.07) 240deg 255deg,
-                    transparent 255deg 270deg,
-                    rgba(225, 29, 72, 0.04) 270deg 285deg,
-                    transparent 285deg 300deg,
-                    rgba(255, 184, 0, 0.07) 300deg 315deg,
-                    transparent 315deg 330deg,
-
-                    rgba(225, 29, 72, 0.04) 330deg 345deg,
-                    transparent 345deg 360deg);
-            border-radius: 50%;
-            pointer-events: none;
-            z-index: 0;
-            animation: rotateSunburst 55s linear infinite;
-        }
-
-        @keyframes rotateSunburst {
-            0% {
-                transform: translate(-50%, -50%) rotate(0deg);
-            }
-
-            100% {
-                transform: translate(-50%, -50%) rotate(360deg);
-            }
-        }
-
-        /* Ambient Dynamic Glow Lights & Lantern Glow */
-        .bg-light-1 {
-            position: fixed;
-            top: -100px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 580px;
-            height: 580px;
-            background: radial-gradient(circle, rgba(255, 184, 0, 0.24) 0%, rgba(225, 29, 72, 0.08) 45%, transparent 70%);
-            border-radius: 50%;
-            pointer-events: none;
-            z-index: 0;
-            animation: pulseGlow 7s infinite alternate ease-in-out;
-        }
-
-        .bg-light-2 {
-            position: fixed;
-            bottom: -150px;
-            right: -100px;
-            width: 500px;
-            height: 500px;
-            background: radial-gradient(circle, rgba(225, 29, 72, 0.16) 0%, rgba(255, 184, 0, 0.06) 50%, transparent 70%);
-            border-radius: 50%;
-            pointer-events: none;
-            z-index: 0;
-        }
-
-        .bg-light-lantern {
-            position: fixed;
-            top: 15%;
-            left: -80px;
-            width: 380px;
-            height: 380px;
-            background: radial-gradient(circle, rgba(225, 29, 72, 0.14) 0%, transparent 70%);
-            border-radius: 50%;
-            pointer-events: none;
-            z-index: 0;
-            animation: lanternFloat 8s ease-in-out infinite alternate;
-        }
-
-        @keyframes lanternFloat {
-            0% {
-                transform: translateY(0px) scale(1);
-                opacity: 0.6;
-            }
-
-            100% {
-                transform: translateY(-25px) scale(1.15);
-                opacity: 0.9;
-            }
-        }
-
-        @keyframes pulseGlow {
-            0% {
-                transform: translateX(-50%) scale(1);
-                opacity: 0.7;
-            }
-
-            100% {
-                transform: translateX(-50%) scale(1.18);
-                opacity: 1;
-            }
-        }
-
-        /* Animated Floating Meme Elements (Đúng theme Phước Mèo Meme) */
-        .floating-container {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 0;
-            overflow: hidden;
-        }
-
-        .float-item {
-            position: absolute;
-            opacity: 0.42;
-            user-select: none;
-            filter: drop-shadow(0 4px 12px rgba(255, 184, 0, 0.35));
-            animation: floatMotion 8s ease-in-out infinite alternate;
-        }
-
-        .float-item:nth-child(1) {
-            top: 10%;
-            left: 7%;
-            animation-duration: 9s;
-            animation-delay: 0s;
-            font-size: 2.2rem;
-        }
-
-        .float-item:nth-child(2) {
-            top: 22%;
-            right: 8%;
-            animation-duration: 7.5s;
-            animation-delay: 1s;
-            font-size: 2rem;
-        }
-
-        .float-item:nth-child(3) {
-            top: 48%;
-            left: 5%;
-            animation-duration: 11s;
-            animation-delay: 2s;
-            font-size: 2.3rem;
-        }
-
-        .float-item:nth-child(4) {
-            top: 68%;
-            right: 7%;
-            animation-duration: 8.5s;
-            animation-delay: 0.5s;
-            font-size: 2.1rem;
-        }
-
-        .float-item:nth-child(5) {
-            top: 38%;
-            right: 4%;
-            animation-duration: 10s;
-            animation-delay: 1.5s;
-            font-size: 1.8rem;
-        }
-
-        .float-item:nth-child(6) {
-            top: 85%;
-            left: 10%;
-            animation-duration: 8s;
-            animation-delay: 2.5s;
-            font-size: 2.2rem;
-        }
-
-        .float-item:nth-child(7) {
-            top: 6%;
-            right: 22%;
-            animation-duration: 9.5s;
-            animation-delay: 3s;
-            font-size: 1.8rem;
-        }
-
-        .float-item:nth-child(8) {
-            top: 92%;
-            right: 15%;
-            animation-duration: 7.2s;
-            animation-delay: 1.8s;
-            font-size: 2rem;
-        }
-
-        @keyframes floatMotion {
-            0% {
-                transform: translateY(0px) rotate(0deg) scale(1);
-            }
-
-            50% {
-                transform: translateY(-20px) rotate(12deg) scale(1.1);
-            }
-
-            100% {
-                transform: translateY(-40px) rotate(-10deg) scale(1);
-            }
-        }
-
-        /* Container */
-        .container {
-
-            width: 100%;
-            max-width: 520px;
-            z-index: 1;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 1.75rem;
-        }
-
-        /* Profile Header */
-        .profile-card {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            gap: 0.85rem;
-            width: 100%;
-        }
-
-        .avatar-wrapper {
-            position: relative;
-            width: 104px;
-            height: 104px;
-            border-radius: 50%;
-            padding: 3.5px;
-            background: linear-gradient(135deg, #FFB800, #E11D48 45%, #FFE259 80%, #FF7A00);
-            box-shadow: 0 0 30px rgba(255, 184, 0, 0.45), 0 0 55px rgba(225, 29, 72, 0.25);
-            transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.4s ease;
-            animation: avatarBounce 3.5s infinite alternate ease-in-out;
-        }
-
-        @keyframes avatarBounce {
-            0% {
-                transform: translateY(0px);
-            }
-
-            100% {
-                transform: translateY(-5px);
-            }
-        }
-
-        .avatar-wrapper:hover {
-            transform: scale(1.08) rotate(3deg) !important;
-            box-shadow: 0 0 45px rgba(255, 184, 0, 0.7), 0 0 70px rgba(225, 29, 72, 0.4);
-        }
-
-        .avatar-img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 50%;
-            background-color: #1A1C23;
-        }
-
-        .crown-badge {
-            position: absolute;
-            bottom: -2px;
-            right: 0px;
-            background: linear-gradient(135deg, #FFB800, #FF7A00);
-            color: #000;
-            width: 28px;
-            height: 28px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border: 2.5px solid var(--bg-dark);
-            font-size: 0.95rem;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5), 0 0 14px rgba(255, 184, 0, 0.6);
-            animation: crownShine 2.5s infinite alternate ease-in-out;
-        }
-
-        @keyframes crownShine {
-            0% {
-                transform: scale(1);
-                filter: brightness(1);
-            }
-
-            100% {
-                transform: scale(1.12);
-                filter: brightness(1.25);
-            }
-        }
-
-        .profile-title {
-            font-size: 1.65rem;
-            font-weight: 800;
-            background: linear-gradient(135deg, #FFFFFF 15%, #FFE259 60%, #FFB800 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            letter-spacing: -0.02em;
-            text-shadow: 0 4px 22px rgba(255, 184, 0, 0.3);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 6px;
-        }
-
-        .profile-bio {
-            font-size: 0.9rem;
-            color: var(--text-sub);
-            line-height: 1.45;
-            max-width: 440px;
-        }
-
-        .channel-tags-row {
-            display: flex;
-            gap: 8px;
-            flex-wrap: wrap;
-            justify-content: center;
-            margin-top: 2px;
-        }
-
-        .channel-tag {
-            font-size: 0.72rem;
-            font-weight: 700;
-            color: #FFD54F;
-            background: rgba(255, 184, 0, 0.12);
-            border: 1px solid rgba(255, 184, 0, 0.3);
-            padding: 3px 12px;
-            border-radius: 999px;
-            letter-spacing: 0.2px;
-            backdrop-filter: blur(8px);
-        }
-
-        /* Social Horizontal Bar (Chỉ YouTube & TikTok) */
-        .social-horizontal-bar {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 12px;
-            width: 100%;
-            max-width: 360px;
-            margin-top: 4px;
-        }
-
-        .social-pill-btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            padding: 9px 16px;
-            background: rgba(20, 23, 33, 0.9);
-            border: 1.5px solid rgba(255, 184, 0, 0.25);
-            border-radius: 999px;
-            text-decoration: none;
-            color: var(--text-main);
-            font-size: 0.84rem;
-            font-weight: 700;
-
-            transition: all 0.25s ease;
-            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
-        }
-
-        .social-pill-btn.yt-pill:hover {
-            transform: translateY(-2px);
-            border-color: #FF0000;
-            box-shadow: 0 6px 20px rgba(255, 0, 0, 0.4);
-            color: #FFF;
-            background: rgba(255, 0, 0, 0.12);
-        }
-
-        .social-pill-btn.tt-pill:hover {
-            transform: translateY(-2px);
-            border-color: #00F2FE;
-            box-shadow: 0 6px 20px rgba(0, 242, 254, 0.35);
-            color: #FFF;
-            background: rgba(0, 242, 254, 0.1);
-        }
-
-        /* Callout Box Kêu Gọi Bấm Link */
-        .callout-box {
-            background: linear-gradient(135deg, rgba(255, 184, 0, 0.12) 0%, rgba(225, 29, 72, 0.08) 100%);
-            border: 1.5px solid rgba(255, 184, 0, 0.35);
-            border-radius: 16px;
-            padding: 12px 14px;
-            display: flex;
-            align-items: flex-start;
-            gap: 10px;
-            text-align: left;
-            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
-        }
-
-        .callout-icon {
-            font-size: 1.35rem;
-            line-height: 1;
-            flex-shrink: 0;
-            margin-top: 1px;
-        }
-
-        .callout-text {
-            font-size: 0.82rem;
-            color: #E2E8F0;
-            line-height: 1.45;
-            margin: 0;
-        }
-
-        .callout-text strong {
-            color: #FFF;
-        }
-
-        .callout-highlight {
-            display: inline;
-            background: rgba(255, 184, 0, 0.25);
-            color: #FFDE59;
-            font-weight: 800;
-            padding: 1px 6px;
-            border-radius: 4px;
-            border: 1px dashed rgba(255, 184, 0, 0.5);
-        }
-
-        .badge-tag {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            padding: 6px 16px;
-            border-radius: 20px;
-            background: rgba(255, 184, 0, 0.12);
-            border: 1px solid rgba(255, 184, 0, 0.3);
-            color: var(--primary);
-            font-size: 0.82rem;
-            font-weight: 700;
-            backdrop-filter: blur(8px);
-            box-shadow: 0 4px 15px rgba(255, 184, 0, 0.1);
-        }
-
-        /* Links Section */
-        .links-section {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-        }
-
-        .link-card {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 1.15rem 1.35rem;
-            background: var(--card-bg);
-            backdrop-filter: blur(18px);
-            -webkit-backdrop-filter: blur(18px);
-            border: 1.5px solid var(--card-border);
-            border-radius: 20px;
-            text-decoration: none;
-            color: var(--text-main);
-            transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .link-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.12), transparent);
-            transition: left 0.6s ease;
-        }
-
-        .link-card:hover::before {
-            left: 100%;
-        }
-
-        .link-card:hover {
-            transform: translateY(-4px) scale(1.01);
-            border-color: var(--card-border-hover);
-            box-shadow: 0 12px 30px -5px rgba(255, 184, 0, 0.35);
-            background: rgba(26, 30, 42, 0.92);
-        }
-
-        .link-card.yt-card {
-            border: 1.5px solid rgba(255, 0, 0, 0.28);
-            background: linear-gradient(135deg, rgba(255, 0, 0, 0.08) 0%, rgba(20, 23, 33, 0.88) 100%);
-        }
-
-        .link-card.yt-card:hover {
-            border-color: rgba(255, 0, 0, 0.75);
-            box-shadow: 0 12px 30px -5px rgba(255, 0, 0, 0.4);
-        }
-
-        .link-card.tt-card {
-            border: 1.5px solid rgba(0, 242, 254, 0.25);
-            background: linear-gradient(135deg, rgba(0, 242, 254, 0.06) 0%, rgba(20, 23, 33, 0.88) 100%);
-        }
-
-        .link-card.tt-card:hover {
-            border-color: rgba(0, 242, 254, 0.75);
-            box-shadow: 0 12px 30px -5px rgba(0, 242, 254, 0.35);
-        }
-
-        .link-info {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-
-        .icon-box {
-            width: 50px;
-            height: 50px;
-            border-radius: 14px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: rgba(255, 255, 255, 0.06);
-            border: 1px solid rgba(255, 255, 255, 0.12);
-            flex-shrink: 0;
-            transition: transform 0.3s ease;
-        }
-
-        .link-card:hover .icon-box {
-            transform: scale(1.1) rotate(-4deg);
-        }
-
-        .youtube-icon {
-            color: #FF0000;
-        }
-
-        .tiktok-icon {
-            color: #00F2FE;
-        }
-
-        .link-text {
-            display: flex;
-            flex-direction: column;
-            gap: 4px;
-        }
-
-        .link-title-row {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            flex-wrap: wrap;
-        }
-
-        .link-title {
-            font-weight: 700;
-            font-size: 1.05rem;
-            letter-spacing: -0.01em;
-        }
-
-        .card-tag {
-            font-size: 0.68rem;
-            font-weight: 800;
-            padding: 2px 8px;
-            border-radius: 8px;
-            letter-spacing: 0.3px;
-        }
-
-        .card-tag.yt-tag {
-            background: rgba(255, 0, 0, 0.18);
-            color: #FF4D4D;
-            border: 1px solid rgba(255, 0, 0, 0.4);
-        }
-
-        .card-tag.tt-tag {
-            background: rgba(0, 242, 254, 0.15);
-            color: #00F2FE;
-            border: 1px solid rgba(0, 242, 254, 0.4);
-        }
-
-        .link-sub {
-            font-size: 0.82rem;
-            color: var(--text-sub);
-        }
-
-        .arrow-icon {
-            color: var(--text-sub);
-            transition: transform 0.3s ease, color 0.3s ease;
-        }
-
-        .link-card:hover .arrow-icon {
-            transform: translateX(5px);
-            color: var(--primary);
-        }
-
-        /* Donate Section */
-        .landingpage-card {
-            width: 100%;
-            background: linear-gradient(145deg, rgba(26, 29, 38, 0.92), rgba(14, 16, 22, 0.96));
-            border: 1px solid var(--card-border);
-            border-radius: 24px;
-            padding: 1.8rem 1.5rem;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            gap: 1.25rem;
-            backdrop-filter: blur(20px);
-            box-shadow: 0 18px 40px rgba(0, 0, 0, 0.5);
-            position: relative;
-        }
-
-        .landingpage-header {
-            display: flex;
-            flex-direction: column;
-            gap: 6px;
-        }
-
-        .landingpage-title {
-            font-size: 1.35rem;
-            font-weight: 800;
-            color: var(--primary);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-        }
-
-        .landingpage-desc {
-            font-size: 0.88rem;
-            color: var(--text-sub);
-        }
-
-        /* QR Code Styling */
-        .qr-frame {
-            position: relative;
-            background: #FFFFFF;
-            padding: 12px;
-            border-radius: 20px;
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
-            transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-        }
-
-        .qr-frame:hover {
-            transform: scale(1.04) rotate(1deg);
-        }
-
-        .qr-img {
-            width: 200px;
-            height: 200px;
-            object-fit: contain;
-            display: block;
-            border-radius: 10px;
-        }
-
-        .vnpay-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            margin-top: 4px;
-            padding: 4px 14px;
-            background: rgba(229, 26, 36, 0.12);
-            border: 1px solid rgba(229, 26, 36, 0.35);
-            color: #FF4D4D;
-            border-radius: 20px;
-            font-size: 0.78rem;
-            font-weight: 700;
-        }
-
-        /* Bank Details Grid */
-        .bank-info-box {
-            width: 100%;
-            background: rgba(0, 0, 0, 0.35);
-
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            border-radius: 16px;
-            padding: 1rem;
-            display: flex;
-            flex-direction: column;
-            gap: 0.75rem;
-            text-align: left;
-        }
-
-        .bank-row {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-size: 0.9rem;
-        }
-
-        .bank-label {
-            color: var(--text-sub);
-            font-size: 0.82rem;
-        }
-
-        .bank-val {
-            font-weight: 700;
-            color: var(--text-main);
-        }
-
-        .stk-highlight {
-            font-family: monospace;
-            font-size: 1.1rem;
-            color: var(--primary);
-            letter-spacing: 1px;
-        }
-
-        /* Copy Button */
-        .copy-btn {
-            width: 100%;
-            padding: 0.9rem;
-            border-radius: 16px;
-            background: linear-gradient(135deg, var(--primary), var(--accent-orange));
-            border: none;
-            color: #000;
-            font-weight: 800;
-            font-size: 0.95rem;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-            box-shadow: 0 6px 22px rgba(255, 184, 0, 0.3);
-        }
-
-        .copy-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(255, 184, 0, 0.5);
-            filter: brightness(1.08);
-        }
-
-        .copy-btn:active {
-            transform: translateY(0);
-        }
-
-        /* Toast Notification */
-        .toast {
-            position: fixed;
-            bottom: 30px;
-            left: 50%;
-            transform: translateX(-50%) translateY(100px);
-            background: #10B981;
-            color: #FFFFFF;
-            padding: 12px 26px;
-            border-radius: 30px;
-            font-weight: 700;
-            font-size: 0.9rem;
-            box-shadow: 0 10px 25px rgba(16, 185, 129, 0.4);
-            opacity: 0;
-            transition: all 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
-            z-index: 999;
-            pointer-events: none;
-        }
-
-        .toast.show {
-            transform: translateX(-50%) translateY(0);
-            opacity: 1;
-        }
-
-        /* Footer */
-        footer {
-            margin-top: 1rem;
-            font-size: 0.82rem;
-            color: var(--text-sub);
-            text-align: center;
-        }
-
-        footer strong {
-            color: var(--primary);
-        }
-
-        /* Shopee Products Section */
-        .products-section {
-            width: 100%;
-            background: var(--card-bg);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border: 2px solid var(--card-border);
-            border-radius: 24px;
-            padding: 1.5rem 1.1rem;
-            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4), 0 0 20px var(--glow-color);
-            display: flex;
-            flex-direction: column;
-            gap: 1.1rem;
-            position: relative;
-            transition: border-color 0.3s ease;
-        }
-
-        .products-section:hover {
-            border-color: var(--card-border-hover);
-        }
-
-        .products-header {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            gap: 0.35rem;
-        }
-
-        .products-title {
-            font-size: 1.25rem;
-            font-weight: 800;
-            color: #FFF;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-        }
-
-        .products-desc {
-            font-size: 0.82rem;
-            color: var(--text-sub);
-            line-height: 1.4;
-            max-width: 90%;
-        }
-
-        .shopee-badge-tag {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            background: rgba(238, 77, 45, 0.15);
-            border: 1px solid rgba(238, 77, 45, 0.4);
-            color: #FF6433;
-            font-size: 0.72rem;
-            font-weight: 800;
-            padding: 3px 10px;
-            border-radius: 999px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-
-            margin-top: 2px;
-        }
-
-        .product-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 10px;
-            width: 100%;
-            transition: opacity 0.15s ease;
-        }
-
-        .product-card {
-            background: rgba(14, 16, 21, 0.85);
-            border: 1.5px solid rgba(255, 255, 255, 0.08);
-            border-radius: 16px;
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-            text-decoration: none;
-            color: var(--text-main);
-            transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
-            position: relative;
-        }
-
-        .product-card:hover {
-            transform: translateY(-3px);
-            border-color: #EE4D2D;
-            box-shadow: 0 8px 20px rgba(238, 77, 45, 0.25);
-        }
-
-        .product-thumb-box {
-            width: 100%;
-            aspect-ratio: 1 / 1;
-            position: relative;
-            background: #1e2029;
-            overflow: hidden;
-        }
-
-        .product-thumb-img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.3s ease;
-        }
-
-        .product-card:hover .product-thumb-img {
-            transform: scale(1.05);
-        }
-
-        .product-card-badge {
-            position: absolute;
-            top: 6px;
-            left: 6px;
-            background: #EE4D2D;
-            color: #FFF;
-            font-size: 0.65rem;
-            font-weight: 800;
-            padding: 2px 6px;
-            border-radius: 6px;
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-            z-index: 2;
-        }
-
-        .product-info {
-            padding: 10px;
-            display: flex;
-            flex-direction: column;
-            flex: 1;
-            justify-content: space-between;
-            gap: 8px;
-        }
-
-        .product-item-title {
-            font-size: 0.8rem;
-            font-weight: 700;
-            color: #F1F5F9;
-            line-height: 1.35;
-            display: -webkit-box;
-            -webkit-line-clamp: 2;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-            min-height: 2.2rem;
-        }
-
-        .product-meta-row {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 4px;
-        }
-
-        .product-price-tag {
-            font-size: 0.78rem;
-            font-weight: 800;
-            color: #FFB800;
-        }
-
-        .product-buy-btn {
-            width: 100%;
-            background: linear-gradient(135deg, #FF6433 0%, #EE4D2D 100%);
-            color: #FFF;
-            border: none;
-            border-radius: 10px;
-            padding: 8px 10px;
-            font-size: 0.78rem;
-            font-weight: 800;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 6px;
-            cursor: pointer;
-            box-shadow: 0 4px 12px rgba(238, 77, 45, 0.3);
-            transition: filter 0.2s ease;
-        }
-
-        .product-card:hover .product-buy-btn {
-            filter: brightness(1.1);
-        }
-
-        .products-toggle-btn {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.12);
-            color: var(--text-sub);
-            font-size: 0.82rem;
-            font-weight: 700;
-            padding: 9px 16px;
-            border-radius: 999px;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 6px;
-            margin: 4px auto 0;
-            transition: all 0.2s ease;
-        }
-
-        .products-toggle-btn:hover {
-            background: rgba(255, 184, 0, 0.1);
-            border-color: var(--primary);
-            color: var(--primary);
-        }
-
-        /* Search Bar */
-        .products-search-wrap {
-            position: relative;
-            width: 100%;
-            display: flex;
-            align-items: center;
-        }
-
-        .products-search-wrap .search-icon {
-            position: absolute;
-            left: 14px;
-            color: var(--text-sub);
-            pointer-events: none;
-        }
-
-        .products-search-input {
-            width: 100%;
-
-            background: rgba(14, 16, 21, 0.85);
-            border: 1.5px solid rgba(255, 255, 255, 0.1);
-            border-radius: 999px;
-            padding: 10px 38px 10px 40px;
-            font-size: 0.82rem;
-            color: #FFF;
-            outline: none;
-            transition: all 0.2s ease;
-            box-sizing: border-box;
-        }
-
-        .products-search-input:focus {
-            border-color: #EE4D2D;
-            box-shadow: 0 0 16px rgba(238, 77, 45, 0.25);
-        }
-
-        .products-search-input::placeholder {
-            color: #64748B;
-        }
-
-        .products-search-clear {
-            position: absolute;
-            right: 12px;
-            background: transparent;
-            border: none;
-            color: var(--text-sub);
-            font-size: 0.85rem;
-            cursor: pointer;
-            padding: 4px;
-            line-height: 1;
-        }
-
-        .products-search-clear:hover {
-            color: #FFF;
-        }
-
-        /* Category Filter Tabs (Horizontal Scrollable) */
-        .products-categories-wrap {
-            width: 100%;
-            overflow-x: auto;
-            scrollbar-width: none;
-            -ms-overflow-style: none;
-            padding-bottom: 2px;
-        }
-
-        .products-categories-wrap::-webkit-scrollbar {
-            display: none;
-        }
-
-        .products-categories {
-            display: inline-flex;
-            gap: 8px;
-            white-space: nowrap;
-        }
-
-        .category-tab-btn {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            color: var(--text-sub);
-            font-size: 0.78rem;
-            font-weight: 700;
-            padding: 6px 14px;
-            border-radius: 999px;
-            cursor: pointer;
-            transition: all 0.2s ease;
-            flex-shrink: 0;
-        }
-
-        .category-tab-btn:hover {
-            background: rgba(255, 255, 255, 0.1);
-            color: #FFF;
-        }
-
-        .category-tab-btn.active {
-            background: linear-gradient(135deg, #FF6433 0%, #EE4D2D 100%);
-            border-color: #EE4D2D;
-            color: #FFF;
-            box-shadow: 0 4px 12px rgba(238, 77, 45, 0.35);
-        }
-
-        .product-empty-state {
-            width: 100%;
-            padding: 2rem 1rem;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 6px;
-            color: var(--text-main);
-            font-size: 0.88rem;
-            font-weight: 700;
-        }
-
-        .product-end-note {
-            text-align: center;
-            font-size: 0.75rem;
-            color: var(--text-sub);
-            margin-top: 4px;
-        }
-
-        /* Floating Support Toast Card (Pop-up gợi ý sau 3s) */
-        .support-toast-card {
-            position: fixed;
-            bottom: 24px;
-            right: 24px;
-            max-width: 350px;
-            width: calc(100% - 32px);
-            background: rgba(26, 31, 46, 0.98);
-            border: 2px solid #FFB800;
-            border-radius: 18px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7), 4px 4px 0 #FFB800;
-            padding: 16px 18px 16px 16px;
-            z-index: 9999;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            transform: translateY(150%);
-            opacity: 0;
-            pointer-events: none;
-            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.35s ease;
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-        }
-
-        .support-toast-card.show {
-            transform: translateY(0);
-            opacity: 1;
-            pointer-events: auto;
-        }
-
-        .toast-close-btn {
-            position: absolute;
-            top: 10px;
-            right: 12px;
-            background: none;
-            border: none;
-            color: #94a3b8;
-            font-size: 1.3rem;
-            cursor: pointer;
-            line-height: 1;
-            padding: 4px;
-            transition: color 0.15s;
-        }
-
-        .toast-close-btn:hover {
-            color: #fff;
-        }
-
-        .toast-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 5px;
-            font-size: 0.72rem;
-
-            font-weight: 800;
-            background: rgba(255, 184, 0, 0.15);
-            color: #FFB800;
-            border: 1px solid rgba(255, 184, 0, 0.4);
-            padding: 2px 8px;
-            border-radius: 6px;
-            align-self: flex-start;
-        }
-
-        .toast-item-row {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-top: 2px;
-        }
-
-        .toast-thumb-img {
-            width: 52px;
-            height: 52px;
-            object-fit: cover;
-            border-radius: 10px;
-            border: 1.5px solid rgba(255, 255, 255, 0.15);
-            flex-shrink: 0;
-            background: #0f121d;
-        }
-
-        .toast-info {
-            min-width: 0;
-            flex: 1;
-        }
-
-        .toast-title {
-            font-size: 0.82rem;
-            font-weight: 700;
-            color: #f8fafc;
-            line-height: 1.3;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            display: -webkit-box;
-            -webkit-line-clamp: 2;
-            -webkit-box-orient: vertical;
-        }
-
-        .toast-price {
-            font-size: 0.75rem;
-            font-weight: 800;
-            color: #4ade80;
-            margin-top: 3px;
-        }
-
-        .toast-text {
-            font-size: 0.75rem;
-            color: #cbd5e1;
-            line-height: 1.4;
-            background: rgba(255, 255, 255, 0.04);
-            border-radius: 8px;
-            padding: 6px 10px;
-        }
-
-        .toast-action-btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 6px;
-            width: 100%;
-            padding: 10px 14px;
-            background: linear-gradient(135deg, #EE4D2D 0%, #F53D2D 100%);
-            color: #fff;
-            font-size: 0.85rem;
-            font-weight: 800;
-            text-decoration: none;
-            border: 1.5px solid #000;
-            border-radius: 10px;
-            box-shadow: 2px 2px 0 #000;
-            cursor: pointer;
-            transition: transform 0.1s, box-shadow 0.1s;
-        }
-
-        .toast-action-btn:active {
-            transform: translate(1.5px, 1.5px);
-            box-shadow: 0.5px 0.5px 0 #000;
-        }
-
-        @media (max-width: 480px) {
-            .support-toast-card {
-                bottom: 16px;
-                right: 14px;
-                left: 14px;
-                width: auto;
-            }
-        }
-
-        /* === POPUP BÌNH CHỌN PHIM TỪ NGUỒN YOUTUBE (?source=youtube) === */
-        .vote-modal-backdrop {
-            position: fixed;
-            inset: 0;
-            background: rgba(5, 7, 13, 0.82);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            z-index: 999999;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 16px;
-            opacity: 0;
-            visibility: hidden;
-            transition: opacity 0.3s ease, visibility 0.3s ease;
-        }
-
-        .vote-modal-backdrop.show {
-            opacity: 1;
-            visibility: visible;
-        }
-
-        .vote-modal-card {
-            width: 100%;
-            max-width: 480px;
-            background: rgba(18, 21, 31, 0.94);
-            border: 1.5px solid rgba(255, 184, 0, 0.35);
-            border-radius: 22px;
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.75), 0 0 35px rgba(255, 184, 0, 0.18);
-            padding: 24px 20px 20px;
-            position: relative;
-            max-height: 90vh;
-            overflow-y: auto;
-            color: #F8FAFC;
-            transform: scale(0.92) translateY(15px);
-            transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-        }
-
-        .vote-modal-backdrop.show .vote-modal-card {
-            transform: scale(1) translateY(0);
-        }
-
-        .vote-modal-close {
-            position: absolute;
-            top: 14px;
-            right: 14px;
-            width: 32px;
-            height: 32px;
-            background: rgba(255, 255, 255, 0.08);
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            border-radius: 50%;
-            color: #94A3B8;
-            font-size: 16px;
-            font-weight: 700;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-
-            transition: all 0.2s;
-        }
-
-        .vote-modal-close:hover {
-            background: rgba(225, 29, 72, 0.3);
-            color: #FFF;
-            border-color: rgba(225, 29, 72, 0.6);
-            transform: rotate(90deg);
-        }
-
-        .vote-winner-badge {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            background: linear-gradient(90deg, rgba(255, 184, 0, 0.16) 0%, rgba(255, 122, 0, 0.12) 100%);
-            border: 1px solid rgba(255, 184, 0, 0.4);
-            border-radius: 14px;
-            padding: 10px 14px;
-            margin-bottom: 18px;
-            font-size: 0.85rem;
-            line-height: 1.4;
-        }
-
-        .vote-winner-badge .trophy-icon {
-            font-size: 1.4rem;
-            flex-shrink: 0;
-        }
-
-        .vote-winner-badge strong {
-            color: #FFB800;
-        }
-
-        .vote-progress-box {
-            margin-bottom: 18px;
-        }
-
-        .vote-progress-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-size: 0.82rem;
-            font-weight: 700;
-            margin-bottom: 6px;
-            color: #E2E8F0;
-        }
-
-        .vote-progress-header .progress-count {
-            color: #FFB800;
-            font-size: 0.95rem;
-        }
-
-        .vote-progress-track {
-            width: 100%;
-            height: 14px;
-            background: rgba(255, 255, 255, 0.08);
-            border-radius: 999px;
-            overflow: hidden;
-            border: 1px solid rgba(255, 255, 255, 0.12);
-            position: relative;
-        }
-
-        .vote-progress-fill {
-            height: 100%;
-            width: 0%;
-            background: linear-gradient(90deg, #FF7A00 0%, #FFB800 60%, #FFD54F 100%);
-            border-radius: 999px;
-            transition: width 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .vote-progress-fill::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            bottom: 0;
-            right: 0;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent);
-            animation: shimmerProgress 2s infinite;
-        }
-
-        @keyframes shimmerProgress {
-            0% {
-                transform: translateX(-100%);
-            }
-
-            100% {
-                transform: translateX(100%);
-            }
-        }
-
-        .vote-red-note {
-            color: #FF4444;
-            font-size: 0.8rem;
-            font-weight: 600;
-            line-height: 1.4;
-            margin-top: 6px;
-            text-shadow: 0 0 10px rgba(255, 68, 68, 0.35);
-        }
-
-        .vote-question {
-            font-size: 1.05rem;
-            font-weight: 800;
-            color: #FFF;
-            margin-top: 14px;
-            margin-bottom: 2px;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-        }
-
-        .vote-options-title {
-            font-size: 0.8rem;
-            font-weight: 700;
-            color: #94A3B8;
-            margin: 12px 0 8px;
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
-
-        .vote-options-grid {
-            display: flex;
-            flex-direction: column;
-            gap: 7px;
-            margin-bottom: 14px;
-            max-height: 165px;
-            overflow-y: auto;
-            padding-right: 4px;
-        }
-
-        .vote-options-grid::-webkit-scrollbar {
-            width: 4px;
-        }
-
-        .vote-options-grid::-webkit-scrollbar-thumb {
-            background: rgba(255, 184, 0, 0.3);
-            border-radius: 4px;
-        }
-
-        .vote-option-chip {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 9px 12px;
-            background: rgba(255, 255, 255, 0.04);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 12px;
-            cursor: pointer;
-            font-size: 0.85rem;
-            font-weight: 600;
-            transition: all 0.2s;
-        }
-
-        .vote-option-chip:hover {
-            background: rgba(255, 184, 0, 0.12);
-            border-color: rgba(255, 184, 0, 0.4);
-            transform: translateX(3px);
-        }
-
-        .vote-option-chip.selected {
-
-            background: rgba(255, 184, 0, 0.22);
-            border-color: #FFB800;
-            box-shadow: 0 0 16px rgba(255, 184, 0, 0.35);
-            transform: translateX(4px);
-        }
-
-        .vote-option-chip.selected .vote-count-badge {
-            background: #FFB800;
-            color: #0A0C13;
-        }
-
-        .vote-chip-left {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            overflow: hidden;
-            white-space: nowrap;
-            text-overflow: ellipsis;
-        }
-
-        .vote-rank-tag {
-            width: 22px;
-            height: 22px;
-            border-radius: 6px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 0.75rem;
-            font-weight: 800;
-            flex-shrink: 0;
-        }
-
-        .vote-rank-1 {
-            background: #FFB800;
-            color: #000;
-        }
-
-        .vote-rank-2 {
-            background: #CBD5E1;
-            color: #000;
-        }
-
-        .vote-rank-3 {
-            background: #CD7F32;
-            color: #FFF;
-        }
-
-        .vote-rank-other {
-            background: rgba(255, 255, 255, 0.12);
-            color: #94A3B8;
-        }
-
-        .vote-count-badge {
-            background: rgba(255, 184, 0, 0.15);
-            color: #FFD54F;
-            padding: 2px 7px;
-            border-radius: 999px;
-            font-size: 0.75rem;
-            font-weight: 700;
-            flex-shrink: 0;
-        }
-
-        .vote-input-wrap {
-            margin-bottom: 14px;
-        }
-
-        .vote-input {
-            width: 100%;
-            background: rgba(255, 255, 255, 0.06);
-            border: 1.5px solid rgba(255, 184, 0, 0.3);
-            border-radius: 12px;
-            padding: 11px 14px;
-            color: #FFF;
-            font-size: 0.9rem;
-            font-family: inherit;
-            outline: none;
-            transition: all 0.2s;
-        }
-
-        .vote-input:focus {
-            border-color: #FFB800;
-            background: rgba(255, 255, 255, 0.09);
-            box-shadow: 0 0 14px rgba(255, 184, 0, 0.3);
-        }
-
-        .vote-input::placeholder {
-            color: #64748B;
-        }
-
-        .vote-submit-btn {
-            width: 100%;
-            padding: 13px 20px;
-            background: linear-gradient(135deg, #FFB800 0%, #FF7A00 100%);
-            color: #0A0C13;
-            border: none;
-            border-radius: 999px;
-            font-size: 0.95rem;
-            font-weight: 800;
-            font-family: inherit;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            box-shadow: 0 4px 18px rgba(255, 184, 0, 0.35);
-            transition: all 0.2s;
-        }
-
-        .vote-submit-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 24px rgba(255, 184, 0, 0.5);
-        }
-
-        .vote-submit-btn:active {
-            transform: translateY(1px);
-        }
-
-        .vote-submit-btn:disabled {
-            opacity: 0.6;
-            cursor: not-allowed;
-            transform: none;
-        }
-
-        .vote-success-panel {
-            display: none;
-            text-align: center;
-            padding: 24px 10px 10px;
-        }
-
-        .vote-success-panel.active {
-            display: block;
-            animation: fadeIn 0.4s ease;
-        }
-
-        .vote-success-icon {
-            font-size: 3rem;
-            margin-bottom: 10px;
-        }
-
-        .vote-success-title {
-            font-size: 1.2rem;
-            font-weight: 800;
-            color: #FFB800;
-            margin-bottom: 6px;
-        }
-
-        .vote-success-desc {
-            font-size: 0.88rem;
-            color: #94A3B8;
-            line-height: 1.5;
-            margin-bottom: 18px;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(8px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO & Social Media Meta Tags -->
+  <title>Phước Mèo Meme 🐱👑 | Video Meme Hài Hước & Links</title>
+  <meta name="description" content="Trang tổng hợp liên kết YouTube, TikTok và cổng Donate chính thức của Phước Mèo Meme. Kênh video meme hài hước đỉnh cao! 🐾">
+  <meta property="og:title" content="Phước Mèo Meme 🐱👑 | Video Meme Hài Hước & Links">
+  <meta property="og:description" content="Kênh video meme hài hước & link donate chính thức của Phước Mèo Meme 🐾">
+  <meta property="og:image" content="./avatar.png">
+  <meta property="og:type" content="website">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="./avatar.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary: #FFB800;
+      --primary-light: #FFD54F;
+      --primary-dark: #E6A100;
+      --accent-red: #E11D48;
+      --accent-lantern: #FF385C;
+      --accent-orange: #FF7A00;
+      --bg-dark: #0A0C13;
+      --card-bg: rgba(18, 21, 31, 0.82);
+      --card-border: rgba(255, 184, 0, 0.22);
+      --card-border-hover: rgba(255, 184, 0, 0.8);
+      --text-main: #F8FAFC;
+      --text-sub: #94A3B8;
+      --glow-gold: rgba(255, 184, 0, 0.35);
+      --glow-red: rgba(225, 29, 72, 0.28);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+    body {
+      background: #0A0C13 radial-gradient(circle at 50% 12%, #181C2B 0%, #0A0C13 85%);
+      color: var(--text-main);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 2.5rem 1rem;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    /* Comic Halftone Dot Pattern Overlay */
+    .comic-dots {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: radial-gradient(rgba(255, 184, 0, 0.12) 2px, transparent 2px);
+      background-size: 28px 28px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* Rotating Imperial Sunburst Beam Background */
+    .sunburst-rays {
+      position: fixed;
+      top: 25%;
+      left: 50%;
+      width: 1200px;
+      height: 1200px;
+      transform: translate(-50%, -50%);
+      background: conic-gradient(
+        from 0deg,
+        rgba(255, 184, 0, 0.07) 0deg 15deg,
+        transparent 15deg 30deg,
+        rgba(225, 29, 72, 0.04) 30deg 45deg,
+        transparent 45deg 60deg,
+        rgba(255, 184, 0, 0.07) 60deg 75deg,
+        transparent 75deg 90deg,
+        rgba(225, 29, 72, 0.04) 90deg 105deg,
+        transparent 105deg 120deg,
+        rgba(255, 184, 0, 0.07) 120deg 135deg,
+        transparent 135deg 150deg,
+        rgba(225, 29, 72, 0.04) 150deg 165deg,
+        transparent 165deg 180deg,
+        rgba(255, 184, 0, 0.07) 180deg 195deg,
+        transparent 195deg 210deg,
+        rgba(225, 29, 72, 0.04) 210deg 225deg,
+        transparent 225deg 240deg,
+        rgba(255, 184, 0, 0.07) 240deg 255deg,
+        transparent 255deg 270deg,
+        rgba(225, 29, 72, 0.04) 270deg 285deg,
+        transparent 285deg 300deg,
+        rgba(255, 184, 0, 0.07) 300deg 315deg,
+        transparent 315deg 330deg,
+        rgba(225, 29, 72, 0.04) 330deg 345deg,
+        transparent 345deg 360deg
+      );
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 0;
+      animation: rotateSunburst 55s linear infinite;
+    }
+
+    @keyframes rotateSunburst {
+      0% { transform: translate(-50%, -50%) rotate(0deg); }
+      100% { transform: translate(-50%, -50%) rotate(360deg); }
+    }
+
+    /* Ambient Dynamic Glow Lights & Lantern Glow */
+    .bg-light-1 {
+      position: fixed;
+      top: -100px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 580px;
+      height: 580px;
+      background: radial-gradient(circle, rgba(255, 184, 0, 0.24) 0%, rgba(225, 29, 72, 0.08) 45%, transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 0;
+      animation: pulseGlow 7s infinite alternate ease-in-out;
+    }
+
+    .bg-light-2 {
+      position: fixed;
+      bottom: -150px;
+      right: -100px;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(225, 29, 72, 0.16) 0%, rgba(255, 184, 0, 0.06) 50%, transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .bg-light-lantern {
+      position: fixed;
+      top: 15%;
+      left: -80px;
+      width: 380px;
+      height: 380px;
+      background: radial-gradient(circle, rgba(225, 29, 72, 0.14) 0%, transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 0;
+      animation: lanternFloat 8s ease-in-out infinite alternate;
+    }
+
+    @keyframes lanternFloat {
+      0% { transform: translateY(0px) scale(1); opacity: 0.6; }
+      100% { transform: translateY(-25px) scale(1.15); opacity: 0.9; }
+    }
+
+    @keyframes pulseGlow {
+      0% { transform: translateX(-50%) scale(1); opacity: 0.7; }
+      100% { transform: translateX(-50%) scale(1.18); opacity: 1; }
+    }
+
+    /* Animated Floating Meme Elements (Đúng theme Phước Mèo Meme) */
+    .floating-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 0;
+      overflow: hidden;
+    }
+
+    .float-item {
+      position: absolute;
+      opacity: 0.42;
+      user-select: none;
+      filter: drop-shadow(0 4px 12px rgba(255, 184, 0, 0.35));
+      animation: floatMotion 8s ease-in-out infinite alternate;
+    }
+
+    .float-item:nth-child(1) { top: 10%; left: 7%; animation-duration: 9s; animation-delay: 0s; font-size: 2.2rem; }
+    .float-item:nth-child(2) { top: 22%; right: 8%; animation-duration: 7.5s; animation-delay: 1s; font-size: 2rem; }
+    .float-item:nth-child(3) { top: 48%; left: 5%; animation-duration: 11s; animation-delay: 2s; font-size: 2.3rem; }
+    .float-item:nth-child(4) { top: 68%; right: 7%; animation-duration: 8.5s; animation-delay: 0.5s; font-size: 2.1rem; }
+    .float-item:nth-child(5) { top: 38%; right: 4%; animation-duration: 10s; animation-delay: 1.5s; font-size: 1.8rem; }
+    .float-item:nth-child(6) { top: 85%; left: 10%; animation-duration: 8s; animation-delay: 2.5s; font-size: 2.2rem; }
+    .float-item:nth-child(7) { top: 6%; right: 22%; animation-duration: 9.5s; animation-delay: 3s; font-size: 1.8rem; }
+    .float-item:nth-child(8) { top: 92%; right: 15%; animation-duration: 7.2s; animation-delay: 1.8s; font-size: 2rem; }
+
+    @keyframes floatMotion {
+      0% { transform: translateY(0px) rotate(0deg) scale(1); }
+      50% { transform: translateY(-20px) rotate(12deg) scale(1.1); }
+      100% { transform: translateY(-40px) rotate(-10deg) scale(1); }
+    }
+
+    /* Container */
+    .container {
+      width: 100%;
+      max-width: 520px;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.75rem;
+    }
+
+    /* Profile Header */
+    .profile-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 0.85rem;
+      width: 100%;
+    }
+
+    .avatar-wrapper {
+      position: relative;
+      width: 104px;
+      height: 104px;
+      border-radius: 50%;
+      padding: 3.5px;
+      background: linear-gradient(135deg, #FFB800, #E11D48 45%, #FFE259 80%, #FF7A00);
+      box-shadow: 0 0 30px rgba(255, 184, 0, 0.45), 0 0 55px rgba(225, 29, 72, 0.25);
+      transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.4s ease;
+      animation: avatarBounce 3.5s infinite alternate ease-in-out;
+    }
+
+    @keyframes avatarBounce {
+      0% { transform: translateY(0px); }
+      100% { transform: translateY(-5px); }
+    }
+
+    .avatar-wrapper:hover {
+      transform: scale(1.08) rotate(3deg) !important;
+      box-shadow: 0 0 45px rgba(255, 184, 0, 0.7), 0 0 70px rgba(225, 29, 72, 0.4);
+    }
+
+    .avatar-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+      background-color: #1A1C23;
+    }
+
+    .crown-badge {
+      position: absolute;
+      bottom: -2px;
+      right: 0px;
+      background: linear-gradient(135deg, #FFB800, #FF7A00);
+      color: #000;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 2.5px solid var(--bg-dark);
+      font-size: 0.95rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5), 0 0 14px rgba(255, 184, 0, 0.6);
+      animation: crownShine 2.5s infinite alternate ease-in-out;
+    }
+
+    @keyframes crownShine {
+      0% { transform: scale(1); filter: brightness(1); }
+      100% { transform: scale(1.12); filter: brightness(1.25); }
+    }
+
+    .profile-title {
+      font-size: 1.65rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, #FFFFFF 15%, #FFE259 60%, #FFB800 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      letter-spacing: -0.02em;
+      text-shadow: 0 4px 22px rgba(255, 184, 0, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+
+    .profile-bio {
+      font-size: 0.9rem;
+      color: var(--text-sub);
+      line-height: 1.45;
+      max-width: 440px;
+    }
+
+    .channel-tags-row {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 2px;
+    }
+
+    .channel-tag {
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: #FFD54F;
+      background: rgba(255, 184, 0, 0.12);
+      border: 1px solid rgba(255, 184, 0, 0.3);
+      padding: 3px 12px;
+      border-radius: 999px;
+      letter-spacing: 0.2px;
+      backdrop-filter: blur(8px);
+    }
+
+    /* Social Horizontal Bar (Chỉ YouTube & TikTok) */
+    .social-horizontal-bar {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      width: 100%;
+      max-width: 360px;
+      margin-top: 4px;
+    }
+
+    .social-pill-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 9px 16px;
+      background: rgba(20, 23, 33, 0.9);
+      border: 1.5px solid rgba(255, 184, 0, 0.25);
+      border-radius: 999px;
+      text-decoration: none;
+      color: var(--text-main);
+      font-size: 0.84rem;
+      font-weight: 700;
+      transition: all 0.25s ease;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.35);
+    }
+
+    .social-pill-btn.yt-pill:hover {
+      transform: translateY(-2px);
+      border-color: #FF0000;
+      box-shadow: 0 6px 20px rgba(255, 0, 0, 0.4);
+      color: #FFF;
+      background: rgba(255, 0, 0, 0.12);
+    }
+
+    .social-pill-btn.tt-pill:hover {
+      transform: translateY(-2px);
+      border-color: #00F2FE;
+      box-shadow: 0 6px 20px rgba(0, 242, 254, 0.35);
+      color: #FFF;
+      background: rgba(0, 242, 254, 0.1);
+    }
+
+    /* Callout Box Kêu Gọi Bấm Link */
+    .callout-box {
+      background: linear-gradient(135deg, rgba(255, 184, 0, 0.12) 0%, rgba(225, 29, 72, 0.08) 100%);
+      border: 1.5px solid rgba(255, 184, 0, 0.35);
+      border-radius: 16px;
+      padding: 12px 14px;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      text-align: left;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+    }
+
+    .callout-icon {
+      font-size: 1.35rem;
+      line-height: 1;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .callout-text {
+      font-size: 0.82rem;
+      color: #E2E8F0;
+      line-height: 1.45;
+      margin: 0;
+    }
+
+    .callout-text strong {
+      color: #FFF;
+    }
+
+    .callout-highlight {
+      display: inline;
+      background: rgba(255, 184, 0, 0.25);
+      color: #FFDE59;
+      font-weight: 800;
+      padding: 1px 6px;
+      border-radius: 4px;
+      border: 1px dashed rgba(255, 184, 0, 0.5);
+    }
+
+    .badge-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 16px;
+      border-radius: 20px;
+      background: rgba(255, 184, 0, 0.12);
+      border: 1px solid rgba(255, 184, 0, 0.3);
+      color: var(--primary);
+      font-size: 0.82rem;
+      font-weight: 700;
+      backdrop-filter: blur(8px);
+      box-shadow: 0 4px 15px rgba(255, 184, 0, 0.1);
+    }
+
+    /* Links Section */
+    .links-section {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .link-card {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.15rem 1.35rem;
+      background: var(--card-bg);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border: 1.5px solid var(--card-border);
+      border-radius: 20px;
+      text-decoration: none;
+      color: var(--text-main);
+      transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .link-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.12), transparent);
+      transition: left 0.6s ease;
+    }
+
+    .link-card:hover::before {
+      left: 100%;
+    }
+
+    .link-card:hover {
+      transform: translateY(-4px) scale(1.01);
+      border-color: var(--card-border-hover);
+      box-shadow: 0 12px 30px -5px rgba(255, 184, 0, 0.35);
+      background: rgba(26, 30, 42, 0.92);
+    }
+
+    .link-card.yt-card {
+      border: 1.5px solid rgba(255, 0, 0, 0.28);
+      background: linear-gradient(135deg, rgba(255, 0, 0, 0.08) 0%, rgba(20, 23, 33, 0.88) 100%);
+    }
+
+    .link-card.yt-card:hover {
+      border-color: rgba(255, 0, 0, 0.75);
+      box-shadow: 0 12px 30px -5px rgba(255, 0, 0, 0.4);
+    }
+
+    .link-card.tt-card {
+      border: 1.5px solid rgba(0, 242, 254, 0.25);
+      background: linear-gradient(135deg, rgba(0, 242, 254, 0.06) 0%, rgba(20, 23, 33, 0.88) 100%);
+    }
+
+    .link-card.tt-card:hover {
+      border-color: rgba(0, 242, 254, 0.75);
+      box-shadow: 0 12px 30px -5px rgba(0, 242, 254, 0.35);
+    }
+
+    .link-info {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .icon-box {
+      width: 50px;
+      height: 50px;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      flex-shrink: 0;
+      transition: transform 0.3s ease;
+    }
+
+    .link-card:hover .icon-box {
+      transform: scale(1.1) rotate(-4deg);
+    }
+
+    .youtube-icon { color: #FF0000; }
+    .tiktok-icon { color: #00F2FE; }
+
+    .link-text {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .link-title-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .link-title {
+      font-weight: 700;
+      font-size: 1.05rem;
+      letter-spacing: -0.01em;
+    }
+
+    .card-tag {
+      font-size: 0.68rem;
+      font-weight: 800;
+      padding: 2px 8px;
+      border-radius: 8px;
+      letter-spacing: 0.3px;
+    }
+
+    .card-tag.yt-tag {
+      background: rgba(255, 0, 0, 0.18);
+      color: #FF4D4D;
+      border: 1px solid rgba(255, 0, 0, 0.4);
+    }
+
+    .card-tag.tt-tag {
+      background: rgba(0, 242, 254, 0.15);
+      color: #00F2FE;
+      border: 1px solid rgba(0, 242, 254, 0.4);
+    }
+
+    .link-sub {
+      font-size: 0.82rem;
+      color: var(--text-sub);
+    }
+
+    .arrow-icon {
+      color: var(--text-sub);
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    .link-card:hover .arrow-icon {
+      transform: translateX(5px);
+      color: var(--primary);
+    }
+
+    /* Donate Section */
+    .landingpage-card {
+      width: 100%;
+      background: linear-gradient(145deg, rgba(26, 29, 38, 0.92), rgba(14, 16, 22, 0.96));
+      border: 1px solid var(--card-border);
+      border-radius: 24px;
+      padding: 1.8rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 1.25rem;
+      backdrop-filter: blur(20px);
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.5);
+      position: relative;
+    }
+
+    .landingpage-header {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .landingpage-title {
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .landingpage-desc {
+      font-size: 0.88rem;
+      color: var(--text-sub);
+    }
+
+    /* QR Code Styling */
+    .qr-frame {
+      position: relative;
+      background: #FFFFFF;
+      padding: 12px;
+      border-radius: 20px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+      transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .qr-frame:hover {
+      transform: scale(1.04) rotate(1deg);
+    }
+
+    .qr-img {
+      width: 200px;
+      height: 200px;
+      object-fit: contain;
+      display: block;
+      border-radius: 10px;
+    }
+
+    .vnpay-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 4px;
+      padding: 4px 14px;
+      background: rgba(229, 26, 36, 0.12);
+      border: 1px solid rgba(229, 26, 36, 0.35);
+      color: #FF4D4D;
+      border-radius: 20px;
+      font-size: 0.78rem;
+      font-weight: 700;
+    }
+
+    /* Bank Details Grid */
+    .bank-info-box {
+      width: 100%;
+      background: rgba(0, 0, 0, 0.35);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 16px;
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      text-align: left;
+    }
+
+    .bank-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.9rem;
+    }
+
+    .bank-label {
+      color: var(--text-sub);
+      font-size: 0.82rem;
+    }
+
+    .bank-val {
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .stk-highlight {
+      font-family: monospace;
+      font-size: 1.1rem;
+      color: var(--primary);
+      letter-spacing: 1px;
+    }
+
+    /* Copy Button */
+    .copy-btn {
+      width: 100%;
+      padding: 0.9rem;
+      border-radius: 16px;
+      background: linear-gradient(135deg, var(--primary), var(--accent-orange));
+      border: none;
+      color: #000;
+      font-weight: 800;
+      font-size: 0.95rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+      box-shadow: 0 6px 22px rgba(255, 184, 0, 0.3);
+    }
+
+    .copy-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(255, 184, 0, 0.5);
+      filter: brightness(1.08);
+    }
+
+    .copy-btn:active {
+      transform: translateY(0);
+    }
+
+    /* Toast Notification */
+    .toast {
+      position: fixed;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%) translateY(100px);
+      background: #10B981;
+      color: #FFFFFF;
+      padding: 12px 26px;
+      border-radius: 30px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      box-shadow: 0 10px 25px rgba(16, 185, 129, 0.4);
+      opacity: 0;
+      transition: all 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+      z-index: 999;
+      pointer-events: none;
+    }
+
+    .toast.show {
+      transform: translateX(-50%) translateY(0);
+      opacity: 1;
+    }
+
+    /* Footer */
+    footer {
+      margin-top: 1rem;
+      font-size: 0.82rem;
+      color: var(--text-sub);
+      text-align: center;
+    }
+
+    footer strong {
+      color: var(--primary);
+    }
+
+    /* Shopee Products Section */
+    .products-section {
+      width: 100%;
+      background: var(--card-bg);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 2px solid var(--card-border);
+      border-radius: 24px;
+      padding: 1.5rem 1.1rem;
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4), 0 0 20px var(--glow-color);
+      display: flex;
+      flex-direction: column;
+      gap: 1.1rem;
+      position: relative;
+      transition: border-color 0.3s ease;
+    }
+
+    .products-section:hover {
+      border-color: var(--card-border-hover);
+    }
+
+    .products-header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 0.35rem;
+    }
+
+    .products-title {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: #FFF;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .products-desc {
+      font-size: 0.82rem;
+      color: var(--text-sub);
+      line-height: 1.4;
+      max-width: 90%;
+    }
+
+    .shopee-badge-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(238, 77, 45, 0.15);
+      border: 1px solid rgba(238, 77, 45, 0.4);
+      color: #FF6433;
+      font-size: 0.72rem;
+      font-weight: 800;
+      padding: 3px 10px;
+      border-radius: 999px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-top: 2px;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      width: 100%;
+      transition: opacity 0.15s ease;
+    }
+
+    .product-card {
+      background: rgba(14, 16, 21, 0.85);
+      border: 1.5px solid rgba(255, 255, 255, 0.08);
+      border-radius: 16px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      text-decoration: none;
+      color: var(--text-main);
+      transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+      position: relative;
+    }
+
+    .product-card:hover {
+      transform: translateY(-3px);
+      border-color: #EE4D2D;
+      box-shadow: 0 8px 20px rgba(238, 77, 45, 0.25);
+    }
+
+    .product-thumb-box {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      position: relative;
+      background: #1e2029;
+      overflow: hidden;
+    }
+
+    .product-thumb-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .product-card:hover .product-thumb-img {
+      transform: scale(1.05);
+    }
+
+    .product-card-badge {
+      position: absolute;
+      top: 6px;
+      left: 6px;
+      background: #EE4D2D;
+      color: #FFF;
+      font-size: 0.65rem;
+      font-weight: 800;
+      padding: 2px 6px;
+      border-radius: 6px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+      z-index: 2;
+    }
+
+    .product-info {
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
+    .product-item-title {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: #F1F5F9;
+      line-height: 1.35;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      min-height: 2.2rem;
+    }
+
+    .product-meta-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 4px;
+    }
+
+    .product-price-tag {
+      font-size: 0.78rem;
+      font-weight: 800;
+      color: #FFB800;
+    }
+
+    .product-buy-btn {
+      width: 100%;
+      background: linear-gradient(135deg, #FF6433 0%, #EE4D2D 100%);
+      color: #FFF;
+      border: none;
+      border-radius: 10px;
+      padding: 8px 10px;
+      font-size: 0.78rem;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(238, 77, 45, 0.3);
+      transition: filter 0.2s ease;
+    }
+
+    .product-card:hover .product-buy-btn {
+      filter: brightness(1.1);
+    }
+
+    .products-toggle-btn {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      color: var(--text-sub);
+      font-size: 0.82rem;
+      font-weight: 700;
+      padding: 9px 16px;
+      border-radius: 999px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      margin: 4px auto 0;
+      transition: all 0.2s ease;
+    }
+
+    .products-toggle-btn:hover {
+      background: rgba(255, 184, 0, 0.1);
+      border-color: var(--primary);
+      color: var(--primary);
+    }
+
+    /* Search Bar */
+    .products-search-wrap {
+      position: relative;
+      width: 100%;
+      display: flex;
+      align-items: center;
+    }
+
+    .products-search-wrap .search-icon {
+      position: absolute;
+      left: 14px;
+      color: var(--text-sub);
+      pointer-events: none;
+    }
+
+    .products-search-input {
+      width: 100%;
+      background: rgba(14, 16, 21, 0.85);
+      border: 1.5px solid rgba(255, 255, 255, 0.1);
+      border-radius: 999px;
+      padding: 10px 38px 10px 40px;
+      font-size: 0.82rem;
+      color: #FFF;
+      outline: none;
+      transition: all 0.2s ease;
+      box-sizing: border-box;
+    }
+
+    .products-search-input:focus {
+      border-color: #EE4D2D;
+      box-shadow: 0 0 16px rgba(238, 77, 45, 0.25);
+    }
+
+    .products-search-input::placeholder {
+      color: #64748B;
+    }
+
+    .products-search-clear {
+      position: absolute;
+      right: 12px;
+      background: transparent;
+      border: none;
+      color: var(--text-sub);
+      font-size: 0.85rem;
+      cursor: pointer;
+      padding: 4px;
+      line-height: 1;
+    }
+
+    .products-search-clear:hover {
+      color: #FFF;
+    }
+
+    /* Category Filter Tabs (Horizontal Scrollable) */
+    .products-categories-wrap {
+      width: 100%;
+      overflow-x: auto;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+      padding-bottom: 2px;
+    }
+
+    .products-categories-wrap::-webkit-scrollbar {
+      display: none;
+    }
+
+    .products-categories {
+      display: inline-flex;
+      gap: 8px;
+      white-space: nowrap;
+    }
+
+    .category-tab-btn {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: var(--text-sub);
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 6px 14px;
+      border-radius: 999px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      flex-shrink: 0;
+    }
+
+    .category-tab-btn:hover {
+      background: rgba(255, 255, 255, 0.1);
+      color: #FFF;
+    }
+
+    .category-tab-btn.active {
+      background: linear-gradient(135deg, #FF6433 0%, #EE4D2D 100%);
+      border-color: #EE4D2D;
+      color: #FFF;
+      box-shadow: 0 4px 12px rgba(238, 77, 45, 0.35);
+    }
+
+    .product-empty-state {
+      width: 100%;
+      padding: 2rem 1rem;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      color: var(--text-main);
+      font-size: 0.88rem;
+      font-weight: 700;
+    }
+
+    .product-end-note {
+      text-align: center;
+      font-size: 0.75rem;
+      color: var(--text-sub);
+      margin-top: 4px;
+    }
+
+    /* Floating Support Toast Card (Pop-up gợi ý sau 3s) */
+    .support-toast-card {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      max-width: 350px;
+      width: calc(100% - 32px);
+      background: rgba(26, 31, 46, 0.98);
+      border: 2px solid #FFB800;
+      border-radius: 18px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7), 4px 4px 0 #FFB800;
+      padding: 16px 18px 16px 16px;
+      z-index: 9999;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      transform: translateY(150%);
+      opacity: 0;
+      pointer-events: none;
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.35s ease;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+    .support-toast-card.show {
+      transform: translateY(0);
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .toast-close-btn {
+      position: absolute;
+      top: 10px;
+      right: 12px;
+      background: none;
+      border: none;
+      color: #94a3b8;
+      font-size: 1.3rem;
+      cursor: pointer;
+      line-height: 1;
+      padding: 4px;
+      transition: color 0.15s;
+    }
+    .toast-close-btn:hover {
+      color: #fff;
+    }
+    .toast-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 0.72rem;
+      font-weight: 800;
+      background: rgba(255, 184, 0, 0.15);
+      color: #FFB800;
+      border: 1px solid rgba(255, 184, 0, 0.4);
+      padding: 2px 8px;
+      border-radius: 6px;
+      align-self: flex-start;
+    }
+    .toast-item-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-top: 2px;
+    }
+    .toast-thumb-img {
+      width: 52px;
+      height: 52px;
+      object-fit: cover;
+      border-radius: 10px;
+      border: 1.5px solid rgba(255, 255, 255, 0.15);
+      flex-shrink: 0;
+      background: #0f121d;
+    }
+    .toast-info {
+      min-width: 0;
+      flex: 1;
+    }
+    .toast-title {
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: #f8fafc;
+      line-height: 1.3;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+    }
+    .toast-price {
+      font-size: 0.75rem;
+      font-weight: 800;
+      color: #4ade80;
+      margin-top: 3px;
+    }
+    .toast-text {
+      font-size: 0.75rem;
+      color: #cbd5e1;
+      line-height: 1.4;
+      background: rgba(255, 255, 255, 0.04);
+      border-radius: 8px;
+      padding: 6px 10px;
+    }
+    .toast-action-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      width: 100%;
+      padding: 10px 14px;
+      background: linear-gradient(135deg, #EE4D2D 0%, #F53D2D 100%);
+      color: #fff;
+      font-size: 0.85rem;
+      font-weight: 800;
+      text-decoration: none;
+      border: 1.5px solid #000;
+      border-radius: 10px;
+      box-shadow: 2px 2px 0 #000;
+      cursor: pointer;
+      transition: transform 0.1s, box-shadow 0.1s;
+    }
+    .toast-action-btn:active {
+      transform: translate(1.5px, 1.5px);
+      box-shadow: 0.5px 0.5px 0 #000;
+    }
+    @media (max-width: 480px) {
+      .support-toast-card {
+        bottom: 16px;
+        right: 14px;
+        left: 14px;
+        width: auto;
+      }
+    }
+
+    /* === POPUP BÌNH CHỌN PHIM TỪ NGUỒN YOUTUBE (?source=youtube) === */
+    .vote-modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(5, 7, 13, 0.82);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      z-index: 999999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+    .vote-modal-backdrop.show {
+      opacity: 1;
+      visibility: visible;
+    }
+    .vote-modal-card {
+      width: 100%;
+      max-width: 480px;
+      background: rgba(18, 21, 31, 0.94);
+      border: 1.5px solid rgba(255, 184, 0, 0.35);
+      border-radius: 22px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.75), 0 0 35px rgba(255, 184, 0, 0.18);
+      padding: 24px 20px 20px;
+      position: relative;
+      max-height: 90vh;
+      overflow-y: auto;
+      color: #F8FAFC;
+      transform: scale(0.92) translateY(15px);
+      transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+    .vote-modal-backdrop.show .vote-modal-card {
+      transform: scale(1) translateY(0);
+    }
+    .vote-modal-close {
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      width: 32px;
+      height: 32px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 50%;
+      color: #94A3B8;
+      font-size: 16px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .vote-modal-close:hover {
+      background: rgba(225, 29, 72, 0.3);
+      color: #FFF;
+      border-color: rgba(225, 29, 72, 0.6);
+      transform: rotate(90deg);
+    }
+    .vote-winner-badge {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: linear-gradient(90deg, rgba(255, 184, 0, 0.16) 0%, rgba(255, 122, 0, 0.12) 100%);
+      border: 1px solid rgba(255, 184, 0, 0.4);
+      border-radius: 14px;
+      padding: 10px 14px;
+      margin-bottom: 18px;
+      font-size: 0.85rem;
+      line-height: 1.4;
+    }
+    .vote-winner-badge .trophy-icon {
+      font-size: 1.4rem;
+      flex-shrink: 0;
+    }
+    .vote-winner-badge strong {
+      color: #FFB800;
+    }
+    .vote-progress-box {
+      margin-bottom: 18px;
+    }
+    .vote-progress-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.82rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+      color: #E2E8F0;
+    }
+    .vote-progress-header .progress-count {
+      color: #FFB800;
+      font-size: 0.95rem;
+    }
+    .vote-progress-track {
+      width: 100%;
+      height: 14px;
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 999px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      position: relative;
+    }
+    .vote-progress-fill {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, #FF7A00 0%, #FFB800 60%, #FFD54F 100%);
+      border-radius: 999px;
+      transition: width 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+    }
+    .vote-progress-fill::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent);
+      animation: shimmerProgress 2s infinite;
+    }
+    @keyframes shimmerProgress {
+      0% { transform: translateX(-100%); }
+      100% { transform: translateX(100%); }
+    }
+    .vote-red-note {
+      color: #FF4444;
+      font-size: 0.8rem;
+      font-weight: 600;
+      line-height: 1.4;
+      margin-top: 6px;
+      text-shadow: 0 0 10px rgba(255, 68, 68, 0.35);
+    }
+    .vote-question {
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: #FFF;
+      margin-top: 14px;
+      margin-bottom: 2px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .vote-options-title {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: #94A3B8;
+      margin: 12px 0 8px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .vote-options-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+      margin-bottom: 14px;
+      max-height: 165px;
+      overflow-y: auto;
+      padding-right: 4px;
+    }
+    .vote-options-grid::-webkit-scrollbar {
+      width: 4px;
+    }
+    .vote-options-grid::-webkit-scrollbar-thumb {
+      background: rgba(255, 184, 0, 0.3);
+      border-radius: 4px;
+    }
+    .vote-option-chip {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 9px 12px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      cursor: pointer;
+      font-size: 0.85rem;
+      font-weight: 600;
+      transition: all 0.2s;
+    }
+    .vote-option-chip:hover {
+      background: rgba(255, 184, 0, 0.12);
+      border-color: rgba(255, 184, 0, 0.4);
+      transform: translateX(3px);
+    }
+    .vote-option-chip.selected {
+      background: rgba(255, 184, 0, 0.22);
+      border-color: #FFB800;
+      box-shadow: 0 0 16px rgba(255, 184, 0, 0.35);
+      transform: translateX(4px);
+    }
+    .vote-option-chip.selected .vote-count-badge {
+      background: #FFB800;
+      color: #0A0C13;
+    }
+    .vote-chip-left {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+    .vote-rank-tag {
+      width: 22px;
+      height: 22px;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      font-weight: 800;
+      flex-shrink: 0;
+    }
+    .vote-rank-1 { background: #FFB800; color: #000; }
+    .vote-rank-2 { background: #CBD5E1; color: #000; }
+    .vote-rank-3 { background: #CD7F32; color: #FFF; }
+    .vote-rank-other { background: rgba(255, 255, 255, 0.12); color: #94A3B8; }
+    .vote-count-badge {
+      background: rgba(255, 184, 0, 0.15);
+      color: #FFD54F;
+      padding: 2px 7px;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+    .vote-input-wrap {
+      margin-bottom: 14px;
+    }
+    .vote-input {
+      width: 100%;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1.5px solid rgba(255, 184, 0, 0.3);
+      border-radius: 12px;
+      padding: 11px 14px;
+      color: #FFF;
+      font-size: 0.9rem;
+      font-family: inherit;
+      outline: none;
+      transition: all 0.2s;
+    }
+    .vote-input:focus {
+      border-color: #FFB800;
+      background: rgba(255, 255, 255, 0.09);
+      box-shadow: 0 0 14px rgba(255, 184, 0, 0.3);
+    }
+    .vote-input::placeholder {
+      color: #64748B;
+    }
+    .vote-submit-btn {
+      width: 100%;
+      padding: 13px 20px;
+      background: linear-gradient(135deg, #FFB800 0%, #FF7A00 100%);
+      color: #0A0C13;
+      border: none;
+      border-radius: 999px;
+      font-size: 0.95rem;
+      font-weight: 800;
+      font-family: inherit;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      box-shadow: 0 4px 18px rgba(255, 184, 0, 0.35);
+      transition: all 0.2s;
+    }
+    .vote-submit-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 24px rgba(255, 184, 0, 0.5);
+    }
+    .vote-submit-btn:active {
+      transform: translateY(1px);
+    }
+    .vote-submit-btn:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+      transform: none;
+    }
+    .vote-success-panel {
+      display: none;
+      text-align: center;
+      padding: 24px 10px 10px;
+    }
+    .vote-success-panel.active {
+      display: block;
+      animation: fadeIn 0.4s ease;
+    }
+    .vote-success-icon {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+    .vote-success-title {
+      font-size: 1.2rem;
+      font-weight: 800;
+      color: #FFB800;
+      margin-bottom: 6px;
+    }
+    .vote-success-desc {
+      font-size: 0.88rem;
+      color: #94A3B8;
+      line-height: 1.5;
+      margin-bottom: 18px;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
 </head>
-
 <body>
 
-    <!-- Comic Halftone & Sunburst Cartoon BG FX -->
-    <div class="comic-dots"></div>
-    <div class="sunburst-rays"></div>
-    <div class="bg-light-1"></div>
-    <div class="bg-light-2"></div>
-    <div class="bg-light-lantern"></div>
+  <!-- Comic Halftone & Sunburst Cartoon BG FX -->
+  <div class="comic-dots"></div>
+  <div class="sunburst-rays"></div>
+  <div class="bg-light-1"></div>
+  <div class="bg-light-2"></div>
+  <div class="bg-light-lantern"></div>
 
-    <!-- Animated Floating Meme Icons (Theme Phước Mèo Meme) -->
-    <div class="floating-container">
-        <div class="float-item">🐾</div>
+  <!-- Animated Floating Meme Icons (Theme Phước Mèo Meme) -->
+  <div class="floating-container">
+    <div class="float-item">🐾</div>
+    <div class="float-item">👑</div>
+    <div class="float-item">🕶️</div>
+    <div class="float-item">🏮</div>
+    <div class="float-item">🎬</div>
+    <div class="float-item">🐱</div>
+    <div class="float-item">🐟</div>
+    <div class="float-item">✨</div>
+  </div>
 
-        <div class="float-item">👑</div>
-        <div class="float-item">🕶️</div>
-        <div class="float-item">🏮</div>
-        <div class="float-item">🎬</div>
-        <div class="float-item">🐱</div>
-        <div class="float-item">🐟</div>
-        <div class="float-item">✨</div>
-    </div>
-
-    <div class="container">
-
-        <!-- Profile Card Header -->
-        <header class="profile-card">
-            <div class="avatar-wrapper">
-                <img src="./avatar.png" alt="Phước Mèo Meme Avatar" class="avatar-img" id="avatarImg">
-                <div class="crown-badge" title="Phước Mèo Meme">👑</div>
-            </div>
-
-            <h1 class="profile-title">Phước Mèo Meme</h1>
-            <p class="profile-bio">Hoàng Thượng làm video meme mèo cho các con sen cười xả stress mỗi ngày 😼👑</p>
-
-            <div class="channel-tags-row">
-                <span class="channel-tag">👑 Trẫm Rất Hài</span>
-                <span class="channel-tag">🎬 Meme Cực Cuốn</span>
-                <span class="channel-tag">🐟 Động Của Sen</span>
-            </div>
-
-            <!-- Social Horizontal Quick Links (Chỉ YouTube & TikTok - Đã xóa Facebook) -->
-            <div class="social-horizontal-bar">
-                <a href="https://www.youtube.com/@phuocmeomemee" target="_blank" rel="noopener noreferrer"
-                    class="social-pill-btn yt-pill" title="Kênh YouTube Phước Mèo Meme">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="#FF0000">
-                        <path
-                            d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
-                    </svg>
-                    <span>YouTube</span>
-                </a>
-                <a href="https://www.tiktok.com/@phuoc.meo.meme" target="_blank" rel="noopener noreferrer"
-                    class="social-pill-btn tt-pill" title="Kênh TikTok Phước Mèo Meme">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                        <path
-                            d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z" />
-                    </svg>
-                    <span>TikTok</span>
-                </a>
-            </div>
-        </header>
-
-        <!-- Shopee Products Showcase / Giỏ Hàng Mua Pate Cho Hoàng Thượng -->
-        <section class="products-section" id="shopeeProductsSection" style="display: none;">
-            <div class="products-header">
-                <h2 class="products-title">
-                    <span>🛍️</span> Giỏ Hàng Mua Pate Cho Hoàng Thượng 🐾
-                </h2>
-
-                <!-- Khung Kêu Gọi Hài Hước Của Hoàng Thượng -->
-                <div class="callout-box">
-                    <span class="callout-icon">💡</span>
-                    <p class="callout-text">
-                        Mấy sen rảnh tay bấm dạo vào ngó mấy món bên dưới giúp trẫm kiếm tí kinh phí mua pate nha!
-                        <span class="callout-highlight">Không cần chốt đơn cũng được nè</span>, chỉ cần bấm vào lướt xem
-                        1 tí là trẫm vui rồi, cảm ơn các sen nhiều lắm! 😼❤️
-                    </p>
-                </div>
-            </div>
-
-            <!-- Search Bar -->
-            <div class="products-search-wrap">
-
-                <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                    stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                    <circle cx="11" cy="11" r="8"></circle>
-                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                </svg>
-                <input type="text" id="productSearchInput" class="products-search-input"
-                    placeholder="🔍 Tìm nhanh món bạn thích..." autocomplete="off">
-                <button type="button" id="productSearchClear" class="products-search-clear" style="display: none;"
-                    onclick="clearProductSearch()">✕</button>
-            </div>
-
-            <!-- Category Filter Pills (Thanh trượt ngang Dynamic) -->
-            <div class="products-categories-wrap">
-                <div class="products-categories" id="productCategoriesList">
-                    <button type="button" class="category-tab-btn active" data-cat="all"
-                        onclick="selectCategory('all')">🔥 Tất cả</button>
-                </div>
-            </div>
-
-            <!-- Product Grid -->
-            <div class="product-grid" id="productGrid">
-                <!-- Rendered by JS -->
-            </div>
-
-            <!-- Empty State -->
-            <div id="productEmptyState" class="product-empty-state" style="display: none;">
-                <span style="font-size: 2rem;">🔍</span>
-                <p>Hổng tìm thấy món nào hết trơn á sen ơi</p>
-                <small style="color: var(--text-sub);">Thử tìm bằng từ khóa khác hoặc bấm tab khác xem sao nha!</small>
-            </div>
-
-            <!-- Load More Button -->
-            <button type="button" class="products-toggle-btn" id="btnLoadMoreProducts" style="display: none;"
-                onclick="loadMoreProducts()">
-                <span id="btnLoadMoreText">Xem thêm sản phẩm</span>
-                <svg id="btnLoadMoreIcon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                    stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
-                    style="transition: transform 0.2s;">
-                    <polyline points="6 9 12 15 18 9"></polyline>
-                </svg>
-            </button>
-
-            <!-- End of List Note -->
-            <div id="productEndOfList" class="product-end-note" style="display: none;">
-                ✨ Đã hiển thị tất cả sản phẩm
-            </div>
-        </section>
-
-        <!-- Social Links Section (Chỉ YouTube & TikTok - Đã xóa Facebook) -->
-        <main class="links-section">
-
-            <!-- Card 1: YouTube -->
-            <a href="https://www.youtube.com/@phuocmeomemee" target="_blank" rel="noopener noreferrer"
-                class="link-card yt-card">
-                <div class="link-info">
-                    <div class="icon-box youtube-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                            <path
-                                d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
-                        </svg>
-                    </div>
-                    <div class="link-text">
-                        <div class="link-title-row">
-                            <span class="link-title">Kênh YouTube Của Hoàng Thượng</span>
-                            <span class="card-tag yt-tag">Tập Mới Nhất</span>
-                        </div>
-                        <div class="link-sub">Xem trọn tập video meme dài • Cười bể bụng không lo quảng cáo 🎬</div>
-                    </div>
-                </div>
-                <svg class="arrow-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                    stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                    <polyline points="9 18 15 12 9 6"></polyline>
-                </svg>
-            </a>
-
-            <!-- Card 2: TikTok -->
-
-            <a href="https://www.tiktok.com/@phuoc.meo.meme" target="_blank" rel="noopener noreferrer"
-                class="link-card tt-card">
-                <div class="link-info">
-                    <div class="icon-box tiktok-icon">
-                        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
-                            <path
-                                d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z" />
-                        </svg>
-                    </div>
-                    <div class="link-text">
-                        <div class="link-title-row">
-                            <span class="link-title">Kênh TikTok Của Trẫm</span>
-                            <span class="card-tag tt-tag">Triệu View</span>
-                        </div>
-                        <div class="link-sub">Clip ngắn lướt là cười • Hóng meme cực cháy mỗi ngày 🔥</div>
-                    </div>
-                </div>
-                <svg class="arrow-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                    stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                    <polyline points="9 18 15 12 9 6"></polyline>
-                </svg>
-            </a>
-
-        </main>
-
-        <!-- Donate Section: Nuôi Mèo Hoàng Thượng -->
-        <section class="landingpage-card">
-            <div class="landingpage-header">
-                <h2 class="landingpage-title">
-                    <span>🐟</span> Góp Hũ Pate Nuôi Hoàng Thượng
-                </h2>
-                <p class="landingpage-desc">Mỗi hũ pate của sen là động lực để trẫm thức đêm cày video meme phục vụ cả
-                    nhà!</p>
-                <div>
-                    <span class="vnpay-badge">⚡ VietQR / VNPay Auto Scan 24/7</span>
-                </div>
-            </div>
-
-            <!-- QR Code Image Frame (Mã CAKE cho Cake by VPBank & STK 70SFSY6GAIG2) -->
-            <div class="qr-frame">
-                <img src="https://img.vietqr.io/image/CAKE-70SFSY6GAIG2-compact2.png?amount=0&addInfo=Donate%20Phuoc%20Meo%20Meme&accountName=PHUOC%20MEO%20MEME"
-                    alt="Mã QR Donate Phước Mèo Meme Cake by VPBank" class="qr-img" id="qrImage"
-                    onerror="this.onerror=null; this.src='./avatar.png';">
-            </div>
-
-            <!-- Bank Details Box -->
-            <div class="bank-info-box">
-                <div class="bank-row">
-                    <span class="bank-label">Ngân hàng:</span>
-                    <span class="bank-val" id="bankName">Cake by VPBank</span>
-                </div>
-                <div class="bank-row">
-                    <span class="bank-label">Số tài khoản:</span>
-                    <span class="bank-val stk-highlight" id="stkVal">70SFSY6GAIG2</span>
-                </div>
-                <div class="bank-row">
-                    <span class="bank-label">Chủ tài khoản:</span>
-                    <span class="bank-val" id="accountName">PHƯỚC MÈO MEME</span>
-                </div>
-            </div>
-
-            <!-- Quick Copy STK Button -->
-            <button class="copy-btn" onclick="copySTK()">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                </svg>
-                Sao Chép STK Cho Hoàng Thượng 🐾
-            </button>
-        </section>
-
-        <!-- Footer -->
-        <footer>
-            <p>© 2026 <strong>Phước Mèo Meme</strong> 🐾. Bản quyền thuộc về Hoàng Thượng.</p>
-            <p style="font-size: 0.75rem; margin-top: 4px; color: #64748B;">👑 Thế Giới Meme Hài Hước • Động Của Các Con
-                Sen 🏮</p>
-        </footer>
-
-    </div>
-
-    <!-- Toast Element -->
-    <div class="toast" id="toast">✅ Đã copy STK! Cảm ơn sen đã tài trợ pate cho Hoàng Thượng 🐟</div>
-
-    <!-- Floating Support Toast Card (Pop-up gợi ý sau 3s) -->
-    <div id="supportToastCard" class="support-toast-card">
-        <button type="button" class="toast-close-btn" onclick="closeSupportToast()"
-            aria-label="Đóng popup">&times;</button>
-        <div class="toast-badge">🎁 Món này xinh nè sen ơi</div>
-        <div class="toast-item-row">
-            <img id="toastProductImg" src="./avatar.png" alt="Ảnh sản phẩm" class="toast-thumb-img"
-                onerror="this.onerror=null; this.src='./avatar.png';">
-            <div class="toast-info">
-                <div id="toastProductTitle" class="toast-title">Đang chọn món quà...</div>
-                <div id="toastProductPrice" class="toast-price">✨ Deal Shopee</div>
-            </div>
-        </div>
-        <div class="toast-text">
-            Chỉ cần sen bấm vào lướt xem là đã tiếp thêm sức mạnh cho trẫm làm video meme rồi, không cần mua đâu nha!
-            Cảm ơn sen nhiều ❤️🐾
-        </div>
-        <a id="toastProductBtn" href="#" class="toast-action-btn" target="_blank" rel="noopener noreferrer">
-            👉 Bấm Ngó Thử Ủng Hộ Phước Mèo Meme
+  <div class="container">
+    
+    <!-- Profile Card Header -->
+    <header class="profile-card">
+      <div class="avatar-wrapper">
+        <img src="./avatar.png" alt="Phước Mèo Meme Avatar" class="avatar-img" id="avatarImg">
+        <div class="crown-badge" title="Phước Mèo Meme">👑</div>
+      </div>
+      
+      <h1 class="profile-title">Phước Mèo Meme</h1>
+      <p class="profile-bio">Hoàng Thượng làm video meme mèo cho các con sen cười xả stress mỗi ngày 😼👑</p>
+      
+      <div class="channel-tags-row">
+        <span class="channel-tag">👑 Trẫm Rất Hài</span>
+        <span class="channel-tag">🎬 Meme Cực Cuốn</span>
+        <span class="channel-tag">🐟 Động Của Sen</span>
+      </div>
+      
+      <!-- Social Horizontal Quick Links (Chỉ YouTube & TikTok - Đã xóa Facebook) -->
+      <div class="social-horizontal-bar">
+        <a href="https://www.youtube.com/@phuocmeomemee" target="_blank" rel="noopener noreferrer" class="social-pill-btn yt-pill" title="Kênh YouTube Phước Mèo Meme">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="#FF0000"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+          <span>YouTube</span>
         </a>
-    </div>
+        <a href="https://www.tiktok.com/@phuoc.meo.meme" target="_blank" rel="noopener noreferrer" class="social-pill-btn tt-pill" title="Kênh TikTok Phước Mèo Meme">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+          <span>TikTok</span>
+        </a>
+      </div>
+    </header>
 
-    <!-- YouTube Source Vote Modal Popup (?source=youtube) -->
-    <div id="voteModalBackdrop" class="vote-modal-backdrop" role="dialog" aria-modal="true"
-        aria-labelledby="voteModalQuestion">
-        <div class="vote-modal-card">
-            <button type="button" class="vote-modal-close" onclick="closeVoteModal()"
-                aria-label="Đóng popup">&times;</button>
-
-            <!-- Panel Nội dung Bình Chọn -->
-            <div id="voteMainPanel">
-                <!-- 1. Huy hiệu Quán Quân hôm qua -->
-                <div id="voteWinnerBadge" class="vote-winner-badge" style="display: none;">
-                    <div class="trophy-icon">🏆</div>
-                    <div id="voteWinnerText">Đang tải kết quả hôm qua...</div>
-                </div>
-
-                <!-- 2. Thanh tiến độ ngày -->
-                <div class="vote-progress-box">
-                    <div class="vote-progress-header">
-                        <span>Tiến độ phát sóng phim mới hôm nay</span>
-                        <span id="voteProgressText" class="progress-count">0/100 vote</span>
-                    </div>
-                    <div class="vote-progress-track">
-                        <div id="voteProgressFill" class="vote-progress-fill" style="width: 0%;"></div>
-                    </div>
-                    <div class="vote-red-note">
-                        🔥 Đủ 100/100 vote hôm nay ➔ Ngày mai có phim mới ngay nhe cả nhà!
-                    </div>
-                </div>
-
-                <!-- 3. Câu hỏi bình chọn & Chú thích đỏ -->
-                <div id="voteModalQuestion" class="vote-question">
-                    <span>🎬</span> Bạn muốn ngày mai page dịch tiếp bộ nào nhất?
-                </div>
-                <div class="vote-red-note" style="margin-bottom: 12px;">
-                    📌 *Nếu bộ Top 1 chưa ra tập mới bên Trung, page xin phép dịch ngay bộ Top 2 nhe mn! ❤️
-                </div>
-
-                <!-- 4. Danh sách Top phim hôm nay (Bấm chọn nhanh) -->
-                <div id="voteOptionsHeader" class="vote-options-title" style="display: none;">
-                    <span>🔥</span> Các bộ đang được đề xuất nhiều hôm nay (Bấm để chọn):
-                </div>
-                <div id="voteOptionsGrid" class="vote-options-grid" style="display: none;"></div>
-
-                <!-- 5. Form nhập tên phim mới & Submit -->
-                <form id="voteForm" onsubmit="handleVoteSubmit(event)">
-                    <!-- Honeypot chống bot tự động -->
-
-                    <input type="text" name="website" style="display: none !important;" tabindex="-1"
-                        autocomplete="off">
-
-                    <div class="vote-input-wrap">
-                        <input type="text" id="voteMovieInput" class="vote-input" maxlength="50"
-                            placeholder="Hoặc nhập tên phim bạn muốn xem... (VD: Đấu La Đại Lục)" autocomplete="off"
-                            oninput="onCustomMovieInput()">
-                    </div>
-
-                    <button type="submit" id="voteSubmitBtn" class="vote-submit-btn">
-                        <span>🎁</span> Bình Chọn & Mở Quà May Mắn
-                    </button>
-                </form>
-            </div>
-
-            <!-- Panel Thông báo Thành Công -->
-            <div id="voteSuccessPanel" class="vote-success-panel">
-                <div class="vote-success-icon">🎉</div>
-                <div class="vote-success-title">Đã Ghi Nhận Bình Chọn!</div>
-                <div class="vote-success-desc">
-                    Cảm ơn bạn đã tiếp lửa cho page! Món quà Shopee may mắn đang được mở ở tab mới, bạn ngó lướt xem ủng
-                    hộ page duy trì nhé ❤️
-                </div>
-                <button type="button" class="vote-submit-btn" onclick="closeVoteModal()">
-                    Đóng & Xem Tiếp Web 🐾
-                </button>
-            </div>
+    <!-- Shopee Products Showcase / Giỏ Hàng Mua Pate Cho Hoàng Thượng -->
+    <section class="products-section" id="shopeeProductsSection" style="display: none;">
+      <div class="products-header">
+        <h2 class="products-title">
+          <span>🛍️</span> Giỏ Hàng Mua Pate Cho Hoàng Thượng 🐾
+        </h2>
+        
+        <!-- Khung Kêu Gọi Hài Hước Của Hoàng Thượng -->
+        <div class="callout-box">
+          <span class="callout-icon">💡</span>
+          <p class="callout-text">
+            Mấy sen rảnh tay bấm dạo vào ngó mấy món bên dưới giúp trẫm kiếm tí kinh phí mua pate nha! 
+            <span class="callout-highlight">Không cần chốt đơn cũng được nè</span>, chỉ cần bấm vào lướt xem 1 tí là trẫm vui rồi, cảm ơn các sen nhiều lắm! 😼❤️
+          </p>
         </div>
+      </div>
+
+      <!-- Search Bar -->
+      <div class="products-search-wrap">
+        <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" id="productSearchInput" class="products-search-input" placeholder="🔍 Tìm nhanh món bạn thích..." autocomplete="off">
+        <button type="button" id="productSearchClear" class="products-search-clear" style="display: none;" onclick="clearProductSearch()">✕</button>
+      </div>
+
+      <!-- Category Filter Pills (Thanh trượt ngang Dynamic) -->
+      <div class="products-categories-wrap">
+        <div class="products-categories" id="productCategoriesList">
+          <button type="button" class="category-tab-btn active" data-cat="all" onclick="selectCategory('all')">🔥 Tất cả</button>
+        </div>
+      </div>
+
+      <!-- Product Grid -->
+      <div class="product-grid" id="productGrid">
+        <!-- Rendered by JS -->
+      </div>
+
+      <!-- Empty State -->
+      <div id="productEmptyState" class="product-empty-state" style="display: none;">
+        <span style="font-size: 2rem;">🔍</span>
+        <p>Hổng tìm thấy món nào hết trơn á sen ơi</p>
+        <small style="color: var(--text-sub);">Thử tìm bằng từ khóa khác hoặc bấm tab khác xem sao nha!</small>
+      </div>
+
+      <!-- Load More Button -->
+      <button type="button" class="products-toggle-btn" id="btnLoadMoreProducts" style="display: none;" onclick="loadMoreProducts()">
+        <span id="btnLoadMoreText">Xem thêm sản phẩm</span>
+        <svg id="btnLoadMoreIcon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="transition: transform 0.2s;"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </button>
+
+      <!-- End of List Note -->
+      <div id="productEndOfList" class="product-end-note" style="display: none;">
+        ✨ Đã hiển thị tất cả sản phẩm
+      </div>
+    </section>
+
+    <!-- Social Links Section (Chỉ YouTube & TikTok - Đã xóa Facebook) -->
+    <main class="links-section">
+
+      <!-- Card 1: YouTube -->
+      <a href="https://www.youtube.com/@phuocmeomemee" target="_blank" rel="noopener noreferrer" class="link-card yt-card">
+        <div class="link-info">
+          <div class="icon-box youtube-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+            </svg>
+          </div>
+          <div class="link-text">
+            <div class="link-title-row">
+              <span class="link-title">Kênh YouTube Của Hoàng Thượng</span>
+              <span class="card-tag yt-tag">Tập Mới Nhất</span>
+            </div>
+            <div class="link-sub">Xem trọn tập video meme dài • Cười bể bụng không lo quảng cáo 🎬</div>
+          </div>
+        </div>
+        <svg class="arrow-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+      </a>
+
+      <!-- Card 2: TikTok -->
+      <a href="https://www.tiktok.com/@phuoc.meo.meme" target="_blank" rel="noopener noreferrer" class="link-card tt-card">
+        <div class="link-info">
+          <div class="icon-box tiktok-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/>
+            </svg>
+          </div>
+          <div class="link-text">
+            <div class="link-title-row">
+              <span class="link-title">Kênh TikTok Của Trẫm</span>
+              <span class="card-tag tt-tag">Triệu View</span>
+            </div>
+            <div class="link-sub">Clip ngắn lướt là cười • Hóng meme cực cháy mỗi ngày 🔥</div>
+          </div>
+        </div>
+        <svg class="arrow-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+      </a>
+
+    </main>
+
+    <!-- Donate Section: Nuôi Mèo Hoàng Thượng -->
+    <section class="landingpage-card">
+      <div class="landingpage-header">
+        <h2 class="landingpage-title">
+          <span>🐟</span> Góp Hũ Pate Nuôi Hoàng Thượng
+        </h2>
+        <p class="landingpage-desc">Mỗi hũ pate của sen là động lực để trẫm thức đêm cày video meme phục vụ cả nhà!</p>
+        <div>
+          <span class="vnpay-badge">⚡ VietQR / VNPay Auto Scan 24/7</span>
+        </div>
+      </div>
+
+      <!-- QR Code Image Frame (Mã CAKE cho Cake by VPBank & STK 70SFSY6GAIG2) -->
+      <div class="qr-frame">
+        <img 
+          src="https://img.vietqr.io/image/CAKE-70SFSY6GAIG2-compact2.png?amount=0&addInfo=Donate%20Phuoc%20Meo%20Meme&accountName=PHUOC%20MEO%20MEME" 
+          alt="Mã QR Donate Phước Mèo Meme Cake by VPBank" 
+          class="qr-img"
+          id="qrImage"
+          onerror="this.onerror=null; this.src='./avatar.png';"
+        >
+      </div>
+
+      <!-- Bank Details Box -->
+      <div class="bank-info-box">
+        <div class="bank-row">
+          <span class="bank-label">Ngân hàng:</span>
+          <span class="bank-val" id="bankName">Cake by VPBank</span>
+        </div>
+        <div class="bank-row">
+          <span class="bank-label">Số tài khoản:</span>
+          <span class="bank-val stk-highlight" id="stkVal">70SFSY6GAIG2</span>
+        </div>
+        <div class="bank-row">
+          <span class="bank-label">Chủ tài khoản:</span>
+          <span class="bank-val" id="accountName">PHƯỚC MÈO MEME</span>
+        </div>
+      </div>
+
+      <!-- Quick Copy STK Button -->
+      <button class="copy-btn" onclick="copySTK()">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+          <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+        </svg>
+        Sao Chép STK Cho Hoàng Thượng 🐾
+      </button>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>© 2026 <strong>Phước Mèo Meme</strong> 🐾. Bản quyền thuộc về Hoàng Thượng.</p>
+      <p style="font-size: 0.75rem; margin-top: 4px; color: #64748B;">👑 Thế Giới Meme Hài Hước • Động Của Các Con Sen 🏮</p>
+    </footer>
+
+  </div>
+
+  <!-- Toast Element -->
+  <div class="toast" id="toast">✅ Đã copy STK! Cảm ơn sen đã tài trợ pate cho Hoàng Thượng 🐟</div>
+
+  <!-- Floating Support Toast Card (Pop-up gợi ý sau 3s) -->
+  <div id="supportToastCard" class="support-toast-card">
+    <button type="button" class="toast-close-btn" onclick="closeSupportToast()" aria-label="Đóng popup">&times;</button>
+    <div class="toast-badge">🎁 Món này xinh nè sen ơi</div>
+    <div class="toast-item-row">
+      <img id="toastProductImg" src="./avatar.png" alt="Ảnh sản phẩm" class="toast-thumb-img" onerror="this.onerror=null; this.src='./avatar.png';">
+      <div class="toast-info">
+        <div id="toastProductTitle" class="toast-title">Đang chọn món quà...</div>
+        <div id="toastProductPrice" class="toast-price">✨ Deal Shopee</div>
+      </div>
     </div>
+    <div class="toast-text">
+      Chỉ cần sen bấm vào lướt xem là đã tiếp thêm sức mạnh cho trẫm làm video meme rồi, không cần mua đâu nha! Cảm ơn sen nhiều ❤️🐾
+    </div>
+    <a id="toastProductBtn" href="#" class="toast-action-btn" target="_blank" rel="noopener noreferrer">
+      👉 Bấm Ngó Thử Ủng Hộ Phước Mèo Meme
+    </a>
+  </div>
 
-    <script>
-        const API_URL = 'https://phuocmeomeme.site'
+  <!-- YouTube Source Vote Modal Popup (?source=youtube) -->
+  <div id="voteModalBackdrop" class="vote-modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="voteModalQuestion">
+    <div class="vote-modal-card">
+      <button type="button" class="vote-modal-close" onclick="closeVoteModal()" aria-label="Đóng popup">&times;</button>
+      
+      <!-- Panel Nội dung Bình Chọn -->
+      <div id="voteMainPanel">
+        <!-- 1. Huy hiệu Quán Quân & Top 3 đợt trước -->
+        <div id="voteWinnerBadge" class="vote-winner-badge" style="display: none;">
+          <div id="voteWinnerText" style="width: 100%;">Đang tải kết quả đợt trước...</div>
+        </div>
 
-        function copySTK() {
-            const stk = document.getElementById('stkVal').innerText.trim();
-            navigator.clipboard.writeText(stk).then(() => {
-                showToast("✅ Đã copy STK! Cảm ơn sen đã tài trợ pate cho Hoàng Thượng 🐟");
-            }).catch(err => {
-                // Fallback for older browsers
-                const textarea = document.createElement('textarea');
-                textarea.value = stk;
-                document.body.appendChild(textarea);
-                textarea.select();
-                document.execCommand('copy');
-                document.body.removeChild(textarea);
-                showToast("✅ Đã copy STK! Cảm ơn sen đã tài trợ pate cho Hoàng Thượng 🐟");
-            });
+        <!-- 2. Thanh tiến độ bể vote chung 100 lượt -->
+        <div class="vote-progress-box">
+          <div class="vote-progress-header">
+            <span id="voteProgressTitle">Tiến độ mở khóa tập mới</span>
+            <span id="voteProgressText" class="progress-count">0/100 vote</span>
+          </div>
+          <div class="vote-progress-track">
+            <div id="voteProgressFill" class="vote-progress-fill" style="width: 0%;"></div>
+          </div>
+          <div class="vote-red-note">
+            🔥 Đủ 100 vote chung ➔ Tập mới của bộ Top 1 sẽ được lên sóng ngay!
+          </div>
+        </div>
+
+        <!-- 3. Câu hỏi bình chọn & Chú thích đỏ -->
+        <div id="voteModalQuestion" class="vote-question">
+          <span>🎬</span> Bạn muốn ngày mai page dịch tiếp bộ nào nhất?
+        </div>
+        <div class="vote-red-note" style="margin-bottom: 12px;">
+          📌 *Nếu bộ Top 1 chưa ra tập mới bên Trung, page xin phép dịch ngay bộ Top 2 nhe mn! ❤️
+        </div>
+
+        <!-- 4. Danh sách Top phim hôm nay (Bấm chọn nhanh) -->
+        <div id="voteOptionsHeader" class="vote-options-title" style="display: none;">
+          <span>🔥</span> Các bộ đang được đề xuất nhiều hôm nay (Bấm để chọn):
+        </div>
+        <div id="voteOptionsGrid" class="vote-options-grid" style="display: none;"></div>
+
+        <!-- 5. Form nhập tên phim mới & Submit -->
+        <form id="voteForm" onsubmit="handleVoteSubmit(event)">
+          <!-- Honeypot chống bot tự động -->
+          <input type="text" name="website" style="display: none !important;" tabindex="-1" autocomplete="off">
+          
+          <div class="vote-input-wrap">
+            <input type="text" id="voteMovieInput" class="vote-input" maxlength="50" placeholder="Hoặc nhập tên phim bạn muốn xem... (VD: Đấu La Đại Lục)" autocomplete="off" oninput="onCustomMovieInput()">
+          </div>
+
+          <button type="submit" id="voteSubmitBtn" class="vote-submit-btn">
+            <span>🎁</span> Bình Chọn & Mở Quà May Mắn
+          </button>
+        </form>
+      </div>
+
+      <!-- Panel Thông báo Thành Công -->
+      <div id="voteSuccessPanel" class="vote-success-panel">
+        <div class="vote-success-icon">🎉</div>
+        <div class="vote-success-title">Đã Ghi Nhận Bình Chọn!</div>
+        <div class="vote-success-desc">
+          Cảm ơn bạn đã tiếp lửa cho page! Món quà Shopee may mắn đang được mở ở tab mới, bạn ngó lướt xem ủng hộ page duy trì nhé ❤️
+        </div>
+        <button type="button" class="vote-submit-btn" onclick="closeVoteModal()">
+          Đóng & Xem Tiếp Web 🐾
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const API_URL = 'https://phuocmeomeme.site'
+
+    function copySTK() {
+      const stk = document.getElementById('stkVal').innerText.trim();
+      navigator.clipboard.writeText(stk).then(() => {
+        showToast("✅ Đã copy STK! Cảm ơn sen đã tài trợ pate cho Hoàng Thượng 🐟");
+      }).catch(err => {
+        // Fallback for older browsers
+        const textarea = document.createElement('textarea');
+        textarea.value = stk;
+        document.body.appendChild(textarea);
+        textarea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textarea);
+        showToast("✅ Đã copy STK! Cảm ơn sen đã tài trợ pate cho Hoàng Thượng 🐟");
+      });
+    }
+
+    function showToast(message) {
+      const toast = document.getElementById('toast');
+      toast.innerText = message;
+      toast.classList.add('show');
+      setTimeout(() => {
+        toast.classList.remove('show');
+      }, 3000);
+    }
+
+    // === Shopee / TikTok Shop Products Showcase với Server-side Pagination & Search ===
+    const urlParams = new URLSearchParams(window.location.search);
+    const currentSource = (urlParams.get('source') || '').toLowerCase().trim();
+    const isTikTokSource = currentSource === 'tiktok';
+
+    let loadedProducts = [];
+    let currentPage = 1;
+    let totalProducts = 0;
+    let hasMorePages = false;
+    let isLoading = false;
+    let currentCategory = 'all';
+    let currentSearch = '';
+    let searchDebounceTimer = null;
+    const PAGE_LIMIT = 8;
+
+    // Client-side Memory Cache (TTL: 60s) để chuyển Tab 0ms tức thì không độ trễ
+    const clientProductCache = new Map();
+    const CLIENT_CACHE_TTL = 60 * 1000;
+
+    function getClientCache(key) {
+      const item = clientProductCache.get(key);
+      if (!item) return null;
+      if (Date.now() - item.timestamp > CLIENT_CACHE_TTL) {
+        clientProductCache.delete(key);
+        return null;
+      }
+      return item.data;
+    }
+
+    function setClientCache(key, data) {
+      if (clientProductCache.size > 60) {
+        const oldest = clientProductCache.keys().next().value;
+        clientProductCache.delete(oldest);
+      }
+      clientProductCache.set(key, { data, timestamp: Date.now() });
+    }
+
+    // Áp dụng dữ liệu products lên UI (Dùng chung cho cả Cache Hit và Network Response)
+    function applyProductsData(data, append = false) {
+      const section = document.getElementById('shopeeProductsSection');
+      const grid = document.getElementById('productGrid');
+      const btnLoadMore = document.getElementById('btnLoadMoreProducts');
+      const textLoadMore = document.getElementById('btnLoadMoreText');
+      const emptyState = document.getElementById('productEmptyState');
+      const endNote = document.getElementById('productEndOfList');
+
+      currentPage = data.page || 1;
+      totalProducts = data.total || 0;
+      hasMorePages = Boolean(data.hasMore);
+
+      if (append) {
+        loadedProducts = loadedProducts.concat(data.products || []);
+      } else {
+        loadedProducts = data.products || [];
+      }
+
+      if (section) section.style.display = 'flex';
+
+      // Render Categories Tabs Động từ API nếu có
+      if (Array.isArray(data.categories) && data.categories.length > 0) {
+        renderCategoryTabs(data.categories);
+      }
+
+      // Render UI Cards
+      renderProductCards(append, data.products || []);
+
+      // Khởi động hẹn giờ 3s hiển thị Toast Card ủng hộ (nếu user chưa tương tác)
+      scheduleSupportToast();
+
+      if (grid) grid.style.opacity = '1';
+
+      // Xử lý Empty State
+      if (loadedProducts.length === 0) {
+        if (emptyState) emptyState.style.display = 'flex';
+        if (btnLoadMore) btnLoadMore.style.display = 'none';
+        if (endNote) endNote.style.display = 'none';
+      } else {
+        if (emptyState) emptyState.style.display = 'none';
+
+        // Hiển thị nút Load More hoặc End Note
+        if (hasMorePages) {
+          if (btnLoadMore) {
+            btnLoadMore.style.display = 'flex';
+            btnLoadMore.disabled = false;
+            const remaining = totalProducts - loadedProducts.length;
+            textLoadMore.textContent = `Xem thêm sản phẩm (còn ${remaining} món)`;
+          }
+          if (endNote) endNote.style.display = 'none';
+        } else {
+          if (btnLoadMore) btnLoadMore.style.display = 'none';
+          if (endNote && totalProducts > PAGE_LIMIT) {
+            endNote.style.display = 'block';
+            endNote.textContent = `✨ Đã hiển thị tất cả ${totalProducts} sản phẩm`;
+          } else if (endNote) {
+            endNote.style.display = 'none';
+          }
+        }
+      }
+    }
+
+    async function fetchProducts(page = 1, append = false) {
+      if (isLoading) return;
+
+      const grid = document.getElementById('productGrid');
+      const btnLoadMore = document.getElementById('btnLoadMoreProducts');
+      const textLoadMore = document.getElementById('btnLoadMoreText');
+      const section = document.getElementById('shopeeProductsSection');
+
+      const cacheKey = `${currentCategory}:${currentSearch.trim()}:${currentSource}:${page}`;
+
+      // 1. Kiểm tra Client-Side Memory Cache (Phản hồi tức thì 0ms khi chuyển qua lại tab)
+      if (!append) {
+        const cached = getClientCache(cacheKey);
+        if (cached) {
+          applyProductsData(cached, false);
+          return;
+        }
+      }
+
+      isLoading = true;
+
+      if (btnLoadMore && append) {
+        btnLoadMore.disabled = true;
+        textLoadMore.textContent = 'Đang tải thêm...';
+      }
+
+      // Hiệu ứng mờ nhẹ để không bị giật trắng giao diện khi chờ mạng
+      if (grid && !append && loadedProducts.length > 0) {
+        grid.style.opacity = '0.55';
+      }
+
+      try {
+        const params = new URLSearchParams({
+          channelId: 'phuocmeomeme',
+          page: String(page),
+          limit: String(PAGE_LIMIT)
+        });
+
+        if (currentSource) {
+          params.set('source', currentSource);
         }
 
-        function showToast(message) {
-            const toast = document.getElementById('toast');
-            toast.innerText = message;
-            toast.classList.add('show');
-            setTimeout(() => {
-                toast.classList.remove('show');
-            }, 3000);
+        if (currentCategory && currentCategory !== 'all') {
+          params.set('category', currentCategory);
         }
 
-        // === Shopee / TikTok Shop Products Showcase với Server-side Pagination & Search ===
-        const urlParams = new URLSearchParams(window.location.search);
-        const currentSource = (urlParams.get('source') || '').toLowerCase().trim();
-        const isTikTokSource = currentSource === 'tiktok';
-
-        let loadedProducts = [];
-        let currentPage = 1;
-        let totalProducts = 0;
-        let hasMorePages = false;
-        let isLoading = false;
-        let currentCategory = 'all';
-        let currentSearch = '';
-        let searchDebounceTimer = null;
-        const PAGE_LIMIT = 8;
-
-        // Client-side Memory Cache (TTL: 60s) để chuyển Tab 0ms tức thì không độ trễ
-        const clientProductCache = new Map();
-        const CLIENT_CACHE_TTL = 60 * 1000;
-
-        function getClientCache(key) {
-            const item = clientProductCache.get(key);
-            if (!item) return null;
-            if (Date.now() - item.timestamp > CLIENT_CACHE_TTL) {
-                clientProductCache.delete(key);
-                return null;
-            }
-            return item.data;
+        if (currentSearch && currentSearch.trim()) {
+          params.set('search', currentSearch.trim());
         }
 
-        function setClientCache(key, data) {
-            if (clientProductCache.size > 60) {
-                const oldest = clientProductCache.keys().next().value;
-                clientProductCache.delete(oldest);
-            }
-            clientProductCache.set(key, { data, timestamp: Date.now() });
+        const res = await fetch(`${API_URL}/api/products?${params.toString()}`);
+        const data = await res.json();
+
+        if (!data.success) throw new Error(data.error || 'Fetch failed');
+
+        // Lưu vào Client Cache
+        setClientCache(cacheKey, data);
+
+        // Áp dụng dữ liệu lên giao diện
+        applyProductsData(data, append);
+      } catch (err) {
+        console.warn('Lỗi load sản phẩm Shopee:', err);
+        if (grid) grid.style.opacity = '1';
+        if (!append && loadedProducts.length === 0) {
+          if (section) section.style.display = 'none';
         }
+      } finally {
+        isLoading = false;
+        if (btnLoadMore) btnLoadMore.disabled = false;
+        if (grid) grid.style.opacity = '1';
+      }
+    }
 
-        // Áp dụng dữ liệu products lên UI (Dùng chung cho cả Cache Hit và Network Response)
-        function applyProductsData(data, append = false) {
-            const section = document.getElementById('shopeeProductsSection');
+    // Render danh sách Tabs Danh mục động từ Server
+    function renderCategoryTabs(categories) {
+      const container = document.getElementById('productCategoriesList');
+      if (!container || !Array.isArray(categories)) return;
 
-            const grid = document.getElementById('productGrid');
-            const btnLoadMore = document.getElementById('btnLoadMoreProducts');
-            const textLoadMore = document.getElementById('btnLoadMoreText');
-            const emptyState = document.getElementById('productEmptyState');
-            const endNote = document.getElementById('productEndOfList');
-
-            currentPage = data.page || 1;
-            totalProducts = data.total || 0;
-            hasMorePages = Boolean(data.hasMore);
-
-            if (append) {
-                loadedProducts = loadedProducts.concat(data.products || []);
-            } else {
-                loadedProducts = data.products || [];
-            }
-
-            if (section) section.style.display = 'flex';
-
-            // Render Categories Tabs Động từ API nếu có
-            if (Array.isArray(data.categories) && data.categories.length > 0) {
-                renderCategoryTabs(data.categories);
-            }
-
-            // Render UI Cards
-            renderProductCards(append, data.products || []);
-
-            // Khởi động hẹn giờ 3s hiển thị Toast Card ủng hộ (nếu user chưa tương tác)
-            scheduleSupportToast();
-
-            if (grid) grid.style.opacity = '1';
-
-            // Xử lý Empty State
-            if (loadedProducts.length === 0) {
-                if (emptyState) emptyState.style.display = 'flex';
-                if (btnLoadMore) btnLoadMore.style.display = 'none';
-                if (endNote) endNote.style.display = 'none';
-            } else {
-                if (emptyState) emptyState.style.display = 'none';
-
-                // Hiển thị nút Load More hoặc End Note
-                if (hasMorePages) {
-                    if (btnLoadMore) {
-                        btnLoadMore.style.display = 'flex';
-                        btnLoadMore.disabled = false;
-                        const remaining = totalProducts - loadedProducts.length;
-                        textLoadMore.textContent = `Xem thêm sản phẩm (còn ${remaining} món)`;
-                    }
-                    if (endNote) endNote.style.display = 'none';
-                } else {
-                    if (btnLoadMore) btnLoadMore.style.display = 'none';
-                    if (endNote && totalProducts > PAGE_LIMIT) {
-                        endNote.style.display = 'block';
-                        endNote.textContent = `✨ Đã hiển thị tất cả ${totalProducts} sản phẩm`;
-                    } else if (endNote) {
-                        endNote.style.display = 'none';
-                    }
-                }
-            }
-        }
-
-        async function fetchProducts(page = 1, append = false) {
-            if (isLoading) return;
-
-            const grid = document.getElementById('productGrid');
-            const btnLoadMore = document.getElementById('btnLoadMoreProducts');
-            const textLoadMore = document.getElementById('btnLoadMoreText');
-            const section = document.getElementById('shopeeProductsSection');
-
-            const cacheKey = `${currentCategory}:${currentSearch.trim()}:${currentSource}:${page}`;
-
-            // 1. Kiểm tra Client-Side Memory Cache (Phản hồi tức thì 0ms khi chuyển qua lại tab)
-            if (!append) {
-                const cached = getClientCache(cacheKey);
-                if (cached) {
-                    applyProductsData(cached, false);
-                    return;
-                }
-            }
-
-            isLoading = true;
-
-            if (btnLoadMore && append) {
-                btnLoadMore.disabled = true;
-                textLoadMore.textContent = 'Đang tải thêm...';
-            }
-
-            // Hiệu ứng mờ nhẹ để không bị giật trắng giao diện khi chờ mạng
-            if (grid && !append && loadedProducts.length > 0) {
-                grid.style.opacity = '0.55';
-            }
-
-            try {
-                const params = new URLSearchParams({
-                    channelId: 'phuocmeomeme',
-                    page: String(page),
-                    limit: String(PAGE_LIMIT)
-                });
-
-                if (currentSource) {
-                    params.set('source', currentSource);
-                }
-
-                if (currentCategory && currentCategory !== 'all') {
-
-                    params.set('category', currentCategory);
-                }
-
-                if (currentSearch && currentSearch.trim()) {
-                    params.set('search', currentSearch.trim());
-                }
-
-                const res = await fetch(`${API_URL}/api/products?${params.toString()}`);
-                const data = await res.json();
-
-                if (!data.success) throw new Error(data.error || 'Fetch failed');
-
-                // Lưu vào Client Cache
-                setClientCache(cacheKey, data);
-
-                // Áp dụng dữ liệu lên giao diện
-                applyProductsData(data, append);
-            } catch (err) {
-                console.warn('Lỗi load sản phẩm Shopee:', err);
-                if (grid) grid.style.opacity = '1';
-                if (!append && loadedProducts.length === 0) {
-                    if (section) section.style.display = 'none';
-                }
-            } finally {
-                isLoading = false;
-                if (btnLoadMore) btnLoadMore.disabled = false;
-                if (grid) grid.style.opacity = '1';
-            }
-        }
-
-        // Render danh sách Tabs Danh mục động từ Server
-        function renderCategoryTabs(categories) {
-            const container = document.getElementById('productCategoriesList');
-            if (!container || !Array.isArray(categories)) return;
-
-            container.innerHTML = categories.map(cat => {
-                const isActive = cat.id === currentCategory;
-                const countStr = cat.count !== undefined ? ` (${cat.count})` : '';
-                const iconStr = cat.icon ? `${cat.icon} ` : '';
-                return `
+      container.innerHTML = categories.map(cat => {
+        const isActive = cat.id === currentCategory;
+        const countStr = cat.count !== undefined ? ` (${cat.count})` : '';
+        const iconStr = cat.icon ? `${cat.icon} ` : '';
+        return `
           <button type="button" 
                   class="category-tab-btn ${isActive ? 'active' : ''}" 
                   data-cat="${escapeHtml(cat.id)}" 
@@ -2260,25 +2021,25 @@
             ${iconStr}${escapeHtml(cat.name)}${countStr}
           </button>
         `;
-            }).join('');
-        }
+      }).join('');
+    }
 
-        function renderProductCards(append = false, newItems = []) {
-            const grid = document.getElementById('productGrid');
-            if (!grid) return;
+    function renderProductCards(append = false, newItems = []) {
+      const grid = document.getElementById('productGrid');
+      if (!grid) return;
 
-            const itemsToRender = append ? newItems : loadedProducts;
+      const itemsToRender = append ? newItems : loadedProducts;
 
-            const cardsHtml = itemsToRender.map(item => {
-                const isItemTiktok = item.platform === 'tiktok' || (item.url && item.url.includes('tiktok.com'));
-                const defaultTitle = isItemTiktok ? 'Sản phẩm TikTok Shop' : 'Sản phẩm Shopee';
-                const defaultBadge = isItemTiktok ? '✨ TikTok Shop' : '✨ Deal Shopee';
-                const titleSafe = escapeHtml(item.title || defaultTitle);
-                const imgSafe = item.imageUrl ? escapeHtml(item.imageUrl) : './avatar.png';
-                const clickUrl = `${API_URL}/api/products/click/${item.id}`;
-                const priceDisplay = item.price ? `🏷️ ${escapeHtml(item.price)}` : defaultBadge;
+      const cardsHtml = itemsToRender.map(item => {
+        const isItemTiktok = item.platform === 'tiktok' || (item.url && item.url.includes('tiktok.com'));
+        const defaultTitle = isItemTiktok ? 'Sản phẩm TikTok Shop' : 'Sản phẩm Shopee';
+        const defaultBadge = isItemTiktok ? '✨ TikTok Shop' : '✨ Deal Shopee';
+        const titleSafe = escapeHtml(item.title || defaultTitle);
+        const imgSafe = item.imageUrl ? escapeHtml(item.imageUrl) : './avatar.png';
+        const clickUrl = `${API_URL}/api/products/click/${item.id}`;
+        const priceDisplay = item.price ? `🏷️ ${escapeHtml(item.price)}` : defaultBadge;
 
-                return `
+        return `
           <a href="${clickUrl}" target="_blank" rel="noopener noreferrer" class="product-card">
             <div class="product-thumb-box">
               <span class="product-card-badge">🐾 Sen bấm ngó thử</span>
@@ -2292,289 +2053,309 @@
                 <span class="product-price-tag">${priceDisplay}</span>
               </div>
               <button type="button" class="product-buy-btn">
-
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
                 👉 Bấm ngó thử ủng hộ Trẫm
               </button>
             </div>
           </a>
         `;
-            }).join('');
+      }).join('');
 
-            if (append) {
-                grid.insertAdjacentHTML('beforeend', cardsHtml);
-            } else {
-                grid.innerHTML = cardsHtml;
-            }
+      if (append) {
+        grid.insertAdjacentHTML('beforeend', cardsHtml);
+      } else {
+        grid.innerHTML = cardsHtml;
+      }
+    }
+
+    // Bấm nút Xem thêm sản phẩm (Load More)
+    function loadMoreProducts() {
+      if (hasMorePages && !isLoading) {
+        fetchProducts(currentPage + 1, true);
+      }
+    }
+
+    // Chọn danh mục (Category filter)
+    function selectCategory(cat) {
+      if (currentCategory === cat) return;
+      currentCategory = cat;
+
+      // Update active pill
+      document.querySelectorAll('.category-tab-btn').forEach(btn => {
+        if (btn.dataset.cat === cat) {
+          btn.classList.add('active');
+        } else {
+          btn.classList.remove('active');
         }
+      });
 
-        // Bấm nút Xem thêm sản phẩm (Load More)
-        function loadMoreProducts() {
-            if (hasMorePages && !isLoading) {
-                fetchProducts(currentPage + 1, true);
-            }
+      // Reset page & load
+      currentPage = 1;
+      fetchProducts(1, false);
+    }
+
+    // Khởi tạo listeners cho thanh Search
+    function initSearchListeners() {
+      const input = document.getElementById('productSearchInput');
+      const clearBtn = document.getElementById('productSearchClear');
+      if (!input) return;
+
+      input.addEventListener('input', (e) => {
+        const val = e.target.value.trim();
+        if (clearBtn) clearBtn.style.display = val ? 'block' : 'none';
+
+        clearTimeout(searchDebounceTimer);
+        searchDebounceTimer = setTimeout(() => {
+          currentSearch = val;
+          currentPage = 1;
+          fetchProducts(1, false);
+        }, 300);
+      });
+    }
+
+    function clearProductSearch() {
+      const input = document.getElementById('productSearchInput');
+      const clearBtn = document.getElementById('productSearchClear');
+      if (input) input.value = '';
+      if (clearBtn) clearBtn.style.display = 'none';
+
+      currentSearch = '';
+      currentPage = 1;
+      fetchProducts(1, false);
+    }
+
+    // === Floating Support Toast Card Logic (Gợi ý sau 3s) ===
+    let supportToastTimer = null;
+    let hasUserInteracted = false;
+
+    // Hủy timer nếu người dùng đã chủ động bấm vào bất kỳ liên kết/nút bấm nào trên trang
+    document.addEventListener('click', (e) => {
+      if (e.target && e.target.closest && e.target.closest('.toast-close-btn')) return;
+      hasUserInteracted = true;
+      if (supportToastTimer) {
+        clearTimeout(supportToastTimer);
+        supportToastTimer = null;
+      }
+    }, { passive: true });
+
+    function closeSupportToast() {
+      const card = document.getElementById('supportToastCard');
+      if (card) card.classList.remove('show');
+    }
+
+    function triggerSupportToast() {
+      if (hasUserInteracted) return;
+      try {
+        if (sessionStorage.getItem('support_toast_viewed')) return;
+      } catch (_) {}
+
+      if (!Array.isArray(loadedProducts) || loadedProducts.length === 0) return;
+
+      // Chọn ngẫu nhiên 1 sản phẩm từ danh sách đang tải
+      const randomIndex = Math.floor(Math.random() * loadedProducts.length);
+      const item = loadedProducts[randomIndex];
+      if (!item) return;
+
+      const titleEl = document.getElementById('toastProductTitle');
+      const priceEl = document.getElementById('toastProductPrice');
+      const imgEl = document.getElementById('toastProductImg');
+      const btnEl = document.getElementById('toastProductBtn');
+      const card = document.getElementById('supportToastCard');
+
+      const isItemTiktok = item.platform === 'tiktok' || (item.url && item.url.includes('tiktok.com'));
+      const defaultTitle = isItemTiktok ? 'Sản phẩm TikTok Shop' : 'Sản phẩm Shopee';
+      const defaultBadge = isItemTiktok ? '✨ TikTok Shop' : '✨ Deal Shopee';
+
+      if (titleEl) titleEl.textContent = item.title || defaultTitle;
+      if (priceEl) priceEl.textContent = item.price ? `🏷️ ${item.price}` : defaultBadge;
+      if (imgEl && item.imageUrl) imgEl.src = item.imageUrl;
+      if (btnEl) btnEl.href = `${API_URL}/api/products/click/${item.id}`;
+
+      if (card) {
+        card.classList.add('show');
+        try {
+          sessionStorage.setItem('support_toast_viewed', '1');
+        } catch (_) {}
+      }
+    }
+
+    function scheduleSupportToast() {
+      if (hasUserInteracted || supportToastTimer) return;
+      try {
+        if (sessionStorage.getItem('support_toast_viewed')) return;
+      } catch (_) {}
+      supportToastTimer = setTimeout(triggerSupportToast, 3000);
+    }
+
+    function escapeHtml(str) {
+      if (!str) return '';
+      return String(str)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#039;');
+    }
+
+    function initPageSourceUI() {
+      if (isTikTokSource) {
+        const titleEl = document.querySelector('.products-title');
+        if (titleEl) {
+          titleEl.innerHTML = '<span>🛍️</span> Góc TikTok Shop Ủng Hộ Phước Mèo Meme 🐾';
         }
-
-        // Chọn danh mục (Category filter)
-        function selectCategory(cat) {
-            if (currentCategory === cat) return;
-            currentCategory = cat;
-
-            // Update active pill
-            document.querySelectorAll('.category-tab-btn').forEach(btn => {
-                if (btn.dataset.cat === cat) {
-                    btn.classList.add('active');
-                } else {
-                    btn.classList.remove('active');
-                }
-            });
-
-            // Reset page & load
-            currentPage = 1;
-            fetchProducts(1, false);
+        const searchInput = document.getElementById('productSearchInput');
+        if (searchInput) {
+          searchInput.placeholder = '🔍 Tìm nhanh món TikTok Shop bạn thích...';
         }
+      }
+    }
 
-        // Khởi tạo listeners cho thanh Search
-        function initSearchListeners() {
-            const input = document.getElementById('productSearchInput');
-            const clearBtn = document.getElementById('productSearchClear');
-            if (!input) return;
+    // === LOGIC POPUP BÌNH CHỌN PHIM NGUỒN YOUTUBE (?source=youtube) ===
+    let currentVoteDate = new Date().toISOString().slice(0, 10);
+    const isYouTubeSource = currentSource === 'youtube';
+    let selectedMovieOption = null;
 
-            input.addEventListener('input', (e) => {
-                const val = e.target.value.trim();
-                if (clearBtn) clearBtn.style.display = val ? 'block' : 'none';
+    function closeVoteModal() {
+      const backdrop = document.getElementById('voteModalBackdrop');
+      if (backdrop) backdrop.classList.remove('show');
+    }
 
-                clearTimeout(searchDebounceTimer);
-                searchDebounceTimer = setTimeout(() => {
-                    currentSearch = val;
-                    currentPage = 1;
-                    fetchProducts(1, false);
-                }, 300);
-            });
+    function selectVoteOption(movieTitle, element) {
+      const inputEl = document.getElementById('voteMovieInput');
+      const chips = document.querySelectorAll('.vote-option-chip');
+
+      // Nếu đang chọn đúng option này -> toggle bỏ chọn
+      if (element && element.classList.contains('selected')) {
+        element.classList.remove('selected');
+        selectedMovieOption = null;
+        if (inputEl) {
+          inputEl.placeholder = 'Hoặc nhập tên phim bạn muốn xem... (VD: Đấu La Đại Lục)';
         }
+        return;
+      }
 
-        function clearProductSearch() {
-            const input = document.getElementById('productSearchInput');
-            const clearBtn = document.getElementById('productSearchClear');
-            if (input) input.value = '';
-            if (clearBtn) clearBtn.style.display = 'none';
+      // Chọn option mới
+      chips.forEach(c => c.classList.remove('selected'));
+      if (element) element.classList.add('selected');
+      selectedMovieOption = movieTitle;
 
-            currentSearch = '';
-            currentPage = 1;
-            fetchProducts(1, false);
-        }
+      // Cập nhật thông báo đã chọn vào input và KHÔNG focus (tránh mở bàn phím mobile)
+      if (inputEl) {
+        inputEl.value = '';
+        inputEl.placeholder = `✅ Đã chọn: ${movieTitle} (Bấm gửi ngay bên dưới nhe)`;
+      }
+    }
 
-        // === Floating Support Toast Card Logic (Gợi ý sau 3s) ===
-        let supportToastTimer = null;
-        let hasUserInteracted = false;
+    function onCustomMovieInput() {
+      // Khi user chủ động gõ vào ô input, hủy chọn option chip ở trên
+      const chips = document.querySelectorAll('.vote-option-chip');
+      chips.forEach(c => c.classList.remove('selected'));
+      selectedMovieOption = null;
+    }
 
-        // Hủy timer nếu người dùng đã chủ động bấm vào bất kỳ liên kết/nút bấm nào trên trang
-        document.addEventListener('click', (e) => {
-            if (e.target && e.target.closest && e.target.closest('.toast-close-btn')) return;
-            hasUserInteracted = true;
-            if (supportToastTimer) {
-                clearTimeout(supportToastTimer);
-                supportToastTimer = null;
-            }
-        }, { passive: true });
+    async function initYouTubeVotePopup() {
+      if (!isYouTubeSource) return;
 
-        function closeSupportToast() {
-            const card = document.getElementById('supportToastCard');
-            if (card) card.classList.remove('show');
-        }
+      // Hủy supportToast nếu có để ưu tiên hiển thị popup bình chọn
+      if (supportToastTimer) {
+        clearTimeout(supportToastTimer);
+        supportToastTimer = null;
+      }
+      hasUserInteracted = true;
 
-        function triggerSupportToast() {
-            if (hasUserInteracted) return;
-            try {
-                if (sessionStorage.getItem('support_toast_viewed')) return;
-            } catch (_) { }
+      try {
+        const res = await fetch(`${API_URL}/api/votes/today`);
+        if (!res.ok) return;
+        const data = await res.json();
+        if (!data.success) return;
 
-            if (!Array.isArray(loadedProducts) || loadedProducts.length === 0) return;
+        currentVoteDate = data.date || currentVoteDate;
+        let currentCycleNumber = data.cycleNumber || 1;
 
-            // Chọn ngẫu nhiên 1 sản phẩm từ danh sách đang tải
-            const randomIndex = Math.floor(Math.random() * loadedProducts.length);
-            const item = loadedProducts[randomIndex];
-            if (!item) return;
+        // 1. Render Trạng Thái Phát Sóng hoặc Top 3 Đợt Trước
+        const winnerBadge = document.getElementById('voteWinnerBadge');
+        const winnerText = document.getElementById('voteWinnerText');
+        if (winnerBadge && winnerText) {
+          let badgeContent = '';
 
-            const titleEl = document.getElementById('toastProductTitle');
-            const priceEl = document.getElementById('toastProductPrice');
-            const imgEl = document.getElementById('toastProductImg');
-
-            const btnEl = document.getElementById('toastProductBtn');
-            const card = document.getElementById('supportToastCard');
-
-            const isItemTiktok = item.platform === 'tiktok' || (item.url && item.url.includes('tiktok.com'));
-            const defaultTitle = isItemTiktok ? 'Sản phẩm TikTok Shop' : 'Sản phẩm Shopee';
-            const defaultBadge = isItemTiktok ? '✨ TikTok Shop' : '✨ Deal Shopee';
-
-            if (titleEl) titleEl.textContent = item.title || defaultTitle;
-            if (priceEl) priceEl.textContent = item.price ? `🏷️ ${item.price}` : defaultBadge;
-            if (imgEl && item.imageUrl) imgEl.src = item.imageUrl;
-            if (btnEl) btnEl.href = `${API_URL}/api/products/click/${item.id}`;
-
-            if (card) {
-                card.classList.add('show');
-                try {
-                    sessionStorage.setItem('support_toast_viewed', '1');
-                } catch (_) { }
-            }
-        }
-
-        function scheduleSupportToast() {
-            if (hasUserInteracted || supportToastTimer) return;
-            try {
-                if (sessionStorage.getItem('support_toast_viewed')) return;
-            } catch (_) { }
-            supportToastTimer = setTimeout(triggerSupportToast, 3000);
-        }
-
-        function escapeHtml(str) {
-            if (!str) return '';
-            return String(str)
-                .replace(/&/g, '&amp;')
-                .replace(/</g, '&lt;')
-                .replace(/>/g, '&gt;')
-                .replace(/"/g, '&quot;')
-                .replace(/'/g, '&#039;');
-        }
-
-        function initPageSourceUI() {
-            if (isTikTokSource) {
-                const titleEl = document.querySelector('.products-title');
-                if (titleEl) {
-                    titleEl.innerHTML = '<span>🛍️</span> Góc TikTok Shop Ủng Hộ Phước Mèo Meme 🐾';
-                }
-                const searchInput = document.getElementById('productSearchInput');
-                if (searchInput) {
-                    searchInput.placeholder = '🔍 Tìm nhanh món TikTok Shop bạn thích...';
-                }
-            }
-        }
-
-        // === LOGIC POPUP BÌNH CHỌN PHIM NGUỒN YOUTUBE (?source=youtube) ===
-        let currentVoteDate = new Date().toISOString().slice(0, 10);
-        const isYouTubeSource = currentSource === 'youtube';
-        let selectedMovieOption = null;
-
-        function closeVoteModal() {
-            const backdrop = document.getElementById('voteModalBackdrop');
-            if (backdrop) backdrop.classList.remove('show');
-        }
-
-        function selectVoteOption(movieTitle, element) {
-            const inputEl = document.getElementById('voteMovieInput');
-            const chips = document.querySelectorAll('.vote-option-chip');
-
-            // Nếu đang chọn đúng option này -> toggle bỏ chọn
-            if (element && element.classList.contains('selected')) {
-                element.classList.remove('selected');
-                selectedMovieOption = null;
-                if (inputEl) {
-                    inputEl.placeholder = 'Hoặc nhập tên phim bạn muốn xem... (VD: Đấu La Đại Lục)';
-                }
-                return;
-            }
-
-            // Chọn option mới
-            chips.forEach(c => c.classList.remove('selected'));
-            if (element) element.classList.add('selected');
-            selectedMovieOption = movieTitle;
-
-            // Cập nhật thông báo đã chọn vào input và KHÔNG focus (tránh mở bàn phím mobile)
-            if (inputEl) {
-                inputEl.value = '';
-                inputEl.placeholder = `✅ Đã chọn: ${movieTitle} (Bấm gửi ngay bên dưới nhe)`;
-            }
-        }
-
-        function onCustomMovieInput() {
-            // Khi user chủ động gõ vào ô input, hủy chọn option chip ở trên
-            const chips = document.querySelectorAll('.vote-option-chip');
-            chips.forEach(c => c.classList.remove('selected'));
-            selectedMovieOption = null;
-        }
-
-        async function initYouTubeVotePopup() {
-            if (!isYouTubeSource) return;
-
-            // Hủy supportToast nếu có để ưu tiên hiển thị popup bình chọn
-            if (supportToastTimer) {
-                clearTimeout(supportToastTimer);
-                supportToastTimer = null;
-            }
-            hasUserInteracted = true;
-
-            try {
-                const res = await fetch(`${API_URL}/api/votes/today`);
-                if (!res.ok) return;
-                const data = await res.json();
-                if (!data.success) return;
-
-                currentVoteDate = data.date || currentVoteDate;
-
-                // 1. Render Trạng Thái Phát Sóng Hôm Nay hoặc Quán Quân Hôm Qua
-                const winnerBadge = document.getElementById('voteWinnerBadge');
-                const winnerText = document.getElementById('voteWinnerText');
-                if (winnerBadge && winnerText) {
-                    if (data.broadcast && data.broadcast.movieTitle) {
-                        const safeTitle = escapeHtml(data.broadcast.movieTitle);
-                        if (data.broadcast.status === 'published') {
-                            const safeUrl = data.broadcast.youtubeUrl || '#';
-                            winnerText.innerHTML = `
-                <div style="display: flex; flex-direction: column; gap: 4px; width: 100%;">
+          // A. Nếu có thông báo phát sóng tập mới từ Admin (/da_ra hoặc /set_phim)
+          if (data.broadcast && data.broadcast.movieTitle) {
+            const safeTitle = escapeHtml(data.broadcast.movieTitle);
+            if (data.broadcast.status === 'published') {
+              const safeUrl = data.broadcast.youtubeUrl || '#';
+              badgeContent += `
+                <div style="display: flex; flex-direction: column; gap: 4px; width: 100%; margin-bottom: 8px;">
                   <div><strong style="color: #FFB800;">🎉 TẬP MỚI ĐÃ LÊN SÓNG:</strong> <span style="font-weight: 700; color: #FFF;">${safeTitle}</span></div>
                   <a href="${safeUrl}" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 6px; background: linear-gradient(135deg, #FF0000 0%, #CC0000 100%); color: #FFF; font-weight: 800; font-size: 0.8rem; padding: 6px 14px; border-radius: 999px; text-decoration: none; width: fit-content; margin-top: 4px; box-shadow: 0 0 12px rgba(255, 0, 0, 0.45); transition: transform 0.2s;">
                     ▶ Bấm Vào Xem Ngay Trên YouTube 🍿
                   </a>
                 </div>
               `;
-                        } else {
-                            const safeNote = data.broadcast.note ? escapeHtml(data.broadcast.note) : '';
-                            winnerText.innerHTML = `
-                <div style="display: flex; flex-direction: column; gap: 3px;">
-                  <div><strong style="color: #FFB800;">⏳ HÔM NAY PAGE SẼ DỊCH:</strong> <span style="font-weight: 700; color: #FFF;">${safeTitle}</span></div>
+            } else {
+              const safeNote = data.broadcast.note ? escapeHtml(data.broadcast.note) : '';
+              badgeContent += `
+                <div style="display: flex; flex-direction: column; gap: 3px; margin-bottom: 8px;">
+                  <div><strong style="color: #FFB800;">⏳ PAGE ĐANG DỊCH TẬP MỚI:</strong> <span style="font-weight: 700; color: #FFF;">${safeTitle}</span></div>
                   ${safeNote ? `<div style="font-size: 0.78rem; color: #FFD54F;">📌 ${safeNote}</div>` : ''}
                 </div>
               `;
-                        }
-                        winnerBadge.style.display = 'flex';
-                    } else if (data.yesterdayWinner && data.yesterdayWinner.movieTitle) {
-                        const safeWinner = escapeHtml(data.yesterdayWinner.movieTitle);
-                        const votesCount = data.yesterdayWinner.votes || 0;
-                        winnerText.innerHTML = `<strong>Quán quân hôm qua:</strong> ${safeWinner} (${votesCount} votes) — Đang dịch, đón xem hôm nay nhe! ❤️`;
-                        winnerBadge.style.display = 'flex';
-                    } else {
-                        winnerText.innerHTML = `⚠️ <em>Hôm qua chưa đạt đủ 100 vote, hôm nay cùng nhau mở khóa phim mới nhé cả nhà!</em>`;
-                        winnerBadge.style.display = 'flex';
-                    }
-                }
+            }
+          }
 
-                // 2. Render Thanh Tiến Độ
-                const total = data.totalVotes || 0;
-                const goal = data.goalVotes || 100;
-                const percent = Math.min(100, Math.round((total / goal) * 100));
+          // B. Hiển thị Top 3 Đợt Vote Trước
+          if (data.previousCycle && Array.isArray(data.previousCycle.top3) && data.previousCycle.top3.length > 0) {
+            const topList = data.previousCycle.top3;
+            const p1 = topList[0] ? `🥇 <strong>${escapeHtml(topList[0].movieTitle)}</strong> <span style="color:#FFB800; font-weight:700">(${topList[0].votes} vote)</span>` : '';
+            const p2 = topList[1] ? `🥈 ${escapeHtml(topList[1].movieTitle)} (${topList[1].votes} vote)` : '';
+            const p3 = topList[2] ? `🥉 ${escapeHtml(topList[2].movieTitle)} (${topList[2].votes} vote)` : '';
 
-                const progressText = document.getElementById('voteProgressText');
-                const progressFill = document.getElementById('voteProgressFill');
-                if (progressText) progressText.textContent = `${total}/${goal} vote (${percent}%)`;
-                if (progressFill) progressFill.style.width = `${percent}%`;
+            badgeContent += `
+              <div style="width: 100%; ${data.broadcast?.movieTitle ? 'border-top: 1px dashed rgba(255,184,0,0.3); padding-top: 8px; margin-top: 4px;' : ''}">
+                <div style="font-size: 0.82rem; font-weight: 800; color: #FFB800; margin-bottom: 4px; display: flex; align-items: center; gap: 6px;">
+                  <span>🏆</span> TOP 3 ĐỢT VOTE TRƯỚC (ĐỢT #${data.previousCycle.cycleNumber}):
+                </div>
+                <div style="font-size: 0.8rem; line-height: 1.5; color: #E8E8E8;">
+                  <div>${p1}</div>
+                  ${p2 ? `<div>${p2}</div>` : ''}
+                  ${p3 ? `<div>${p3}</div>` : ''}
+                </div>
+              </div>
+            `;
+          } else if (!badgeContent) {
+            badgeContent = `🔥 <em>Đang ở Đợt #1! Cùng nhau vote để mở khóa tập mới cho bộ phim bạn yêu thích nhé!</em>`;
+          }
 
-                // 3. Render Danh Sách Top Options
+          winnerText.innerHTML = badgeContent;
+          winnerBadge.style.display = 'flex';
+        }
 
-                const optionsHeader = document.getElementById('voteOptionsHeader');
-                const optionsGrid = document.getElementById('voteOptionsGrid');
-                if (optionsGrid && Array.isArray(data.topMovies) && data.topMovies.length > 0) {
-                    let html = '';
-                    data.topMovies.slice(0, 6).forEach((item, index) => {
-                        const rank = index + 1;
-                        let rankClass = 'vote-rank-other';
-                        if (rank === 1) rankClass = 'vote-rank-1';
-                        else if (rank === 2) rankClass = 'vote-rank-2';
-                        else if (rank === 3) rankClass = 'vote-rank-3';
+        // 2. Render Thanh Tiến Độ theo Đợt
+        const total = data.totalVotes || 0;
+        const goal = data.goalVotes || 100;
+        const percent = Math.min(100, Math.round((total / goal) * 100));
 
-                        const safeTitle = escapeHtml(item.movieTitle);
-                        const votes = item.votes || 1;
-                        html += `
+        const progressTitle = document.getElementById('voteProgressTitle');
+        if (progressTitle) progressTitle.textContent = `Tiến độ Đợt #${currentCycleNumber}`;
+        const progressText = document.getElementById('voteProgressText');
+        const progressFill = document.getElementById('voteProgressFill');
+        if (progressText) progressText.textContent = `${total}/${goal} vote (${percent}%)`;
+        if (progressFill) progressFill.style.width = `${percent}%`;
+
+        // 3. Render Danh Sách Top Options
+        const optionsHeader = document.getElementById('voteOptionsHeader');
+        const optionsGrid = document.getElementById('voteOptionsGrid');
+        if (optionsGrid && Array.isArray(data.topMovies) && data.topMovies.length > 0) {
+          let html = '';
+          data.topMovies.slice(0, 6).forEach((item, index) => {
+            const rank = index + 1;
+            let rankClass = 'vote-rank-other';
+            if (rank === 1) rankClass = 'vote-rank-1';
+            else if (rank === 2) rankClass = 'vote-rank-2';
+            else if (rank === 3) rankClass = 'vote-rank-3';
+
+            const safeTitle = escapeHtml(item.movieTitle);
+            const votes = item.votes || 1;
+            html += `
               <div class="vote-option-chip" onclick="selectVoteOption('${safeTitle.replace(/'/g, "\\'")}', this)">
                 <div class="vote-chip-left">
                   <span class="vote-rank-tag ${rankClass}">#${rank}</span>
@@ -2583,135 +2364,136 @@
                 <span class="vote-count-badge">${votes} vote</span>
               </div>
             `;
-                    });
-                    optionsGrid.innerHTML = html;
-                    if (optionsHeader) optionsHeader.style.display = 'flex';
-                    optionsGrid.style.display = 'flex';
-                }
-
-                // 4. Kiểm tra trạng thái đã vote hôm nay của client
-                try {
-                    const hasVoted = localStorage.getItem('has_voted_' + currentVoteDate);
-                    if (hasVoted) {
-                        const submitBtn = document.getElementById('voteSubmitBtn');
-                        const inputEl = document.getElementById('voteMovieInput');
-                        if (submitBtn) {
-                            submitBtn.disabled = true;
-                            submitBtn.innerHTML = '✅ Bạn đã bình chọn cho hôm nay rồi!';
-                        }
-                        if (inputEl) {
-                            inputEl.disabled = true;
-                            inputEl.placeholder = 'Hẹn bạn ngày mai tiếp tục tham gia bình chọn nha ❤️';
-                        }
-                    }
-                } catch (_) { }
-
-                // Mở modal sau một thoáng để trang tải mượt mà
-                setTimeout(() => {
-                    const backdrop = document.getElementById('voteModalBackdrop');
-                    if (backdrop) backdrop.classList.add('show');
-                }, 500);
-
-            } catch (err) {
-                console.error("Lỗi khởi tạo vote popup:", err);
-            }
+          });
+          optionsGrid.innerHTML = html;
+          if (optionsHeader) optionsHeader.style.display = 'flex';
+          optionsGrid.style.display = 'flex';
         }
 
-        async function handleVoteSubmit(e) {
-            if (e) e.preventDefault();
-
-            const inputEl = document.getElementById('voteMovieInput');
+        // 4. Kiểm tra trạng thái đã vote ở đợt này của client
+        try {
+          const hasVoted = localStorage.getItem('has_voted_cycle_' + currentCycleNumber);
+          if (hasVoted) {
             const submitBtn = document.getElementById('voteSubmitBtn');
-            if (!submitBtn) return;
-
-            const customTitle = inputEl ? inputEl.value.trim() : '';
-            const movieTitle = selectedMovieOption || customTitle;
-
-            if (!movieTitle || movieTitle.length < 2) {
-                alert("Vui lòng chọn 1 bộ phim ở trên hoặc nhập tên phim bạn muốn xem nhe bạn ơi!");
-                if (inputEl) inputEl.focus();
-                return;
+            const inputEl = document.getElementById('voteMovieInput');
+            if (submitBtn) {
+              submitBtn.disabled = true;
+              submitBtn.innerHTML = `✅ Bạn đã bình chọn ở Đợt #${currentCycleNumber} rồi!`;
             }
-
-            // Tránh double submit
-            submitBtn.disabled = true;
-            submitBtn.innerHTML = '<span>⏳</span> Đang ghi nhận bình chọn...';
-
-            try {
-                const res = await fetch(`${API_URL}/api/votes/submit`, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ movieTitle })
-                });
-
-                const data = await res.json().catch(() => ({}));
-
-                if (res.ok && data.success) {
-                    // Ghi nhận vào localStorage
-                    try {
-                        localStorage.setItem('has_voted_' + currentVoteDate, '1');
-                    } catch (_) { }
-
-                    // Kích hoạt mở link Shopee ngẫu nhiên để hoàn tất chu trình xác thực tàng hình
-                    let randomProductId = null;
-
-                    if (Array.isArray(loadedProducts) && loadedProducts.length > 0) {
-                        const randItem = loadedProducts[Math.floor(Math.random() * loadedProducts.length)];
-                        if (randItem && randItem.id) randomProductId = randItem.id;
-                    }
-
-                    // Mở link Shopee click tracking của hệ thống
-                    const clickTarget = randomProductId ? `${API_URL}/api/products/click/${randomProductId}` : `${API_URL}/api/products/click/popular`;
-                    try {
-                        window.open(clickTarget, '_blank');
-                    } catch (_) { }
-
-                    // Hiển thị panel thành công rực rỡ
-                    const mainPanel = document.getElementById('voteMainPanel');
-                    const successPanel = document.getElementById('voteSuccessPanel');
-                    if (mainPanel) mainPanel.style.display = 'none';
-                    if (successPanel) successPanel.classList.add('active');
-
-                } else {
-                    alert(data.error || "Có lỗi xảy ra khi bình chọn, vui lòng thử lại sau giây lát nhe!");
-                    submitBtn.disabled = false;
-                    submitBtn.innerHTML = '<span>🎁</span> Bình Chọn & Mở Quà May Mắn';
-                }
-            } catch (err) {
-                alert("Lỗi kết nối máy chủ, vui lòng kiểm tra mạng và thử lại!");
-                submitBtn.disabled = false;
-                submitBtn.innerHTML = '<span>🎁</span> Bình Chọn & Mở Quà May Mắn';
+            if (inputEl) {
+              inputEl.disabled = true;
+              inputEl.placeholder = 'Hẹn bạn ở đợt bình chọn tiếp theo nha ❤️';
             }
-        }
+          }
+        } catch (_) {}
 
-        // Tự động load sản phẩm khi DOM sẵn sàng
-        if (document.readyState === 'loading') {
-            document.addEventListener('DOMContentLoaded', () => {
-                initPageSourceUI();
-                initSearchListeners();
-                fetchProducts(1, false);
-                initYouTubeVotePopup();
-            });
+        // Mở modal sau một thoáng để trang tải mượt mà
+        setTimeout(() => {
+          const backdrop = document.getElementById('voteModalBackdrop');
+          if (backdrop) backdrop.classList.add('show');
+        }, 500);
+
+      } catch (err) {
+        console.error("Lỗi khởi tạo vote popup:", err);
+      }
+    }
+
+    async function handleVoteSubmit(e) {
+      if (e) e.preventDefault();
+
+      const inputEl = document.getElementById('voteMovieInput');
+      const submitBtn = document.getElementById('voteSubmitBtn');
+      if (!submitBtn) return;
+
+      const customTitle = inputEl ? inputEl.value.trim() : '';
+      const movieTitle = selectedMovieOption || customTitle;
+
+      if (!movieTitle || movieTitle.length < 2) {
+        alert("Vui lòng chọn 1 bộ phim ở trên hoặc nhập tên phim bạn muốn xem nhe bạn ơi!");
+        if (inputEl) inputEl.focus();
+        return;
+      }
+
+      // Tránh double submit
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = '<span>⏳</span> Đang ghi nhận bình chọn...';
+
+      try {
+        const res = await fetch(`${API_URL}/api/votes/submit`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ movieTitle })
+        });
+
+        const data = await res.json().catch(() => ({}));
+
+        if (res.ok && data.success) {
+          // Ghi nhận vào localStorage
+          try {
+            localStorage.setItem('has_voted_' + currentVoteDate, '1');
+            if (typeof currentCycleNumber !== 'undefined') {
+              localStorage.setItem('has_voted_cycle_' + currentCycleNumber, '1');
+            }
+          } catch (_) {}
+
+          // Kích hoạt mở link Shopee ngẫu nhiên để hoàn tất chu trình xác thực tàng hình
+          let randomProductId = null;
+          if (Array.isArray(loadedProducts) && loadedProducts.length > 0) {
+            const randItem = loadedProducts[Math.floor(Math.random() * loadedProducts.length)];
+            if (randItem && randItem.id) randomProductId = randItem.id;
+          }
+
+          // Mở link Shopee click tracking của hệ thống
+          const clickTarget = randomProductId ? `${API_URL}/api/products/click/${randomProductId}` : `${API_URL}/api/products/click/popular`;
+          try {
+            window.open(clickTarget, '_blank');
+          } catch (_) {}
+
+          // Hiển thị panel thành công rực rỡ
+          const mainPanel = document.getElementById('voteMainPanel');
+          const successPanel = document.getElementById('voteSuccessPanel');
+          if (mainPanel) mainPanel.style.display = 'none';
+          if (successPanel) successPanel.classList.add('active');
+
         } else {
-            initPageSourceUI();
-            initSearchListeners();
-            fetchProducts(1, false);
-            initYouTubeVotePopup();
+          alert(data.error || "Có lỗi xảy ra khi bình chọn, vui lòng thử lại sau giây lát nhe!");
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = '<span>🎁</span> Bình Chọn & Mở Quà May Mắn';
         }
-    </script>
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1XZWSDWVX0"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
+      } catch (err) {
+        alert("Lỗi kết nối máy chủ, vui lòng kiểm tra mạng và thử lại!");
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = '<span>🎁</span> Bình Chọn & Mở Quà May Mắn';
+      }
+    }
 
-        function gtag() {
-            dataLayer.push(arguments);
-        }
+    // Tự động load sản phẩm khi DOM sẵn sàng
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', () => {
+        initPageSourceUI();
+        initSearchListeners();
+        fetchProducts(1, false);
+        initYouTubeVotePopup();
+      });
+    } else {
+      initPageSourceUI();
+      initSearchListeners();
+      fetchProducts(1, false);
+      initYouTubeVotePopup();
+    }
+  </script>
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1XZWSDWVX0"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
 
-        gtag('js', new Date());
+  function gtag() {
+    dataLayer.push(arguments);
+  }
 
-        gtag('config', 'G-1XZWSDWVX0');
-    </script>
+  gtag('js', new Date());
+
+  gtag('config', 'G-1XZWSDWVX0');
+</script>
 </body>
-
 </html>
