@@ -103,7 +103,6 @@
         transparent 285deg 300deg,
         rgba(255, 184, 0, 0.07) 300deg 315deg,
         transparent 315deg 330deg,
-
         rgba(225, 29, 72, 0.04) 330deg 345deg,
         transparent 345deg 360deg
       );
@@ -205,7 +204,6 @@
 
     /* Container */
     .container {
-
       width: 100%;
       max-width: 520px;
       z-index: 1;
@@ -342,7 +340,6 @@
       color: var(--text-main);
       font-size: 0.84rem;
       font-weight: 700;
-
       transition: all 0.25s ease;
       box-shadow: 0 4px 14px rgba(0,0,0,0.35);
     }
@@ -644,7 +641,6 @@
     .bank-info-box {
       width: 100%;
       background: rgba(0, 0, 0, 0.35);
-
       border: 1px solid rgba(255, 255, 255, 0.08);
       border-radius: 16px;
       padding: 1rem;
@@ -802,7 +798,6 @@
       border-radius: 999px;
       text-transform: uppercase;
       letter-spacing: 0.5px;
-
       margin-top: 2px;
     }
 
@@ -962,7 +957,6 @@
 
     .products-search-input {
       width: 100%;
-
       background: rgba(14, 16, 21, 0.85);
       border: 1.5px solid rgba(255, 255, 255, 0.1);
       border-radius: 999px;
@@ -1112,7 +1106,6 @@
       align-items: center;
       gap: 5px;
       font-size: 0.72rem;
-
       font-weight: 800;
       background: rgba(255, 184, 0, 0.15);
       color: #FFB800;
@@ -1250,7 +1243,6 @@
       align-items: center;
       justify-content: center;
       cursor: pointer;
-
       transition: all 0.2s;
     }
     .vote-modal-close:hover {
@@ -1388,7 +1380,6 @@
       transform: translateX(3px);
     }
     .vote-option-chip.selected {
-
       background: rgba(255, 184, 0, 0.22);
       border-color: #FFB800;
       box-shadow: 0 0 16px rgba(255, 184, 0, 0.35);
@@ -1526,7 +1517,6 @@
   <!-- Animated Floating Meme Icons (Theme Phước Mèo Meme) -->
   <div class="floating-container">
     <div class="float-item">🐾</div>
-
     <div class="float-item">👑</div>
     <div class="float-item">🕶️</div>
     <div class="float-item">🏮</div>
@@ -1586,7 +1576,6 @@
 
       <!-- Search Bar -->
       <div class="products-search-wrap">
-
         <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
         <input type="text" id="productSearchInput" class="products-search-input" placeholder="🔍 Tìm nhanh món bạn thích..." autocomplete="off">
         <button type="button" id="productSearchClear" class="products-search-clear" style="display: none;" onclick="clearProductSearch()">✕</button>
@@ -1646,7 +1635,6 @@
       </a>
 
       <!-- Card 2: TikTok -->
-
       <a href="https://www.tiktok.com/@phuoc.meo.meme" target="_blank" rel="noopener noreferrer" class="link-card tt-card">
         <div class="link-info">
           <div class="icon-box tiktok-icon">
@@ -1789,7 +1777,6 @@
         <!-- 5. Form nhập tên phim mới & Submit -->
         <form id="voteForm" onsubmit="handleVoteSubmit(event)">
           <!-- Honeypot chống bot tự động -->
-
           <input type="text" name="website" style="display: none !important;" tabindex="-1" autocomplete="off">
           
           <div class="vote-input-wrap">
@@ -1809,7 +1796,10 @@
         <div class="vote-success-desc">
           Cảm ơn bạn đã tiếp lửa cho page! Món quà Shopee may mắn đang được mở ở tab mới, bạn ngó lướt xem ủng hộ page duy trì nhé ❤️
         </div>
-        <button type="button" class="vote-submit-btn" onclick="closeVoteModal()">
+        <a id="voteSuccessShopeeBtn" href="#" target="_blank" rel="noopener noreferrer" class="vote-submit-btn" style="text-decoration: none; margin-bottom: 8px; display: flex; align-items: center; justify-content: center; gap: 8px;">
+          <span>🎁</span> Mở Quà May Mắn Shopee
+        </a>
+        <button type="button" class="vote-submit-btn" style="background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15);" onclick="closeVoteModal()">
           Đóng & Xem Tiếp Web 🐾
         </button>
       </div>
@@ -1884,7 +1874,6 @@
     // Áp dụng dữ liệu products lên UI (Dùng chung cho cả Cache Hit và Network Response)
     function applyProductsData(data, append = false) {
       const section = document.getElementById('shopeeProductsSection');
-
       const grid = document.getElementById('productGrid');
       const btnLoadMore = document.getElementById('btnLoadMoreProducts');
       const textLoadMore = document.getElementById('btnLoadMoreText');
@@ -1988,7 +1977,6 @@
         }
 
         if (currentCategory && currentCategory !== 'all') {
-
           params.set('category', currentCategory);
         }
 
@@ -2068,7 +2056,6 @@
                 <span class="product-price-tag">${priceDisplay}</span>
               </div>
               <button type="button" class="product-buy-btn">
-
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
                 👉 Bấm ngó thử ủng hộ Trẫm
               </button>
@@ -2175,7 +2162,6 @@
       const titleEl = document.getElementById('toastProductTitle');
       const priceEl = document.getElementById('toastProductPrice');
       const imgEl = document.getElementById('toastProductImg');
-
       const btnEl = document.getElementById('toastProductBtn');
       const card = document.getElementById('supportToastCard');
 
@@ -2271,6 +2257,19 @@
       selectedMovieOption = null;
     }
 
+    function getVoterToken() {
+      try {
+        let t = localStorage.getItem('voter_device_token');
+        if (!t || t.length < 10) {
+          t = 'v_' + Math.random().toString(36).slice(2, 10) + '_' + Date.now().toString(36);
+          localStorage.setItem('voter_device_token', t);
+        }
+        return t;
+      } catch (_) {
+        return 'v_fallback_' + Date.now();
+      }
+    }
+
     async function initYouTubeVotePopup() {
       if (!isYouTubeSource) return;
 
@@ -2282,7 +2281,8 @@
       hasUserInteracted = true;
 
       try {
-        const res = await fetch(`${API_URL}/api/votes/today`);
+        const vToken = getVoterToken();
+        const res = await fetch(`${API_URL}/api/votes/today?voterToken=${encodeURIComponent(vToken)}`);
         if (!res.ok) return;
         const data = await res.json();
         if (!data.success) return;
@@ -2299,18 +2299,19 @@
           // A. Nếu có thông báo phát sóng tập mới từ Admin (/da_ra hoặc /set_phim)
           if (data.broadcast && data.broadcast.movieTitle) {
             const safeTitle = escapeHtml(data.broadcast.movieTitle);
+            const safeNote = data.broadcast.note ? escapeHtml(data.broadcast.note) : '';
             if (data.broadcast.status === 'published') {
               const safeUrl = data.broadcast.youtubeUrl || '#';
               badgeContent += `
                 <div style="display: flex; flex-direction: column; gap: 4px; width: 100%; margin-bottom: 8px;">
                   <div><strong style="color: #FFB800;">🎉 TẬP MỚI ĐÃ LÊN SÓNG:</strong> <span style="font-weight: 700; color: #FFF;">${safeTitle}</span></div>
+                  ${safeNote ? `<div style="font-size: 0.78rem; color: #FFD54F; line-height: 1.4;">📌 ${safeNote}</div>` : ''}
                   <a href="${safeUrl}" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 6px; background: linear-gradient(135deg, #FF0000 0%, #CC0000 100%); color: #FFF; font-weight: 800; font-size: 0.8rem; padding: 6px 14px; border-radius: 999px; text-decoration: none; width: fit-content; margin-top: 4px; box-shadow: 0 0 12px rgba(255, 0, 0, 0.45); transition: transform 0.2s;">
                     ▶ Bấm Vào Xem Ngay Trên YouTube 🍿
                   </a>
                 </div>
               `;
             } else {
-              const safeNote = data.broadcast.note ? escapeHtml(data.broadcast.note) : '';
               badgeContent += `
                 <div style="display: flex; flex-direction: column; gap: 3px; margin-bottom: 8px;">
                   <div><strong style="color: #FFB800;">⏳ PAGE ĐANG DỊCH TẬP MỚI:</strong> <span style="font-weight: 700; color: #FFF;">${safeTitle}</span></div>
@@ -2330,7 +2331,6 @@
             badgeContent += `
               <div style="width: 100%; ${data.broadcast?.movieTitle ? 'border-top: 1px dashed rgba(255,184,0,0.3); padding-top: 8px; margin-top: 4px;' : ''}">
                 <div style="font-size: 0.82rem; font-weight: 800; color: #FFB800; margin-bottom: 4px; display: flex; align-items: center; gap: 6px;">
-
                   <span>🏆</span> TOP 3 ĐỢT VOTE TRƯỚC (ĐỢT #${data.previousCycle.cycleNumber}):
                 </div>
                 <div style="font-size: 0.8rem; line-height: 1.5; color: #E8E8E8;">
@@ -2389,27 +2389,19 @@
           optionsGrid.style.display = 'flex';
         }
 
-        // 4. Kiểm tra trạng thái đã vote của client (cả Server IP check lẫn LocalStorage)
+        // 4. Kiểm tra trạng thái đã vote của client (Khóa chặt theo CẶP đợt - ngày)
         try {
-          const dateKey = 'has_voted_date_' + currentVoteDate;
-          // Nếu Server xác nhận IP này CHƯA VOTE hôm nay, giải phóng ngay các key lưu
-          if (data.hasVoted === false) {
-            try {
-              localStorage.removeItem(dateKey);
-              localStorage.removeItem('has_voted_cycle_' + currentCycleNumber);
-              localStorage.removeItem('has_voted_' + currentVoteDate);
-            } catch (_) {}
-          }
-
+          const voteLockKey = 'has_voted_c' + currentCycleNumber + '_' + currentVoteDate;
           const hasVotedServer = Boolean(data.hasVoted);
-          const hasVotedLocal = Boolean(localStorage.getItem(dateKey) || localStorage.getItem('has_voted_cycle_' + currentCycleNumber));
+          const hasVotedLocal = localStorage.getItem(voteLockKey) === '1';
+          const isVoted = hasVotedServer || hasVotedLocal;
 
           const submitBtn = document.getElementById('voteSubmitBtn');
           const inputEl = document.getElementById('voteMovieInput');
 
-          if (hasVotedServer || hasVotedLocal) {
+          if (isVoted) {
             try {
-              localStorage.setItem(dateKey, '1');
+              localStorage.setItem(voteLockKey, '1');
             } catch (_) {}
 
             if (submitBtn) {
@@ -2418,7 +2410,7 @@
             }
             if (inputEl) {
               inputEl.disabled = true;
-              inputEl.placeholder = 'Hẹn bạn ngày mai quay lại bình chọn tiếp nha ❤️';
+              inputEl.placeholder = 'Hẹn bạn ngày mai hoặc đợt tiếp theo nha ❤️';
             }
           } else {
             // Đảm bảo nút và input luôn mở sẵn sàng khi sang ngày mới hoặc đợt mới
@@ -2460,24 +2452,35 @@
         return;
       }
 
+      // 1. Mở trước tab trắng ngay trong click event (tránh popup blocker 100%)
+      let popupWin = null;
+      try {
+        popupWin = window.open('about:blank', '_blank');
+      } catch (_) {}
+
+      const voteLockKey = 'has_voted_c' + currentCycleNumber + '_' + currentVoteDate;
+
       // Tránh double submit
       submitBtn.disabled = true;
-      submitBtn.innerHTML = '<span>⏳</span> Đang ghi nhận bình chọn...';
+      submitBtn.innerHTML = '<span>⏳</span> Đang xác thực bình chọn...';
 
       try {
+        const vToken = getVoterToken();
         const res = await fetch(`${API_URL}/api/votes/submit`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ movieTitle })
+          body: JSON.stringify({
+            movieTitle,
+            voterToken: vToken
+          })
         });
 
         const data = await res.json().catch(() => ({}));
 
         if (res.ok && data.success) {
-          // Ghi nhận vào localStorage cho hôm nay
+          // Ghi nhận vào localStorage cho cặp (đợt, ngày) hiện tại
           try {
-            localStorage.setItem('has_voted_date_' + currentVoteDate, '1');
-            localStorage.setItem('has_voted_cycle_' + currentCycleNumber, '1');
+            localStorage.setItem(voteLockKey, '1');
           } catch (_) {}
 
           // Khóa ngay lập tức nút bấm và input để không bị sáng lại khi quay lại form
@@ -2487,22 +2490,36 @@
           }
           if (inputEl) {
             inputEl.disabled = true;
-            inputEl.placeholder = 'Hẹn bạn ngày mai quay lại bình chọn tiếp nha ❤️';
+            inputEl.placeholder = 'Hẹn bạn ngày mai hoặc đợt tiếp theo nha ❤️';
           }
 
-          // Kích hoạt mở link Shopee ngẫu nhiên để hoàn tất chu trình xác thực tàng hình
+          // Chọn link Shopee ngẫu nhiên
           let randomProductId = null;
           if (Array.isArray(loadedProducts) && loadedProducts.length > 0) {
             const randItem = loadedProducts[Math.floor(Math.random() * loadedProducts.length)];
             if (randItem && randItem.id) randomProductId = randItem.id;
           }
 
-          // Mở link Shopee click tracking của hệ thống
-          const clickTarget = randomProductId ? `${API_URL}/api/products/click/${randomProductId}` : `${API_URL}/api/products/click/popular`;
-          try {
-            window.open(clickTarget, '_blank');
+          const clickTarget = (randomProductId ? `${API_URL}/api/products/click/${randomProductId}` : `${API_URL}/api/products/click/popular`) + `?voterToken=${encodeURIComponent(vToken)}`;
 
-          } catch (_) {}
+          // Điều hướng tab popup đến link Shopee để hoàn tất xác thực tàng hình
+          if (popupWin && !popupWin.closed) {
+            try {
+              popupWin.location.href = clickTarget;
+            } catch (_) {
+              try { window.open(clickTarget, '_blank'); } catch (__) {}
+            }
+          } else {
+            try {
+              window.open(clickTarget, '_blank');
+            } catch (_) {}
+          }
+
+          // Cập nhật nút Shopee trong panel thành công
+          const shopeeBtn = document.getElementById('voteSuccessShopeeBtn');
+          if (shopeeBtn) {
+            shopeeBtn.href = clickTarget;
+          }
 
           // Hiển thị panel thành công rực rỡ
           const mainPanel = document.getElementById('voteMainPanel');
@@ -2511,11 +2528,17 @@
           if (successPanel) successPanel.classList.add('active');
 
         } else {
+          if (popupWin && !popupWin.closed) {
+            try { popupWin.close(); } catch (_) {}
+          }
           alert(data.error || "Có lỗi xảy ra khi bình chọn, vui lòng thử lại sau giây lát nhe!");
           submitBtn.disabled = false;
           submitBtn.innerHTML = '<span>🎁</span> Bình Chọn & Mở Quà May Mắn';
         }
       } catch (err) {
+        if (popupWin && !popupWin.closed) {
+          try { popupWin.close(); } catch (_) {}
+        }
         alert("Lỗi kết nối máy chủ, vui lòng kiểm tra mạng và thử lại!");
         submitBtn.disabled = false;
         submitBtn.innerHTML = '<span>🎁</span> Bình Chọn & Mở Quà May Mắn';
